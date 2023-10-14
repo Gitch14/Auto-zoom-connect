@@ -55,7 +55,7 @@ loop do
 
         puts "Start process to enter meeting zoom"
 
-        system("res/AutoIt3/AutoIt3.exe res/autoIt3_script1.au3 #{meeting_id} #{password}") # script to open zoom conf
+        system("res/AutoIt3/AutoIt3.exe res/autoIt3_script.au3 #{meeting_id} #{password}") # script to open zoom conf
 
         puts "Zoom - connected time = " + current_time.to_s
 

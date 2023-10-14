@@ -2,8 +2,6 @@
 Local $meetingId = $CmdLine[1]
 Local $password = $CmdLine[2]
 
-; Run("C:\Users\vladb\AppData\Roaming\Zoom\bin\Zoom.exe")
-
 ; Wait for the Zoom conference window to appear (wait for 30 seconds)
 WinWait("[CLASS:ZPPTMainFrmWndClassEx]", "", 30)
 

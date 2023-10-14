@@ -1,1 +1,1 @@
-Run("C:\Users\vladb\AppData\Roaming\Zoom\bin_00\Zoom.exe")
+Run("C:\path\to\zoom.exe")
