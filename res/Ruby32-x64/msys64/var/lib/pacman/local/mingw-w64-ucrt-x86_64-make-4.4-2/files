@@ -1,0 +1,9 @@
+%FILES%
+ucrt64/
+ucrt64/bin/
+ucrt64/bin/mingw32-make.exe
+ucrt64/include/
+ucrt64/include/gnumake.h
+ucrt64/lib/
+ucrt64/lib/libgnumake-1.dll.a
+

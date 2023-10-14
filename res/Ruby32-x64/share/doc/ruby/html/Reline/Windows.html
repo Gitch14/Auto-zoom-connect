@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Reline::Windows - Documentation for Ruby 3.2</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+  var index_rel_prefix = "../";
+</script>
+
+<script src="../js/navigation.js" defer></script>
+<script src="../js/search.js" defer></script>
+<script src="../js/search_index.js" defer></script>
+<script src="../js/searcher.js" defer></script>
+<script src="../js/darkfish.js" defer></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link href="../css/rdoc.css" rel="stylesheet">
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    
+<div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  <p class="link"><a href="../Object.html">Object</a>
+</div>
+
+    
+    
+    
+<!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    <li ><a href="#method-c-check_input_event">::check_input_event</a>
+    <li ><a href="#method-c-clear_screen">::clear_screen</a>
+    <li ><a href="#method-c-cursor_pos">::cursor_pos</a>
+    <li ><a href="#method-c-deprep">::deprep</a>
+    <li ><a href="#method-c-empty_buffer-3F">::empty_buffer?</a>
+    <li ><a href="#method-c-encoding">::encoding</a>
+    <li ><a href="#method-c-erase_after_cursor">::erase_after_cursor</a>
+    <li ><a href="#method-c-get_console_screen_buffer_info">::get_console_screen_buffer_info</a>
+    <li ><a href="#method-c-get_screen_size">::get_screen_size</a>
+    <li ><a href="#method-c-getc">::getc</a>
+    <li ><a href="#method-c-getconsolemode">::getconsolemode</a>
+    <li ><a href="#method-c-hide_cursor">::hide_cursor</a>
+    <li ><a href="#method-c-in_pasting-3F">::in_pasting?</a>
+    <li ><a href="#method-c-move_cursor_column">::move_cursor_column</a>
+    <li ><a href="#method-c-move_cursor_down">::move_cursor_down</a>
+    <li ><a href="#method-c-move_cursor_up">::move_cursor_up</a>
+    <li ><a href="#method-c-msys_tty-3F">::msys_tty?</a>
+    <li ><a href="#method-c-prep">::prep</a>
+    <li ><a href="#method-c-process_key_event">::process_key_event</a>
+    <li ><a href="#method-c-scroll_down">::scroll_down</a>
+    <li ><a href="#method-c-set_default_key_bindings">::set_default_key_bindings</a>
+    <li ><a href="#method-c-set_screen_size">::set_screen_size</a>
+    <li ><a href="#method-c-set_winch_handler">::set_winch_handler</a>
+    <li ><a href="#method-c-setconsolemode">::setconsolemode</a>
+    <li ><a href="#method-c-show_cursor">::show_cursor</a>
+    <li ><a href="#method-c-ungetc">::ungetc</a>
+    <li ><a href="#method-c-win-3F">::win?</a>
+    <li ><a href="#method-c-win_legacy_console-3F">::win_legacy_console?</a>
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Reline::Windows">
+  <h1 id="class-Reline::Windows" class="class">
+    class Reline::Windows
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  <section id="5Buntitled-5D" class="documentation-section">
+
+
+    <section class="constants-list">
+      <header>
+        <h3>Constants</h3>
+      </header>
+      <dl>
+        <dt id="CAPSLOCK_ON">CAPSLOCK_ON
+        <dd>
+        <dt id="ENABLE_VIRTUAL_TERMINAL_PROCESSING">ENABLE_VIRTUAL_TERMINAL_PROCESSING
+        <dd>
+        <dt id="ENHANCED_KEY">ENHANCED_KEY
+        <dd>
+        <dt id="FILE_NAME_INFO">FILE_NAME_INFO
+        <dd>
+        <dt id="FILE_TYPE_PIPE">FILE_TYPE_PIPE
+        <dd>
+        <dt id="KEY_EVENT">KEY_EVENT
+        <dd>
+        <dt id="KEY_MAP">KEY_MAP
+        <dd>
+        <dt id="LEFT_ALT_PRESSED">LEFT_ALT_PRESSED
+        <dd>
+        <dt id="LEFT_CTRL_PRESSED">LEFT_CTRL_PRESSED
+        <dd>
+        <dt id="NUMLOCK_ON">NUMLOCK_ON
+        <dd>
+        <dt id="RIGHT_ALT_PRESSED">RIGHT_ALT_PRESSED
+        <dd>
+        <dt id="RIGHT_CTRL_PRESSED">RIGHT_CTRL_PRESSED
+        <dd>
+        <dt id="SCROLLLOCK_ON">SCROLLLOCK_ON
+        <dd>
+        <dt id="SHIFT_PRESSED">SHIFT_PRESSED
+        <dd>
+        <dt id="STD_INPUT_HANDLE">STD_INPUT_HANDLE
+        <dd>
+        <dt id="STD_OUTPUT_HANDLE">STD_OUTPUT_HANDLE
+        <dd>
+        <dt id="VK_CONTROL">VK_CONTROL
+        <dd>
+        <dt id="VK_DELETE">VK_DELETE
+        <dd>
+        <dt id="VK_DIVIDE">VK_DIVIDE
+        <dd>
+        <dt id="VK_DOWN">VK_DOWN
+        <dd>
+        <dt id="VK_END">VK_END
+        <dd>
+        <dt id="VK_HOME">VK_HOME
+        <dd>
+        <dt id="VK_LEFT">VK_LEFT
+        <dd>
+        <dt id="VK_LMENU">VK_LMENU
+        <dd>
+        <dt id="VK_MENU">VK_MENU
+        <dd>
+        <dt id="VK_RETURN">VK_RETURN
+        <dd>
+        <dt id="VK_RIGHT">VK_RIGHT
+        <dd>
+        <dt id="VK_SHIFT">VK_SHIFT
+        <dd>
+        <dt id="VK_TAB">VK_TAB
+        <dd>
+        <dt id="VK_UP">VK_UP
+        <dd>
+        <dt id="WINDOW_BUFFER_SIZE_EVENT">WINDOW_BUFFER_SIZE_EVENT
+        <dd>
+      </dl>
+    </section>
+
+
+
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+      <div id="method-c-check_input_event" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">check_input_event</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="check_input_event-source">
+            <pre><span class="ruby-comment"># File lib/reline/windows.rb, line 257</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">check_input_event</span>
+  <span class="ruby-identifier">num_of_events</span> = <span class="ruby-value">0</span>.<span class="ruby-identifier">chr</span> <span class="ruby-operator">*</span> <span class="ruby-value">8</span>
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">@@output_buf</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-constant">Reline</span>.<span class="ruby-identifier">core</span>.<span class="ruby-identifier">line_editor</span>.<span class="ruby-identifier">resize</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@WaitForSingleObject</span>.(<span class="ruby-identifier">@@hConsoleInputHandle</span>, <span class="ruby-value">100</span>) <span class="ruby-operator">!=</span> <span class="ruby-value">0</span> <span class="ruby-comment"># max 0.1 sec</span>
+      <span class="ruby-comment"># prevent for background consolemode change</span>
+      <span class="ruby-identifier">@@legacy_console</span> = (<span class="ruby-identifier">getconsolemode</span>() <span class="ruby-operator">&amp;</span> <span class="ruby-constant">ENABLE_VIRTUAL_TERMINAL_PROCESSING</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>)
+      <span class="ruby-keyword">next</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@GetNumberOfConsoleInputEvents</span>.(<span class="ruby-identifier">@@hConsoleInputHandle</span>, <span class="ruby-identifier">num_of_events</span>) <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-keyword">or</span> <span class="ruby-identifier">num_of_events</span>.<span class="ruby-identifier">unpack1</span>(<span class="ruby-string">&#39;L&#39;</span>) <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">input_records</span> = <span class="ruby-value">0</span>.<span class="ruby-identifier">chr</span> <span class="ruby-operator">*</span> <span class="ruby-value">20</span> <span class="ruby-operator">*</span> <span class="ruby-value">80</span>
+    <span class="ruby-identifier">read_event</span> = <span class="ruby-value">0</span>.<span class="ruby-identifier">chr</span> <span class="ruby-operator">*</span> <span class="ruby-value">4</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@ReadConsoleInputW</span>.(<span class="ruby-identifier">@@hConsoleInputHandle</span>, <span class="ruby-identifier">input_records</span>, <span class="ruby-value">80</span>, <span class="ruby-identifier">read_event</span>) <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>
+      <span class="ruby-identifier">read_events</span> = <span class="ruby-identifier">read_event</span>.<span class="ruby-identifier">unpack1</span>(<span class="ruby-string">&#39;L&#39;</span>)
+      <span class="ruby-value">0</span>.<span class="ruby-identifier">upto</span>(<span class="ruby-identifier">read_events</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">idx</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">input_record</span> = <span class="ruby-identifier">input_records</span>[<span class="ruby-identifier">idx</span> <span class="ruby-operator">*</span> <span class="ruby-value">20</span>, <span class="ruby-value">20</span>]
+        <span class="ruby-identifier">event</span> = <span class="ruby-identifier">input_record</span>[<span class="ruby-value">0</span>, <span class="ruby-value">2</span>].<span class="ruby-identifier">unpack1</span>(<span class="ruby-string">&#39;s*&#39;</span>)
+        <span class="ruby-keyword">case</span> <span class="ruby-identifier">event</span>
+        <span class="ruby-keyword">when</span> <span class="ruby-constant">WINDOW_BUFFER_SIZE_EVENT</span>
+          <span class="ruby-identifier">@@winch_handler</span>.()
+        <span class="ruby-keyword">when</span> <span class="ruby-constant">KEY_EVENT</span>
+          <span class="ruby-identifier">key_down</span> = <span class="ruby-identifier">input_record</span>[<span class="ruby-value">4</span>, <span class="ruby-value">4</span>].<span class="ruby-identifier">unpack1</span>(<span class="ruby-string">&#39;l*&#39;</span>)
+          <span class="ruby-identifier">repeat_count</span> = <span class="ruby-identifier">input_record</span>[<span class="ruby-value">8</span>, <span class="ruby-value">2</span>].<span class="ruby-identifier">unpack1</span>(<span class="ruby-string">&#39;s*&#39;</span>)
+          <span class="ruby-identifier">virtual_key_code</span> = <span class="ruby-identifier">input_record</span>[<span class="ruby-value">10</span>, <span class="ruby-value">2</span>].<span class="ruby-identifier">unpack1</span>(<span class="ruby-string">&#39;s*&#39;</span>)
+          <span class="ruby-identifier">virtual_scan_code</span> = <span class="ruby-identifier">input_record</span>[<span class="ruby-value">12</span>, <span class="ruby-value">2</span>].<span class="ruby-identifier">unpack1</span>(<span class="ruby-string">&#39;s*&#39;</span>)
+          <span class="ruby-identifier">char_code</span> = <span class="ruby-identifier">input_record</span>[<span class="ruby-value">14</span>, <span class="ruby-value">2</span>].<span class="ruby-identifier">unpack1</span>(<span class="ruby-string">&#39;S*&#39;</span>)
+          <span class="ruby-identifier">control_key_state</span> = <span class="ruby-identifier">input_record</span>[<span class="ruby-value">16</span>, <span class="ruby-value">2</span>].<span class="ruby-identifier">unpack1</span>(<span class="ruby-string">&#39;S*&#39;</span>)
+          <span class="ruby-identifier">is_key_down</span> = <span class="ruby-identifier">key_down</span>.<span class="ruby-identifier">zero?</span> <span class="ruby-operator">?</span> <span class="ruby-keyword">false</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">true</span>
+          <span class="ruby-keyword">if</span> <span class="ruby-identifier">is_key_down</span>
+            <span class="ruby-identifier">process_key_event</span>(<span class="ruby-identifier">repeat_count</span>, <span class="ruby-identifier">virtual_key_code</span>, <span class="ruby-identifier">virtual_scan_code</span>, <span class="ruby-identifier">char_code</span>, <span class="ruby-identifier">control_key_state</span>)
+          <span class="ruby-keyword">end</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-clear_screen" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">clear_screen</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="clear_screen-source">
+            <pre><span class="ruby-comment"># File lib/reline/windows.rb, line 413</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">clear_screen</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@legacy_console</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">csbi</span> = <span class="ruby-identifier">get_console_screen_buffer_info</span>
+    <span class="ruby-identifier">buffer_width</span>, <span class="ruby-identifier">_buffer_lines</span>, <span class="ruby-identifier">attributes</span>, <span class="ruby-identifier">window_top</span>, <span class="ruby-identifier">window_bottom</span> = <span class="ruby-identifier">csbi</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-string">&#39;ss@8S@12sx2s&#39;</span>)
+    <span class="ruby-identifier">fill_length</span> = <span class="ruby-identifier">buffer_width</span> <span class="ruby-operator">*</span> (<span class="ruby-identifier">window_bottom</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">window_top</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>)
+    <span class="ruby-identifier">screen_topleft</span> = <span class="ruby-identifier">window_top</span> <span class="ruby-operator">*</span> <span class="ruby-value">65536</span>
+    <span class="ruby-identifier">written</span> = <span class="ruby-value">0</span>.<span class="ruby-identifier">chr</span> <span class="ruby-operator">*</span> <span class="ruby-value">4</span>
+    <span class="ruby-identifier">@@FillConsoleOutputCharacter</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">@@hConsoleHandle</span>, <span class="ruby-value">0x20</span>, <span class="ruby-identifier">fill_length</span>, <span class="ruby-identifier">screen_topleft</span>, <span class="ruby-identifier">written</span>)
+    <span class="ruby-identifier">@@FillConsoleOutputAttribute</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">@@hConsoleHandle</span>, <span class="ruby-identifier">attributes</span>, <span class="ruby-identifier">fill_length</span>, <span class="ruby-identifier">screen_topleft</span>, <span class="ruby-identifier">written</span>)
+    <span class="ruby-identifier">@@SetConsoleCursorPosition</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">@@hConsoleHandle</span>, <span class="ruby-identifier">screen_topleft</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">@@output</span>.<span class="ruby-identifier">write</span> <span class="ruby-string">&quot;\e[2J&quot;</span> <span class="ruby-string">&quot;\e[H&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-cursor_pos" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">cursor_pos</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="cursor_pos-source">
+            <pre><span class="ruby-comment"># File lib/reline/windows.rb, line 342</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">cursor_pos</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">csbi</span> = <span class="ruby-identifier">get_console_screen_buffer_info</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-constant">Reline</span><span class="ruby-operator">::</span><span class="ruby-constant">CursorPos</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">0</span>, <span class="ruby-value">0</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">x</span> = <span class="ruby-identifier">csbi</span>[<span class="ruby-value">4</span>, <span class="ruby-value">2</span>].<span class="ruby-identifier">unpack1</span>(<span class="ruby-string">&#39;s&#39;</span>)
+  <span class="ruby-identifier">y</span> = <span class="ruby-identifier">csbi</span>[<span class="ruby-value">6</span>, <span class="ruby-value">2</span>].<span class="ruby-identifier">unpack1</span>(<span class="ruby-string">&#39;s&#39;</span>)
+  <span class="ruby-constant">Reline</span><span class="ruby-operator">::</span><span class="ruby-constant">CursorPos</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-deprep" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">deprep</span><span
+              class="method-args">(otio)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="deprep-source">
+            <pre><span class="ruby-comment"># File lib/reline/windows.rb, line 455</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">deprep</span>(<span class="ruby-identifier">otio</span>)
+  <span class="ruby-comment"># do nothing</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-empty_buffer-3F" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">empty_buffer?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="empty_buffer-3F-source">
+            <pre><span class="ruby-comment"># File lib/reline/windows.rb, line 307</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">empty_buffer?</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">@@output_buf</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">@@kbhit</span>.<span class="ruby-identifier">call</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+    <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-encoding" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">encoding</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="encoding-source">
+            <pre><span class="ruby-comment"># File lib/reline/windows.rb, line 4</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">encoding</span>
+  <span class="ruby-constant">Encoding</span><span class="ruby-operator">::</span><span class="ruby-constant">UTF_8</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-erase_after_cursor" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">erase_after_cursor</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="erase_after_cursor-source">
+            <pre><span class="ruby-comment"># File lib/reline/windows.rb, line 377</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">erase_after_cursor</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">csbi</span> = <span class="ruby-identifier">get_console_screen_buffer_info</span>
+  <span class="ruby-identifier">attributes</span> = <span class="ruby-identifier">csbi</span>[<span class="ruby-value">8</span>, <span class="ruby-value">2</span>].<span class="ruby-identifier">unpack1</span>(<span class="ruby-string">&#39;S&#39;</span>)
+  <span class="ruby-identifier">cursor</span> = <span class="ruby-identifier">csbi</span>[<span class="ruby-value">4</span>, <span class="ruby-value">4</span>].<span class="ruby-identifier">unpack1</span>(<span class="ruby-string">&#39;L&#39;</span>)
+  <span class="ruby-identifier">written</span> = <span class="ruby-value">0</span>.<span class="ruby-identifier">chr</span> <span class="ruby-operator">*</span> <span class="ruby-value">4</span>
+  <span class="ruby-identifier">@@FillConsoleOutputCharacter</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">@@hConsoleHandle</span>, <span class="ruby-value">0x20</span>, <span class="ruby-identifier">get_screen_size</span>.<span class="ruby-identifier">last</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">cursor_pos</span>.<span class="ruby-identifier">x</span>, <span class="ruby-identifier">cursor</span>, <span class="ruby-identifier">written</span>)
+  <span class="ruby-identifier">@@FillConsoleOutputAttribute</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">@@hConsoleHandle</span>, <span class="ruby-identifier">attributes</span>, <span class="ruby-identifier">get_screen_size</span>.<span class="ruby-identifier">last</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">cursor_pos</span>.<span class="ruby-identifier">x</span>, <span class="ruby-identifier">cursor</span>, <span class="ruby-identifier">written</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-get_console_screen_buffer_info" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">get_console_screen_buffer_info</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="get_console_screen_buffer_info-source">
+            <pre><span class="ruby-comment"># File lib/reline/windows.rb, line 317</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">get_console_screen_buffer_info</span>
+  <span class="ruby-comment"># CONSOLE_SCREEN_BUFFER_INFO</span>
+  <span class="ruby-comment"># [ 0,2] dwSize.X</span>
+  <span class="ruby-comment"># [ 2,2] dwSize.Y</span>
+  <span class="ruby-comment"># [ 4,2] dwCursorPositions.X</span>
+  <span class="ruby-comment"># [ 6,2] dwCursorPositions.Y</span>
+  <span class="ruby-comment"># [ 8,2] wAttributes</span>
+  <span class="ruby-comment"># [10,2] srWindow.Left</span>
+  <span class="ruby-comment"># [12,2] srWindow.Top</span>
+  <span class="ruby-comment"># [14,2] srWindow.Right</span>
+  <span class="ruby-comment"># [16,2] srWindow.Bottom</span>
+  <span class="ruby-comment"># [18,2] dwMaximumWindowSize.X</span>
+  <span class="ruby-comment"># [20,2] dwMaximumWindowSize.Y</span>
+  <span class="ruby-identifier">csbi</span> = <span class="ruby-value">0</span>.<span class="ruby-identifier">chr</span> <span class="ruby-operator">*</span> <span class="ruby-value">22</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@GetConsoleScreenBufferInfo</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">@@hConsoleHandle</span>, <span class="ruby-identifier">csbi</span>) <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+  <span class="ruby-identifier">csbi</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-get_screen_size" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">get_screen_size</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="get_screen_size-source">
+            <pre><span class="ruby-comment"># File lib/reline/windows.rb, line 335</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">get_screen_size</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">csbi</span> = <span class="ruby-identifier">get_console_screen_buffer_info</span>
+    <span class="ruby-keyword">return</span> [<span class="ruby-value">1</span>, <span class="ruby-value">1</span>]
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">csbi</span>[<span class="ruby-value">0</span>, <span class="ruby-value">4</span>].<span class="ruby-identifier">unpack</span>(<span class="ruby-string">&#39;SS&#39;</span>).<span class="ruby-identifier">reverse</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-getc" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">getc</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="getc-source">
+            <pre><span class="ruby-comment"># File lib/reline/windows.rb, line 294</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">getc</span>
+  <span class="ruby-identifier">check_input_event</span>
+  <span class="ruby-identifier">@@output_buf</span>.<span class="ruby-identifier">shift</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-hide_cursor" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">hide_cursor</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="hide_cursor-source">
+            <pre><span class="ruby-comment"># File lib/reline/windows.rb, line 432</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">hide_cursor</span>
+  <span class="ruby-identifier">size</span> = <span class="ruby-value">100</span>
+  <span class="ruby-identifier">visible</span> = <span class="ruby-value">0</span> <span class="ruby-comment"># 0 means false</span>
+  <span class="ruby-identifier">cursor_info</span> = [<span class="ruby-identifier">size</span>, <span class="ruby-identifier">visible</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-string">&#39;Li&#39;</span>)
+  <span class="ruby-identifier">@@SetConsoleCursorInfo</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">@@hConsoleHandle</span>, <span class="ruby-identifier">cursor_info</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-in_pasting-3F" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">in_pasting?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="in_pasting-3F-source">
+            <pre><span class="ruby-comment"># File lib/reline/windows.rb, line 303</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">in_pasting?</span>
+  <span class="ruby-keyword">not</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">empty_buffer?</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-move_cursor_column" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">move_cursor_column</span><span
+              class="method-args">(val)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="move_cursor_column-source">
+            <pre><span class="ruby-comment"># File lib/reline/windows.rb, line 351</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">move_cursor_column</span>(<span class="ruby-identifier">val</span>)
+  <span class="ruby-identifier">@@SetConsoleCursorPosition</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">@@hConsoleHandle</span>, <span class="ruby-identifier">cursor_pos</span>.<span class="ruby-identifier">y</span> <span class="ruby-operator">*</span> <span class="ruby-value">65536</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">val</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-move_cursor_down" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">move_cursor_down</span><span
+              class="method-args">(val)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="move_cursor_down-source">
+            <pre><span class="ruby-comment"># File lib/reline/windows.rb, line 365</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">move_cursor_down</span>(<span class="ruby-identifier">val</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">val</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">csbi</span> = <span class="ruby-identifier">get_console_screen_buffer_info</span>
+    <span class="ruby-identifier">screen_height</span> = <span class="ruby-identifier">get_screen_size</span>.<span class="ruby-identifier">first</span>
+    <span class="ruby-identifier">y</span> = <span class="ruby-identifier">cursor_pos</span>.<span class="ruby-identifier">y</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">val</span>
+    <span class="ruby-identifier">y</span> = <span class="ruby-identifier">screen_height</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">&gt;</span> (<span class="ruby-identifier">screen_height</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>)
+    <span class="ruby-identifier">@@SetConsoleCursorPosition</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">@@hConsoleHandle</span>, (<span class="ruby-identifier">cursor_pos</span>.<span class="ruby-identifier">y</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">val</span>) <span class="ruby-operator">*</span> <span class="ruby-value">65536</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">cursor_pos</span>.<span class="ruby-identifier">x</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">val</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">move_cursor_up</span>(<span class="ruby-operator">-</span><span class="ruby-identifier">val</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-move_cursor_up" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">move_cursor_up</span><span
+              class="method-args">(val)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="move_cursor_up-source">
+            <pre><span class="ruby-comment"># File lib/reline/windows.rb, line 355</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">move_cursor_up</span>(<span class="ruby-identifier">val</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">val</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">y</span> = <span class="ruby-identifier">cursor_pos</span>.<span class="ruby-identifier">y</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">val</span>
+    <span class="ruby-identifier">y</span> = <span class="ruby-value">0</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">y</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">@@SetConsoleCursorPosition</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">@@hConsoleHandle</span>, <span class="ruby-identifier">y</span> <span class="ruby-operator">*</span> <span class="ruby-value">65536</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">cursor_pos</span>.<span class="ruby-identifier">x</span>)
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">val</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">move_cursor_down</span>(<span class="ruby-operator">-</span><span class="ruby-identifier">val</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-msys_tty-3F" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">msys_tty?</span><span
+              class="method-args">(io = @@hConsoleInputHandle)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="msys_tty-3F-source">
+            <pre><span class="ruby-comment"># File lib/reline/windows.rb, line 173</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">msys_tty?</span>(<span class="ruby-identifier">io</span> = <span class="ruby-identifier">@@hConsoleInputHandle</span>)
+  <span class="ruby-comment"># check if fd is a pipe</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@GetFileType</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">io</span>) <span class="ruby-operator">!=</span> <span class="ruby-constant">FILE_TYPE_PIPE</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">bufsize</span> = <span class="ruby-value">1024</span>
+  <span class="ruby-identifier">p_buffer</span> = <span class="ruby-string">&quot;\0&quot;</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">bufsize</span>
+  <span class="ruby-identifier">res</span> = <span class="ruby-identifier">@@GetFileInformationByHandleEx</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">io</span>, <span class="ruby-constant">FILE_NAME_INFO</span>, <span class="ruby-identifier">p_buffer</span>, <span class="ruby-identifier">bufsize</span> <span class="ruby-operator">-</span> <span class="ruby-value">2</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">res</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+
+  <span class="ruby-comment"># get pipe name: p_buffer layout is:</span>
+  <span class="ruby-comment">#   struct _FILE_NAME_INFO {</span>
+  <span class="ruby-comment">#     DWORD FileNameLength;</span>
+  <span class="ruby-comment">#     WCHAR FileName[1];</span>
+  <span class="ruby-comment">#   } FILE_NAME_INFO</span>
+  <span class="ruby-identifier">len</span> = <span class="ruby-identifier">p_buffer</span>[<span class="ruby-value">0</span>, <span class="ruby-value">4</span>].<span class="ruby-identifier">unpack1</span>(<span class="ruby-string">&quot;L&quot;</span>)
+  <span class="ruby-identifier">name</span> = <span class="ruby-identifier">p_buffer</span>[<span class="ruby-value">4</span>, <span class="ruby-identifier">len</span>].<span class="ruby-identifier">encode</span>(<span class="ruby-constant">Encoding</span><span class="ruby-operator">::</span><span class="ruby-constant">UTF_8</span>, <span class="ruby-constant">Encoding</span><span class="ruby-operator">::</span><span class="ruby-constant">UTF_16LE</span>, <span class="ruby-value">invalid:</span> <span class="ruby-value">:replace</span>)
+
+  <span class="ruby-comment"># Check if this could be a MSYS2 pty pipe (&#39;\msys-XXXX-ptyN-XX&#39;)</span>
+  <span class="ruby-comment"># or a cygwin pty pipe (&#39;\cygwin-XXXX-ptyN-XX&#39;)</span>
+  <span class="ruby-identifier">name</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/(msys-|cygwin-).*-pty/</span> <span class="ruby-operator">?</span> <span class="ruby-keyword">true</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-prep" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">prep</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="prep-source">
+            <pre><span class="ruby-comment"># File lib/reline/windows.rb, line 450</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">prep</span>
+  <span class="ruby-comment"># do nothing</span>
+  <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-process_key_event" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">process_key_event</span><span
+              class="method-args">(repeat_count, virtual_key_code, virtual_scan_code, char_code, control_key_state)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="process_key_event-source">
+            <pre><span class="ruby-comment"># File lib/reline/windows.rb, line 220</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">process_key_event</span>(<span class="ruby-identifier">repeat_count</span>, <span class="ruby-identifier">virtual_key_code</span>, <span class="ruby-identifier">virtual_scan_code</span>, <span class="ruby-identifier">char_code</span>, <span class="ruby-identifier">control_key_state</span>)
+
+  <span class="ruby-comment"># high-surrogate</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-value">0xD800</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">char_code</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">char_code</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">0xDBFF</span>
+    <span class="ruby-identifier">@@hsg</span> = <span class="ruby-identifier">char_code</span>
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># low-surrogate</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-value">0xDC00</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">char_code</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">char_code</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">0xDFFF</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@hsg</span>
+      <span class="ruby-identifier">char_code</span> = <span class="ruby-value">0x10000</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">@@hsg</span> <span class="ruby-operator">-</span> <span class="ruby-value">0xD800</span>) <span class="ruby-operator">*</span> <span class="ruby-value">0x400</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">char_code</span> <span class="ruby-operator">-</span> <span class="ruby-value">0xDC00</span>
+      <span class="ruby-identifier">@@hsg</span> = <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-comment"># no high-surrogate. ignored.</span>
+      <span class="ruby-keyword">return</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-comment"># ignore high-surrogate without low-surrogate if there</span>
+    <span class="ruby-identifier">@@hsg</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">key</span> = <span class="ruby-constant">KeyEventRecord</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">virtual_key_code</span>, <span class="ruby-identifier">char_code</span>, <span class="ruby-identifier">control_key_state</span>)
+
+  <span class="ruby-identifier">match</span> = <span class="ruby-constant">KEY_MAP</span>.<span class="ruby-identifier">find</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">args</span>,<span class="ruby-operator">|</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">matches?</span>(<span class="ruby-operator">**</span><span class="ruby-identifier">args</span>) }
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">match</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">@@output_buf</span>.<span class="ruby-identifier">concat</span>(<span class="ruby-identifier">match</span>.<span class="ruby-identifier">last</span>)
+    <span class="ruby-keyword">return</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># no char, only control keys</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">char_code</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">control_keys</span>.<span class="ruby-identifier">any?</span>
+
+  <span class="ruby-identifier">@@output_buf</span>.<span class="ruby-identifier">push</span>(<span class="ruby-string">&quot;\e&quot;</span>.<span class="ruby-identifier">ord</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">control_keys</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-value">:ALT</span>) <span class="ruby-keyword">and</span> <span class="ruby-operator">!</span><span class="ruby-identifier">key</span>.<span class="ruby-identifier">control_keys</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-value">:CTRL</span>)
+
+  <span class="ruby-identifier">@@output_buf</span>.<span class="ruby-identifier">concat</span>(<span class="ruby-identifier">key</span>.<span class="ruby-identifier">char</span>.<span class="ruby-identifier">bytes</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-scroll_down" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">scroll_down</span><span
+              class="method-args">(val)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="scroll_down-source">
+            <pre><span class="ruby-comment"># File lib/reline/windows.rb, line 386</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">scroll_down</span>(<span class="ruby-identifier">val</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">val</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">csbi</span> = <span class="ruby-identifier">get_console_screen_buffer_info</span>
+  <span class="ruby-identifier">buffer_width</span>, <span class="ruby-identifier">buffer_lines</span>, <span class="ruby-identifier">x</span>, <span class="ruby-identifier">y</span>, <span class="ruby-identifier">attributes</span>, <span class="ruby-identifier">window_left</span>, <span class="ruby-identifier">window_top</span>, <span class="ruby-identifier">window_bottom</span> = <span class="ruby-identifier">csbi</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-string">&#39;ssssSssx2s&#39;</span>)
+  <span class="ruby-identifier">screen_height</span> = <span class="ruby-identifier">window_bottom</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">window_top</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+  <span class="ruby-identifier">val</span> = <span class="ruby-identifier">screen_height</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">val</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">screen_height</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@legacy_console</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">window_left</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span>
+    <span class="ruby-comment"># unless ENABLE_VIRTUAL_TERMINAL,</span>
+    <span class="ruby-comment"># if srWindow.Left != 0 then it&#39;s conhost.exe hosted console</span>
+    <span class="ruby-comment"># and puts &quot;\n&quot; causes horizontal scroll. its glitch.</span>
+    <span class="ruby-comment"># FYI irb write from culumn 1, so this gives no gain.</span>
+    <span class="ruby-identifier">scroll_rectangle</span> = [<span class="ruby-value">0</span>, <span class="ruby-identifier">val</span>, <span class="ruby-identifier">buffer_width</span>, <span class="ruby-identifier">buffer_lines</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">val</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-string">&#39;s4&#39;</span>)
+    <span class="ruby-identifier">destination_origin</span> = <span class="ruby-value">0</span> <span class="ruby-comment"># y * 65536 + x</span>
+    <span class="ruby-identifier">fill</span> = [<span class="ruby-string">&#39; &#39;</span>.<span class="ruby-identifier">ord</span>, <span class="ruby-identifier">attributes</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-string">&#39;SS&#39;</span>)
+    <span class="ruby-identifier">@@ScrollConsoleScreenBuffer</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">@@hConsoleHandle</span>, <span class="ruby-identifier">scroll_rectangle</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">destination_origin</span>, <span class="ruby-identifier">fill</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">origin_x</span> = <span class="ruby-identifier">x</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">origin_y</span> = <span class="ruby-identifier">y</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">window_top</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">@@output</span>.<span class="ruby-identifier">write</span> [
+      (<span class="ruby-identifier">origin_y</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">screen_height</span>) <span class="ruby-operator">?</span> <span class="ruby-node">&quot;\e[#{screen_height};H&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>,
+      <span class="ruby-string">&quot;\n&quot;</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">val</span>,
+      (<span class="ruby-identifier">origin_y</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">screen_height</span> <span class="ruby-keyword">or</span> <span class="ruby-operator">!</span><span class="ruby-identifier">x</span>.<span class="ruby-identifier">zero?</span>) <span class="ruby-operator">?</span> <span class="ruby-node">&quot;\e[#{origin_y};#{origin_x}H&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-keyword">nil</span>
+    ].<span class="ruby-identifier">join</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-set_default_key_bindings" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">set_default_key_bindings</span><span
+              class="method-args">(config)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="set_default_key_bindings-source">
+            <pre><span class="ruby-comment"># File lib/reline/windows.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">set_default_key_bindings</span>(<span class="ruby-identifier">config</span>)
+  {
+    [<span class="ruby-value">224</span>, <span class="ruby-value">72</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:ed_prev_history</span>, <span class="ruby-comment"># ↑</span>
+    [<span class="ruby-value">224</span>, <span class="ruby-value">80</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:ed_next_history</span>, <span class="ruby-comment"># ↓</span>
+    [<span class="ruby-value">224</span>, <span class="ruby-value">77</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:ed_next_char</span>,    <span class="ruby-comment"># →</span>
+    [<span class="ruby-value">224</span>, <span class="ruby-value">75</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:ed_prev_char</span>,    <span class="ruby-comment"># ←</span>
+    [<span class="ruby-value">224</span>, <span class="ruby-value">83</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:key_delete</span>,      <span class="ruby-comment"># Del</span>
+    [<span class="ruby-value">224</span>, <span class="ruby-value">71</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:ed_move_to_beg</span>,  <span class="ruby-comment"># Home</span>
+    [<span class="ruby-value">224</span>, <span class="ruby-value">79</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:ed_move_to_end</span>,  <span class="ruby-comment"># End</span>
+    [  <span class="ruby-value">0</span>, <span class="ruby-value">41</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:ed_unassigned</span>,   <span class="ruby-comment"># input method on/off</span>
+    [  <span class="ruby-value">0</span>, <span class="ruby-value">72</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:ed_prev_history</span>, <span class="ruby-comment"># ↑</span>
+    [  <span class="ruby-value">0</span>, <span class="ruby-value">80</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:ed_next_history</span>, <span class="ruby-comment"># ↓</span>
+    [  <span class="ruby-value">0</span>, <span class="ruby-value">77</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:ed_next_char</span>,    <span class="ruby-comment"># →</span>
+    [  <span class="ruby-value">0</span>, <span class="ruby-value">75</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:ed_prev_char</span>,    <span class="ruby-comment"># ←</span>
+    [  <span class="ruby-value">0</span>, <span class="ruby-value">83</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:key_delete</span>,      <span class="ruby-comment"># Del</span>
+    [  <span class="ruby-value">0</span>, <span class="ruby-value">71</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:ed_move_to_beg</span>,  <span class="ruby-comment"># Home</span>
+    [  <span class="ruby-value">0</span>, <span class="ruby-value">79</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:ed_move_to_end</span>   <span class="ruby-comment"># End</span>
+  }.<span class="ruby-identifier">each_pair</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">func</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">config</span>.<span class="ruby-identifier">add_default_key_binding_by_keymap</span>(<span class="ruby-value">:emacs</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">func</span>)
+    <span class="ruby-identifier">config</span>.<span class="ruby-identifier">add_default_key_binding_by_keymap</span>(<span class="ruby-value">:vi_insert</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">func</span>)
+    <span class="ruby-identifier">config</span>.<span class="ruby-identifier">add_default_key_binding_by_keymap</span>(<span class="ruby-value">:vi_command</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">func</span>)
+  <span class="ruby-keyword">end</span>
+
+  {
+    [<span class="ruby-value">27</span>, <span class="ruby-value">32</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:em_set_mark</span>,             <span class="ruby-comment"># M-&lt;space&gt;</span>
+    [<span class="ruby-value">24</span>, <span class="ruby-value">24</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:em_exchange_mark</span>,        <span class="ruby-comment"># C-x C-x</span>
+  }.<span class="ruby-identifier">each_pair</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">func</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">config</span>.<span class="ruby-identifier">add_default_key_binding_by_keymap</span>(<span class="ruby-value">:emacs</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">func</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Emulate ANSI key sequence.</span>
+  {
+    [<span class="ruby-value">27</span>, <span class="ruby-value">91</span>, <span class="ruby-value">90</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:completion_journey_up</span>, <span class="ruby-comment"># S-Tab</span>
+  }.<span class="ruby-identifier">each_pair</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">func</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">config</span>.<span class="ruby-identifier">add_default_key_binding_by_keymap</span>(<span class="ruby-value">:emacs</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">func</span>)
+    <span class="ruby-identifier">config</span>.<span class="ruby-identifier">add_default_key_binding_by_keymap</span>(<span class="ruby-value">:vi_insert</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">func</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-set_screen_size" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">set_screen_size</span><span
+              class="method-args">(rows, columns)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="set_screen_size-source">
+            <pre><span class="ruby-comment"># File lib/reline/windows.rb, line 428</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">set_screen_size</span>(<span class="ruby-identifier">rows</span>, <span class="ruby-identifier">columns</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">NotImplementedError</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-set_winch_handler" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">set_winch_handler</span><span
+              class="method-args">(&amp;handler)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="set_winch_handler-source">
+            <pre><span class="ruby-comment"># File lib/reline/windows.rb, line 446</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">set_winch_handler</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">handler</span>)
+  <span class="ruby-identifier">@@winch_handler</span> = <span class="ruby-identifier">handler</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-show_cursor" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">show_cursor</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="show_cursor-source">
+            <pre><span class="ruby-comment"># File lib/reline/windows.rb, line 439</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">show_cursor</span>
+  <span class="ruby-identifier">size</span> = <span class="ruby-value">100</span>
+  <span class="ruby-identifier">visible</span> = <span class="ruby-value">1</span> <span class="ruby-comment"># 1 means true</span>
+  <span class="ruby-identifier">cursor_info</span> = [<span class="ruby-identifier">size</span>, <span class="ruby-identifier">visible</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-string">&#39;Li&#39;</span>)
+  <span class="ruby-identifier">@@SetConsoleCursorInfo</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">@@hConsoleHandle</span>, <span class="ruby-identifier">cursor_info</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-ungetc" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">ungetc</span><span
+              class="method-args">(c)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="ungetc-source">
+            <pre><span class="ruby-comment"># File lib/reline/windows.rb, line 299</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">ungetc</span>(<span class="ruby-identifier">c</span>)
+  <span class="ruby-identifier">@@output_buf</span>.<span class="ruby-identifier">unshift</span>(<span class="ruby-identifier">c</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-win-3F" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">win?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="win-3F-source">
+            <pre><span class="ruby-comment"># File lib/reline/windows.rb, line 8</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">win?</span>
+  <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-win_legacy_console-3F" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">win_legacy_console?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="win_legacy_console-3F-source">
+            <pre><span class="ruby-comment"># File lib/reline/windows.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">win_legacy_console?</span>
+  <span class="ruby-identifier">@@legacy_console</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+     <section id="private-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Private Class Methods</h3>
+       </header>
+
+      <div id="method-c-getconsolemode" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">getconsolemode</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="getconsolemode-source">
+            <pre><span class="ruby-comment"># File lib/reline/windows.rb, line 152</span>
+                     <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">getconsolemode</span>
+  <span class="ruby-identifier">mode</span> = <span class="ruby-string">&quot;\000\000\000\000&quot;</span>
+  <span class="ruby-identifier">@@GetConsoleMode</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">@@hConsoleHandle</span>, <span class="ruby-identifier">mode</span>)
+  <span class="ruby-identifier">mode</span>.<span class="ruby-identifier">unpack1</span>(<span class="ruby-string">&#39;L&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-setconsolemode" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">setconsolemode</span><span
+              class="method-args">(mode)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="setconsolemode-source">
+            <pre><span class="ruby-comment"># File lib/reline/windows.rb, line 158</span>
+                     <span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">setconsolemode</span>(<span class="ruby-identifier">mode</span>)
+  <span class="ruby-identifier">@@SetConsoleMode</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">@@hConsoleHandle</span>, <span class="ruby-identifier">mode</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.5.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

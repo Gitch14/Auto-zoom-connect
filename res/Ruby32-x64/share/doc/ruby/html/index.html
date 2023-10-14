@@ -1,0 +1,1968 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Documentation for Ruby 3.2</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+  var index_rel_prefix = "./";
+</script>
+
+<script src="./js/navigation.js" defer></script>
+<script src="./js/search.js" defer></script>
+<script src="./js/search_index.js" defer></script>
+<script src="./js/searcher.js" defer></script>
+<script src="./js/darkfish.js" defer></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  <div id="project-metadata">
+    
+<div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+    <li><a href="./COPYING.html">COPYING</a>
+    <li><a href="./COPYING_ja.html">COPYING.ja</a>
+    <li><a href="./LEGAL.html">LEGAL</a>
+    <li><details><summary><a href="./NEWS_md.html">NEWS</a></summary>
+    <ul class="link-list">
+      <li><a href="./NEWS/NEWS-1_8_7.html">NEWS-1.8.7</a>
+      <li><a href="./NEWS/NEWS-1_9_1.html">NEWS-1.9.1</a>
+      <li><a href="./NEWS/NEWS-1_9_2.html">NEWS-1.9.2</a>
+      <li><a href="./NEWS/NEWS-1_9_3.html">NEWS-1.9.3</a>
+      <li><a href="./NEWS/NEWS-2_0_0.html">NEWS-2.0.0</a>
+      <li><a href="./NEWS/NEWS-2_1_0.html">NEWS-2.1.0</a>
+      <li><a href="./NEWS/NEWS-2_2_0.html">NEWS-2.2.0</a>
+      <li><a href="./NEWS/NEWS-2_3_0.html">NEWS-2.3.0</a>
+      <li><a href="./NEWS/NEWS-2_4_0.html">NEWS-2.4.0</a>
+      <li><a href="./NEWS/NEWS-2_5_0.html">NEWS-2.5.0</a>
+      <li><a href="./NEWS/NEWS-2_6_0.html">NEWS-2.6.0</a>
+      <li><a href="./NEWS/NEWS-2_7_0.html">NEWS-2.7.0</a>
+      <li><a href="./NEWS/NEWS-3_0_0_md.html">NEWS-3.0.0</a>
+      <li><a href="./NEWS/NEWS-3_1_0_md.html">NEWS-3.1.0</a>
+    </ul></details>
+    <li><a href="./README_ja_md.html">README.ja</a>
+    <li><a href="./README_md.html">README</a>
+    <li><a href="./bsearch_rdoc.html">bsearch</a>
+    <li><a href="./bug_triaging_rdoc.html">bug_triaging</a>
+    <li><a href="./case_mapping_rdoc.html">case_mapping</a>
+    <li><a href="./character_selectors_rdoc.html">character_selectors</a>
+    <li><a href="./command_injection_rdoc.html">command_injection</a>
+    <li><details><summary><a href="./contributing_md.html">contributing</a></summary>
+    <ul class="link-list">
+      <li><a href="./contributing/building_ruby_md.html">building_ruby</a>
+      <li><a href="./contributing/documentation_guide_md.html">documentation_guide</a>
+      <li><a href="./contributing/making_changes_to_ruby_md.html">making_changes_to_ruby</a>
+      <li><a href="./contributing/making_changes_to_stdlibs_md.html">making_changes_to_stdlibs</a>
+      <li><a href="./contributing/reporting_issues_md.html">reporting_issues</a>
+      <li><a href="./contributing/testing_ruby_md.html">testing_ruby</a>
+    </ul></details>
+    <li><a href="./dig_methods_rdoc.html">dig_methods</a>
+    <li><a href="./dtrace_probes_rdoc.html">dtrace_probes</a>
+    <li><a href="./encodings_rdoc.html">encodings</a>
+    <li><a href="./extension_ja_rdoc.html">extension.ja</a>
+    <li><a href="./extension_rdoc.html">extension</a>
+    <li><a href="./fiber_md.html">fiber</a>
+    <li><a href="./format_specifications_rdoc.html">format_specifications</a>
+    <li><a href="./globals_rdoc.html">globals</a>
+    <li><a href="./implicit_conversion_rdoc.html">implicit_conversion</a>
+    <li><a href="./keywords_rdoc.html">keywords</a>
+    <li><a href="./maintainers_rdoc.html">maintainers</a>
+    <li><a href="./marshal_rdoc.html">marshal</a>
+    <li><a href="./memory_view_md.html">memory_view</a>
+    <li><details><summary>optparse</summary>
+    <ul class="link-list">
+      <li><a href="./optparse/argument_converters_rdoc.html">argument_converters</a>
+      <li><a href="./optparse/creates_option_rdoc.html">creates_option</a>
+      <li><a href="./optparse/option_params_rdoc.html">option_params</a>
+      <li><a href="./optparse/tutorial_rdoc.html">tutorial</a>
+    </ul></details>
+    <li><a href="./packed_data_rdoc.html">packed_data</a>
+    <li><a href="./ractor_md.html">ractor</a>
+    <li><a href="./regexp_rdoc.html">regexp</a>
+    <li><a href="./security_rdoc.html">security</a>
+    <li><a href="./signals_rdoc.html">signals</a>
+    <li><a href="./standard_library_rdoc.html">standard_library</a>
+    <li><a href="./strftime_formatting_rdoc.html">strftime_formatting</a>
+    <li><details><summary><a href="./syntax_rdoc.html">syntax</a></summary>
+    <ul class="link-list">
+      <li><a href="./syntax/assignment_rdoc.html">assignment</a>
+      <li><a href="./syntax/calling_methods_rdoc.html">calling_methods</a>
+      <li><a href="./syntax/comments_rdoc.html">comments</a>
+      <li><a href="./syntax/control_expressions_rdoc.html">control_expressions</a>
+      <li><a href="./syntax/exceptions_rdoc.html">exceptions</a>
+      <li><a href="./syntax/literals_rdoc.html">literals</a>
+      <li><a href="./syntax/methods_rdoc.html">methods</a>
+      <li><a href="./syntax/miscellaneous_rdoc.html">miscellaneous</a>
+      <li><a href="./syntax/modules_and_classes_rdoc.html">modules_and_classes</a>
+      <li><a href="./syntax/pattern_matching_rdoc.html">pattern_matching</a>
+      <li><a href="./syntax/precedence_rdoc.html">precedence</a>
+      <li><a href="./syntax/refinements_rdoc.html">refinements</a>
+    </ul></details>
+    <li><a href="./timezones_rdoc.html">timezones</a>
+    <li><a href="./win32/README_win32.html">README.win32</a>
+  </ul>
+</div>
+
+    <div id="classindex-section" class="nav-section">
+  <h3>Class and Module Index</h3>
+
+  <ul class="link-list">
+  <li><details><summary><code><a href="./ACL.html">ACL</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./ACL/ACLEntry.html">ACLEntry</a></code>
+  <li><code><a href="./ACL/ACLList.html">ACLList</a></code>
+  </ul></details>
+  <li><code><a href="./ARGF.html">ARGF</a></code>
+  <li><code><a href="./Abbrev.html">Abbrev</a></code>
+  <li><code><a href="./Addrinfo.html">Addrinfo</a></code>
+  <li><code><a href="./ArgumentError.html">ArgumentError</a></code>
+  <li><code><a href="./Array.html">Array</a></code>
+  <li><code><a href="./Base64.html">Base64</a></code>
+  <li><code><a href="./BasicObject.html">BasicObject</a></code>
+  <li><code><a href="./BasicSocket.html">BasicSocket</a></code>
+  <li><details><summary><code><a href="./Benchmark.html">Benchmark</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Benchmark/Tms.html">Tms</a></code>
+  </ul></details>
+  <li><code><a href="./BigDecimal.html">BigDecimal</a></code>
+  <li><code><a href="./BigMath.html">BigMath</a></code>
+  <li><code><a href="./Binding.html">Binding</a></code>
+  <li><code><a href="./Bundler.html">Bundler</a></code>
+  <li><details><summary><code><a href="./CGI.html">CGI</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./CGI/Cookie.html">Cookie</a></code>
+  <li><code><a href="./CGI/Escape.html">Escape</a></code>
+  <li><code><a href="./CGI/HTML3.html">HTML3</a></code>
+  <li><code><a href="./CGI/HTML4.html">HTML4</a></code>
+  <li><code><a href="./CGI/HTML4Fr.html">HTML4Fr</a></code>
+  <li><code><a href="./CGI/HTML4Tr.html">HTML4Tr</a></code>
+  <li><code><a href="./CGI/HTML5.html">HTML5</a></code>
+  <li><code><a href="./CGI/HtmlExtension.html">HtmlExtension</a></code>
+  <li><code><a href="./CGI/InvalidEncoding.html">InvalidEncoding</a></code>
+  <li><code><a href="./CGI/QueryExtension.html">QueryExtension</a></code>
+  <li><details><summary><code><a href="./CGI/Session.html">Session</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./CGI/Session/FileStore.html">FileStore</a></code>
+  <li><code><a href="./CGI/Session/MemoryStore.html">MemoryStore</a></code>
+  <li><code><a href="./CGI/Session/NullStore.html">NullStore</a></code>
+  <li><code><a href="./CGI/Session/PStore.html">PStore</a></code>
+  </ul></details>
+  <li><code><a href="./CGI/Util.html">Util</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./CSV.html">CSV</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./CSV/DeleteSuffix.html">DeleteSuffix</a></code>
+  <li><code><a href="./CSV/FieldsConverter.html">FieldsConverter</a></code>
+  <li><code><a href="./CSV/InputRecordSeparator.html">InputRecordSeparator</a></code>
+  <li><code><a href="./CSV/MalformedCSVError.html">MalformedCSVError</a></code>
+  <li><code><a href="./CSV/MatchP.html">MatchP</a></code>
+  <li><details><summary><code><a href="./CSV/Parser.html">Parser</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./CSV/Parser/InputsScanner.html">InputsScanner</a></code>
+  <li><code><a href="./CSV/Parser/InvalidEncoding.html">InvalidEncoding</a></code>
+  <li><code><a href="./CSV/Parser/Scanner.html">Scanner</a></code>
+  <li><code><a href="./CSV/Parser/UnexpectedError.html">UnexpectedError</a></code>
+  </ul></details>
+  <li><code><a href="./CSV/Row.html">Row</a></code>
+  <li><code><a href="./CSV/Table.html">Table</a></code>
+  <li><code><a href="./CSV/Writer.html">Writer</a></code>
+  </ul></details>
+  <li><code><a href="./Class.html">Class</a></code>
+  <li><code><a href="./ClosedQueueError.html">ClosedQueueError</a></code>
+  <li><code><a href="./Comparable.html">Comparable</a></code>
+  <li><code><a href="./Complex.html">Complex</a></code>
+  <li><code><a href="./Continuation.html">Continuation</a></code>
+  <li><details><summary><code><a href="./CoreExtensions.html">CoreExtensions</a></code></summary>
+  <ul class="link-list">
+  <li><details><summary><code><a href="./CoreExtensions/TCPSocketExt.html">TCPSocketExt</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./CoreExtensions/TCPSocketExt/Initializer.html">Initializer</a></code>
+  </ul></details>
+  </ul></details>
+  <li><code><a href="./Coverage.html">Coverage</a></code>
+  <li><details><summary><code><a href="./DRb.html">DRb</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./DRb/DRbArray.html">DRbArray</a></code>
+  <li><code><a href="./DRb/DRbBadScheme.html">DRbBadScheme</a></code>
+  <li><code><a href="./DRb/DRbBadURI.html">DRbBadURI</a></code>
+  <li><code><a href="./DRb/DRbConn.html">DRbConn</a></code>
+  <li><code><a href="./DRb/DRbConnError.html">DRbConnError</a></code>
+  <li><code><a href="./DRb/DRbError.html">DRbError</a></code>
+  <li><code><a href="./DRb/DRbIdConv.html">DRbIdConv</a></code>
+  <li><code><a href="./DRb/DRbIdConv.html">DRbIdConv</a></code>
+  <li><code><a href="./DRb/DRbMessage.html">DRbMessage</a></code>
+  <li><code><a href="./DRb/DRbObject.html">DRbObject</a></code>
+  <li><code><a href="./DRb/DRbObject.html">DRbObject</a></code>
+  <li><code><a href="./DRb/DRbObservable.html">DRbObservable</a></code>
+  <li><code><a href="./DRb/DRbProtocol.html">DRbProtocol</a></code>
+  <li><code><a href="./DRb/DRbRemoteError.html">DRbRemoteError</a></code>
+  <li><details><summary><code><a href="./DRb/DRbSSLSocket.html">DRbSSLSocket</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./DRb/DRbSSLSocket/SSLConfig.html">SSLConfig</a></code>
+  </ul></details>
+  <li><code><a href="./DRb/DRbServerNotFound.html">DRbServerNotFound</a></code>
+  <li><code><a href="./DRb/DRbTCPSocket.html">DRbTCPSocket</a></code>
+  <li><code><a href="./DRb/DRbUNIXSocket.html">DRbUNIXSocket</a></code>
+  <li><code><a href="./DRb/DRbUndumped.html">DRbUndumped</a></code>
+  <li><code><a href="./DRb/DRbUndumped.html">DRbUndumped</a></code>
+  <li><code><a href="./DRb/DRbUnknown.html">DRbUnknown</a></code>
+  <li><code><a href="./DRb/DRbUnknownError.html">DRbUnknownError</a></code>
+  <li><code><a href="./DRb/ExtServ.html">ExtServ</a></code>
+  <li><code><a href="./DRb/ExtServManager.html">ExtServManager</a></code>
+  <li><code><a href="./DRb/GW.html">GW</a></code>
+  <li><code><a href="./DRb/GWIdConv.html">GWIdConv</a></code>
+  <li><code><a href="./DRb/ThreadObject.html">ThreadObject</a></code>
+  <li><details><summary><code><a href="./DRb/TimerIdConv.html">TimerIdConv</a></code></summary>
+  <ul class="link-list">
+  <li><details><summary><code><a href="./DRb/TimerIdConv/TimerHolder2.html">TimerHolder2</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./DRb/TimerIdConv/TimerHolder2/InvalidIndexError.html">InvalidIndexError</a></code>
+  </ul></details>
+  </ul></details>
+  <li><details><summary><code><a href="./DRb/WeakIdConv.html">WeakIdConv</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./DRb/WeakIdConv/WeakSet.html">WeakSet</a></code>
+  </ul></details>
+  </ul></details>
+  <li><code><a href="./Data.html">Data</a></code>
+  <li><details><summary><code><a href="./Date.html">Date</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Date/Error.html">Error</a></code>
+  </ul></details>
+  <li><code><a href="./DateTime.html">DateTime</a></code>
+  <li><code><a href="./Delegator.html">Delegator</a></code>
+  <li><details><summary><code><a href="./DidYouMean.html">DidYouMean</a></code></summary>
+  <ul class="link-list">
+  <li><details><summary><code><a href="./DidYouMean/ClassNameChecker.html">ClassNameChecker</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./DidYouMean/ClassNameChecker/ClassName.html">ClassName</a></code>
+  </ul></details>
+  <li><code><a href="./DidYouMean/Correctable.html">Correctable</a></code>
+  <li><code><a href="./DidYouMean/Formatter.html">Formatter</a></code>
+  <li><code><a href="./DidYouMean/Jaro.html">Jaro</a></code>
+  <li><code><a href="./DidYouMean/JaroWinkler.html">JaroWinkler</a></code>
+  <li><code><a href="./DidYouMean/KeyErrorChecker.html">KeyErrorChecker</a></code>
+  <li><code><a href="./DidYouMean/MethodNameChecker.html">MethodNameChecker</a></code>
+  <li><code><a href="./DidYouMean/NameErrorCheckers.html">NameErrorCheckers</a></code>
+  <li><code><a href="./DidYouMean/NullChecker.html">NullChecker</a></code>
+  <li><code><a href="./DidYouMean/PatternKeyNameChecker.html">PatternKeyNameChecker</a></code>
+  <li><code><a href="./DidYouMean/Formatter.html">PlainFormatter</a></code>
+  <li><code><a href="./DidYouMean/RequirePathChecker.html">RequirePathChecker</a></code>
+  <li><code><a href="./DidYouMean/SpellChecker.html">SpellChecker</a></code>
+  <li><code><a href="./DidYouMean/TreeSpellChecker.html">TreeSpellChecker</a></code>
+  <li><code><a href="./DidYouMean/VariableNameChecker.html">VariableNameChecker</a></code>
+  <li><code><a href="./DidYouMean/Formatter.html">VerboseFormatter</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./Digest.html">Digest</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Digest/Base.html">Base</a></code>
+  <li><code><a href="./Digest/Class.html">Class</a></code>
+  <li><code><a href="./Digest/Instance.html">Instance</a></code>
+  <li><code><a href="./Digest/MD5.html">MD5</a></code>
+  <li><code><a href="./Digest/RMD160.html">RMD160</a></code>
+  <li><code><a href="./Digest/SHA1.html">SHA1</a></code>
+  <li><code><a href="./Digest/SHA2.html">SHA2</a></code>
+  </ul></details>
+  <li><code><a href="./Dir.html">Dir</a></code>
+  <li><code><a href="./ENV.html">ENV</a></code>
+  <li><code><a href="./EOFError.html">EOFError</a></code>
+  <li><details><summary><code><a href="./ERB.html">ERB</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./ERB/DefMethod.html">DefMethod</a></code>
+  <li><code><a href="./ERB/Escape.html">Escape</a></code>
+  <li><code><a href="./ERB/Util.html">Util</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./Encoding.html">Encoding</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Encoding/CompatibilityError.html">CompatibilityError</a></code>
+  <li><code><a href="./Encoding/Converter.html">Converter</a></code>
+  <li><code><a href="./Encoding/ConverterNotFoundError.html">ConverterNotFoundError</a></code>
+  <li><code><a href="./Encoding/InvalidByteSequenceError.html">InvalidByteSequenceError</a></code>
+  <li><code><a href="./Encoding/UndefinedConversionError.html">UndefinedConversionError</a></code>
+  </ul></details>
+  <li><code><a href="./EncodingError.html">EncodingError</a></code>
+  <li><code><a href="./English.html">English</a></code>
+  <li><code><a href="./Enumerable.html">Enumerable</a></code>
+  <li><details><summary><code><a href="./Enumerator.html">Enumerator</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Enumerator/ArithmeticSequence.html">ArithmeticSequence</a></code>
+  <li><code><a href="./Enumerator/Chain.html">Chain</a></code>
+  <li><code><a href="./Enumerator/Generator.html">Generator</a></code>
+  <li><code><a href="./Enumerator/Lazy.html">Lazy</a></code>
+  <li><code><a href="./Enumerator/Producer.html">Producer</a></code>
+  <li><code><a href="./Enumerator/Product.html">Product</a></code>
+  <li><code><a href="./Enumerator/Yielder.html">Yielder</a></code>
+  </ul></details>
+  <li><code><a href="./Errno.html">Errno</a></code>
+  <li><details><summary><code><a href="./ErrorHighlight.html">ErrorHighlight</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./ErrorHighlight/CoreExt.html">CoreExt</a></code>
+  <li><code><a href="./ErrorHighlight/DefaultFormatter.html">DefaultFormatter</a></code>
+  <li><details><summary><code><a href="./ErrorHighlight/Spotter.html">Spotter</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./ErrorHighlight/Spotter/NonAscii.html">NonAscii</a></code>
+  </ul></details>
+  </ul></details>
+  <li><details><summary><code><a href="./Etc.html">Etc</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Etc/Group.html">Group</a></code>
+  <li><code><a href="./Etc/Passwd.html">Passwd</a></code>
+  </ul></details>
+  <li><code><a href="./Exception.html">Exception</a></code>
+  <li><code><a href="./FalseClass.html">FalseClass</a></code>
+  <li><code><a href="./Fcntl.html">Fcntl</a></code>
+  <li><details><summary><code><a href="./Fiber.html">Fiber</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Fiber/Pool.html">Pool</a></code>
+  <li><code><a href="./Fiber/Scheduler.html">Scheduler</a></code>
+  </ul></details>
+  <li><code><a href="./FiberError.html">FiberError</a></code>
+  <li><details><summary><code><a href="./Fiddle.html">Fiddle</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Fiddle/BasicTypes.html">BasicTypes</a></code>
+  <li><code><a href="./Fiddle/CParser.html">CParser</a></code>
+  <li><code><a href="./Fiddle/CStruct.html">CStruct</a></code>
+  <li><code><a href="./Fiddle/CStructBuilder.html">CStructBuilder</a></code>
+  <li><code><a href="./Fiddle/CStructEntity.html">CStructEntity</a></code>
+  <li><code><a href="./Fiddle/CUnion.html">CUnion</a></code>
+  <li><code><a href="./Fiddle/CUnionEntity.html">CUnionEntity</a></code>
+  <li><code><a href="./Fiddle/ClearedReferenceError.html">ClearedReferenceError</a></code>
+  <li><details><summary><code><a href="./Fiddle/Closure.html">Closure</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Fiddle/Closure/BlockCaller.html">BlockCaller</a></code>
+  </ul></details>
+  <li><code><a href="./Fiddle/CompositeHandler.html">CompositeHandler</a></code>
+  <li><code><a href="./Fiddle/DLError.html">DLError</a></code>
+  <li><code><a href="./Fiddle/Error.html">Error</a></code>
+  <li><code><a href="./Fiddle/Function.html">Function</a></code>
+  <li><code><a href="./Fiddle/Handle.html">Handle</a></code>
+  <li><code><a href="./Fiddle/Importer.html">Importer</a></code>
+  <li><code><a href="./Fiddle/Pinned.html">Pinned</a></code>
+  <li><code><a href="./Fiddle/Pointer.html">Pointer</a></code>
+  <li><code><a href="./Fiddle/StructArray.html">StructArray</a></code>
+  <li><code><a href="./Fiddle/Types.html">Types</a></code>
+  <li><code><a href="./Fiddle/Win32Types.html">Win32Types</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./File.html">File</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./File/Constants.html">Constants</a></code>
+  <li><code><a href="./File/Stat.html">Stat</a></code>
+  </ul></details>
+  <li><code><a href="./FileTest.html">FileTest</a></code>
+  <li><details><summary><code><a href="./FileUtils.html">FileUtils</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./FileUtils/DryRun.html">DryRun</a></code>
+  <li><code><a href="./FileUtils/NoWrite.html">NoWrite</a></code>
+  <li><code><a href="./FileUtils/StreamUtils_.html">StreamUtils_</a></code>
+  <li><code><a href="./FileUtils/Verbose.html">Verbose</a></code>
+  </ul></details>
+  <li><code><a href="./Find.html">Find</a></code>
+  <li><code><a href="./Float.html">Float</a></code>
+  <li><code><a href="./FloatDomainError.html">FloatDomainError</a></code>
+  <li><code><a href="./Forwardable.html">Forwardable</a></code>
+  <li><code><a href="./FrozenError.html">FrozenError</a></code>
+  <li><details><summary><code><a href="./GC.html">GC</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./GC/Profiler.html">Profiler</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./Gem.html">Gem</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Gem/AvailableSet.html">AvailableSet</a></code>
+  <li><code><a href="./Gem/BasicSpecification.html">BasicSpecification</a></code>
+  <li><code><a href="./Gem/BundlerVersionFinder.html">BundlerVersionFinder</a></code>
+  <li><code><a href="./Gem/Command.html">Command</a></code>
+  <li><code><a href="./Gem/CommandLineError.html">CommandLineError</a></code>
+  <li><code><a href="./Gem/CommandManager.html">CommandManager</a></code>
+  <li><details><summary><code><a href="./Gem/Commands.html">Commands</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Gem/Commands/BuildCommand.html">BuildCommand</a></code>
+  <li><code><a href="./Gem/Commands/CertCommand.html">CertCommand</a></code>
+  <li><code><a href="./Gem/Commands/CheckCommand.html">CheckCommand</a></code>
+  <li><code><a href="./Gem/Commands/CleanupCommand.html">CleanupCommand</a></code>
+  <li><code><a href="./Gem/Commands/ContentsCommand.html">ContentsCommand</a></code>
+  <li><code><a href="./Gem/Commands/DependencyCommand.html">DependencyCommand</a></code>
+  <li><code><a href="./Gem/Commands/EnvironmentCommand.html">EnvironmentCommand</a></code>
+  <li><code><a href="./Gem/Commands/ExecCommand.html">ExecCommand</a></code>
+  <li><code><a href="./Gem/Commands/FetchCommand.html">FetchCommand</a></code>
+  <li><code><a href="./Gem/Commands/GenerateIndexCommand.html">GenerateIndexCommand</a></code>
+  <li><code><a href="./Gem/Commands/HelpCommand.html">HelpCommand</a></code>
+  <li><code><a href="./Gem/Commands/InfoCommand.html">InfoCommand</a></code>
+  <li><code><a href="./Gem/Commands/InstallCommand.html">InstallCommand</a></code>
+  <li><code><a href="./Gem/Commands/ListCommand.html">ListCommand</a></code>
+  <li><code><a href="./Gem/Commands/LockCommand.html">LockCommand</a></code>
+  <li><code><a href="./Gem/Commands/MirrorCommand.html">MirrorCommand</a></code>
+  <li><code><a href="./Gem/Commands/OpenCommand.html">OpenCommand</a></code>
+  <li><code><a href="./Gem/Commands/OutdatedCommand.html">OutdatedCommand</a></code>
+  <li><code><a href="./Gem/Commands/OwnerCommand.html">OwnerCommand</a></code>
+  <li><code><a href="./Gem/Commands/PristineCommand.html">PristineCommand</a></code>
+  <li><code><a href="./Gem/Commands/PushCommand.html">PushCommand</a></code>
+  <li><code><a href="./Gem/Commands/QueryCommand.html">QueryCommand</a></code>
+  <li><code><a href="./Gem/Commands/RdocCommand.html">RdocCommand</a></code>
+  <li><code><a href="./Gem/Commands/SearchCommand.html">SearchCommand</a></code>
+  <li><code><a href="./Gem/Commands/ServerCommand.html">ServerCommand</a></code>
+  <li><details><summary><code><a href="./Gem/Commands/SetupCommand.html">SetupCommand</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Gem/Commands/SetupCommand/MakeDirs.html">MakeDirs</a></code>
+  </ul></details>
+  <li><code><a href="./Gem/Commands/SigninCommand.html">SigninCommand</a></code>
+  <li><code><a href="./Gem/Commands/SignoutCommand.html">SignoutCommand</a></code>
+  <li><code><a href="./Gem/Commands/SourcesCommand.html">SourcesCommand</a></code>
+  <li><code><a href="./Gem/Commands/SpecificationCommand.html">SpecificationCommand</a></code>
+  <li><code><a href="./Gem/Commands/StaleCommand.html">StaleCommand</a></code>
+  <li><code><a href="./Gem/Commands/UninstallCommand.html">UninstallCommand</a></code>
+  <li><code><a href="./Gem/Commands/UnpackCommand.html">UnpackCommand</a></code>
+  <li><code><a href="./Gem/Commands/UpdateCommand.html">UpdateCommand</a></code>
+  <li><code><a href="./Gem/Commands/WhichCommand.html">WhichCommand</a></code>
+  <li><code><a href="./Gem/Commands/YankCommand.html">YankCommand</a></code>
+  </ul></details>
+  <li><code><a href="./Gem/ConfigFile.html">ConfigFile</a></code>
+  <li><code><a href="./Gem/ConflictError.html">ConflictError</a></code>
+  <li><code><a href="./Gem/ConsoleUI.html">ConsoleUI</a></code>
+  <li><code><a href="./Gem/DefaultUserInteraction.html">DefaultUserInteraction</a></code>
+  <li><code><a href="./Gem/Dependency.html">Dependency</a></code>
+  <li><code><a href="./Gem/DependencyError.html">DependencyError</a></code>
+  <li><code><a href="./Gem/DependencyInstaller.html">DependencyInstaller</a></code>
+  <li><code><a href="./Gem/DependencyList.html">DependencyList</a></code>
+  <li><code><a href="./Gem/DependencyRemovalException.html">DependencyRemovalException</a></code>
+  <li><code><a href="./Gem/DependencyResolutionError.html">DependencyResolutionError</a></code>
+  <li><code><a href="./Gem/Deprecate.html">Deprecate</a></code>
+  <li><code><a href="./Gem/Doctor.html">Doctor</a></code>
+  <li><code><a href="./Gem/DocumentError.html">DocumentError</a></code>
+  <li><code><a href="./Gem/EndOfYAMLException.html">EndOfYAMLException</a></code>
+  <li><code><a href="./Gem/ErrorReason.html">ErrorReason</a></code>
+  <li><code><a href="./Gem/Exception.html">Exception</a></code>
+  <li><details><summary><code><a href="./Gem/Ext.html">Ext</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Gem/Ext/BuildError.html">BuildError</a></code>
+  <li><code><a href="./Gem/Ext/Builder.html">Builder</a></code>
+  <li><details><summary><code><a href="./Gem/Ext/CargoBuilder.html">CargoBuilder</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Gem/Ext/CargoBuilder/DylibNotFoundError.html">DylibNotFoundError</a></code>
+  <li><code><a href="./Gem/Ext/CargoBuilder/LinkFlagConverter.html">LinkFlagConverter</a></code>
+  </ul></details>
+  <li><code><a href="./Gem/Ext/CmakeBuilder.html">CmakeBuilder</a></code>
+  <li><code><a href="./Gem/Ext/ConfigureBuilder.html">ConfigureBuilder</a></code>
+  <li><code><a href="./Gem/Ext/ExtConfBuilder.html">ExtConfBuilder</a></code>
+  <li><code><a href="./Gem/Ext/RakeBuilder.html">RakeBuilder</a></code>
+  </ul></details>
+  <li><code><a href="./Gem/FilePermissionError.html">FilePermissionError</a></code>
+  <li><code><a href="./Gem/FormatException.html">FormatException</a></code>
+  <li><code><a href="./Gem/GemNotFoundException.html">GemNotFoundException</a></code>
+  <li><code><a href="./Gem/GemNotInHomeException.html">GemNotInHomeException</a></code>
+  <li><code><a href="./Gem/GemRunner.html">GemRunner</a></code>
+  <li><code><a href="./Gem/GemcutterUtilities.html">GemcutterUtilities</a></code>
+  <li><code><a href="./Gem/ImpossibleDependenciesError.html">ImpossibleDependenciesError</a></code>
+  <li><code><a href="./Gem/Indexer.html">Indexer</a></code>
+  <li><code><a href="./Gem/InstallError.html">InstallError</a></code>
+  <li><code><a href="./Gem/InstallUpdateOptions.html">InstallUpdateOptions</a></code>
+  <li><details><summary><code><a href="./Gem/Installer.html">Installer</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Gem/Installer/FakePackage.html">FakePackage</a></code>
+  </ul></details>
+  <li><code><a href="./Gem/InstallerUninstallerUtils.html">InstallerUninstallerUtils</a></code>
+  <li><code><a href="./Gem/InvalidSpecificationException.html">InvalidSpecificationException</a></code>
+  <li><code><a href="./Gem/Licenses.html">Licenses</a></code>
+  <li><code><a href="./Gem/List.html">List</a></code>
+  <li><code><a href="./Gem/LoadError.html">LoadError</a></code>
+  <li><code><a href="./Gem/LocalRemoteOptions.html">LocalRemoteOptions</a></code>
+  <li><code><a href="./Gem/MissingSpecError.html">MissingSpecError</a></code>
+  <li><code><a href="./Gem/MissingSpecVersionError.html">MissingSpecVersionError</a></code>
+  <li><details><summary><code><a href="./Gem/MockGemUi.html">MockGemUi</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Gem/MockGemUi/InputEOFError.html">InputEOFError</a></code>
+  <li><code><a href="./Gem/MockGemUi/SystemExitException.html">SystemExitException</a></code>
+  <li><code><a href="./Gem/MockGemUi/TTY.html">TTY</a></code>
+  <li><code><a href="./Gem/MockGemUi/TermError.html">TermError</a></code>
+  </ul></details>
+  <li><code><a href="./Gem/NameTuple.html">NameTuple</a></code>
+  <li><code><a href="./Gem/NoAliasYAMLTree.html">NoAliasYAMLTree</a></code>
+  <li><code><a href="./Gem/OperationNotSupportedError.html">OperationNotSupportedError</a></code>
+  <li><details><summary><code><a href="./Gem/Package.html">Package</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Gem/Package/DigestIO.html">DigestIO</a></code>
+  <li><code><a href="./Gem/Package/Error.html">Error</a></code>
+  <li><code><a href="./Gem/Package/FormatError.html">FormatError</a></code>
+  <li><code><a href="./Gem/Package/NonSeekableIO.html">NonSeekableIO</a></code>
+  <li><code><a href="./Gem/Package/Old.html">Old</a></code>
+  <li><code><a href="./Gem/Package/PathError.html">PathError</a></code>
+  <li><code><a href="./Gem/Package/SymlinkError.html">SymlinkError</a></code>
+  <li><code><a href="./Gem/Package/TarHeader.html">TarHeader</a></code>
+  <li><code><a href="./Gem/Package/TarInvalidError.html">TarInvalidError</a></code>
+  <li><details><summary><code><a href="./Gem/Package/TarReader.html">TarReader</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Gem/Package/TarReader/Entry.html">Entry</a></code>
+  <li><code><a href="./Gem/Package/TarReader/UnexpectedEOF.html">UnexpectedEOF</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./Gem/Package/TarWriter.html">TarWriter</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Gem/Package/TarWriter/BoundedStream.html">BoundedStream</a></code>
+  <li><code><a href="./Gem/Package/TarWriter/FileOverflow.html">FileOverflow</a></code>
+  <li><code><a href="./Gem/Package/TarWriter/RestrictedStream.html">RestrictedStream</a></code>
+  </ul></details>
+  <li><code><a href="./Gem/Package/TooLongFileName.html">TooLongFileName</a></code>
+  </ul></details>
+  <li><code><a href="./Gem/PackageTask.html">PackageTask</a></code>
+  <li><code><a href="./Gem/PathSupport.html">PathSupport</a></code>
+  <li><code><a href="./Gem/Platform.html">Platform</a></code>
+  <li><code><a href="./Gem/PlatformMismatch.html">PlatformMismatch</a></code>
+  <li><code><a href="./Gem/QueryUtils.html">QueryUtils</a></code>
+  <li><code><a href="./Gem/RemoteError.html">RemoteError</a></code>
+  <li><details><summary><code><a href="./Gem/RemoteFetcher.html">RemoteFetcher</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Gem/RemoteFetcher/FetchError.html">FetchError</a></code>
+  <li><code><a href="./Gem/RemoteFetcher/UnknownHostError.html">UnknownHostError</a></code>
+  </ul></details>
+  <li><code><a href="./Gem/RemoteInstallationCancelled.html">RemoteInstallationCancelled</a></code>
+  <li><code><a href="./Gem/RemoteInstallationSkipped.html">RemoteInstallationSkipped</a></code>
+  <li><code><a href="./Gem/RemoteSourceException.html">RemoteSourceException</a></code>
+  <li><details><summary><code><a href="./Gem/RequestSet.html">RequestSet</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Gem/RequestSet/GemDependencyAPI.html">GemDependencyAPI</a></code>
+  <li><details><summary><code><a href="./Gem/RequestSet/Lockfile.html">Lockfile</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Gem/RequestSet/Lockfile/ParseError.html">ParseError</a></code>
+  <li><code><a href="./Gem/RequestSet/Lockfile/Parser.html">Parser</a></code>
+  <li><code><a href="./Gem/RequestSet/Lockfile/Tokenizer.html">Tokenizer</a></code>
+  </ul></details>
+  </ul></details>
+  <li><details><summary><code><a href="./Gem/Requirement.html">Requirement</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Gem/Requirement/BadRequirementError.html">BadRequirementError</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./Gem/Resolver.html">Resolver</a></code></summary>
+  <ul class="link-list">
+  <li><details><summary><code><a href="./Gem/Resolver/APISet.html">APISet</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Gem/Resolver/APISet/GemParser.html">GemParser</a></code>
+  </ul></details>
+  <li><code><a href="./Gem/Resolver/APISpecification.html">APISpecification</a></code>
+  <li><code><a href="./Gem/Resolver/ActivationRequest.html">ActivationRequest</a></code>
+  <li><code><a href="./Gem/Resolver/BestSet.html">BestSet</a></code>
+  <li><code><a href="./Gem/Resolver/ComposedSet.html">ComposedSet</a></code>
+  <li><code><a href="./Gem/Resolver/Conflict.html">Conflict</a></code>
+  <li><code><a href="./Gem/Resolver/CurrentSet.html">CurrentSet</a></code>
+  <li><code><a href="./Gem/Resolver/DependencyRequest.html">DependencyRequest</a></code>
+  <li><code><a href="./Gem/Resolver/GitSet.html">GitSet</a></code>
+  <li><code><a href="./Gem/Resolver/GitSpecification.html">GitSpecification</a></code>
+  <li><code><a href="./Gem/Resolver/IndexSet.html">IndexSet</a></code>
+  <li><code><a href="./Gem/Resolver/IndexSpecification.html">IndexSpecification</a></code>
+  <li><code><a href="./Gem/Resolver/InstalledSpecification.html">InstalledSpecification</a></code>
+  <li><code><a href="./Gem/Resolver/InstallerSet.html">InstallerSet</a></code>
+  <li><code><a href="./Gem/Resolver/LocalSpecification.html">LocalSpecification</a></code>
+  <li><code><a href="./Gem/Resolver/LockSet.html">LockSet</a></code>
+  <li><code><a href="./Gem/Resolver/LockSpecification.html">LockSpecification</a></code>
+  <li><details><summary><code><a href="./Gem/Resolver/Molinillo.html">Molinillo</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Gem/Resolver/Molinillo/CircularDependencyError.html">CircularDependencyError</a></code>
+  <li><details><summary><code><a href="./Gem/Resolver/Molinillo/Delegates.html">Delegates</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Gem/Resolver/Molinillo/Delegates/ResolutionState.html">ResolutionState</a></code>
+  <li><code><a href="./Gem/Resolver/Molinillo/Delegates/SpecificationProvider.html">SpecificationProvider</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./Gem/Resolver/Molinillo/DependencyGraph.html">DependencyGraph</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Gem/Resolver/Molinillo/DependencyGraph/Action.html">Action</a></code>
+  <li><code><a href="./Gem/Resolver/Molinillo/DependencyGraph/AddEdgeNoCircular.html">AddEdgeNoCircular</a></code>
+  <li><code><a href="./Gem/Resolver/Molinillo/DependencyGraph/DeleteEdge.html">DeleteEdge</a></code>
+  <li><code><a href="./Gem/Resolver/Molinillo/DependencyGraph/DetachVertexNamed.html">DetachVertexNamed</a></code>
+  <li><code><a href="./Gem/Resolver/Molinillo/DependencyGraph/Log.html">Log</a></code>
+  <li><code><a href="./Gem/Resolver/Molinillo/DependencyGraph/Tag.html">Tag</a></code>
+  <li><code><a href="./Gem/Resolver/Molinillo/DependencyGraph/Vertex.html">Vertex</a></code>
+  </ul></details>
+  <li><code><a href="./Gem/Resolver/Molinillo/DependencyState.html">DependencyState</a></code>
+  <li><code><a href="./Gem/Resolver/Molinillo/NoSuchDependencyError.html">NoSuchDependencyError</a></code>
+  <li><code><a href="./Gem/Resolver/Molinillo/PossibilityState.html">PossibilityState</a></code>
+  <li><code><a href="./Gem/Resolver/Molinillo/ResolutionState.html">ResolutionState</a></code>
+  <li><details><summary><code><a href="./Gem/Resolver/Molinillo/Resolver.html">Resolver</a></code></summary>
+  <ul class="link-list">
+  <li><details><summary><code><a href="./Gem/Resolver/Molinillo/Resolver/Resolution.html">Resolution</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Gem/Resolver/Molinillo/Resolver/Resolution/Conflict.html">Conflict</a></code>
+  <li><code><a href="./Gem/Resolver/Molinillo/Resolver/Resolution/PossibilitySet.html">PossibilitySet</a></code>
+  <li><code><a href="./Gem/Resolver/Molinillo/Resolver/Resolution/UnwindDetails.html">UnwindDetails</a></code>
+  </ul></details>
+  </ul></details>
+  <li><code><a href="./Gem/Resolver/Molinillo/ResolverError.html">ResolverError</a></code>
+  <li><code><a href="./Gem/Resolver/Molinillo/SpecificationProvider.html">SpecificationProvider</a></code>
+  <li><code><a href="./Gem/Resolver/Molinillo/UI.html">UI</a></code>
+  <li><code><a href="./Gem/Resolver/Molinillo/VersionConflict.html">VersionConflict</a></code>
+  </ul></details>
+  <li><code><a href="./Gem/Resolver/RequirementList.html">RequirementList</a></code>
+  <li><code><a href="./Gem/Resolver/Set.html">Set</a></code>
+  <li><code><a href="./Gem/Resolver/SourceSet.html">SourceSet</a></code>
+  <li><code><a href="./Gem/Resolver/SpecSpecification.html">SpecSpecification</a></code>
+  <li><code><a href="./Gem/Resolver/Specification.html">Specification</a></code>
+  <li><code><a href="./Gem/Resolver/Stats.html">Stats</a></code>
+  <li><code><a href="./Gem/Resolver/VendorSet.html">VendorSet</a></code>
+  <li><code><a href="./Gem/Resolver/VendorSpecification.html">VendorSpecification</a></code>
+  </ul></details>
+  <li><code><a href="./Gem/RubyVersionMismatch.html">RubyVersionMismatch</a></code>
+  <li><code><a href="./Gem/RuntimeRequirementNotMetError.html">RuntimeRequirementNotMetError</a></code>
+  <li><details><summary><code><a href="./Gem/S3URISigner.html">S3URISigner</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Gem/S3URISigner/ConfigurationError.html">ConfigurationError</a></code>
+  <li><code><a href="./Gem/S3URISigner/InstanceProfileError.html">InstanceProfileError</a></code>
+  </ul></details>
+  <li><code><a href="./Gem/SafeYAML.html">SafeYAML</a></code>
+  <li><details><summary><code><a href="./Gem/Security.html">Security</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Gem/Security/Exception.html">Exception</a></code>
+  <li><code><a href="./Gem/Security/Policy.html">Policy</a></code>
+  <li><code><a href="./Gem/Security/Signer.html">Signer</a></code>
+  <li><code><a href="./Gem/Security/TrustDir.html">TrustDir</a></code>
+  </ul></details>
+  <li><code><a href="./Gem/SecurityOption.html">SecurityOption</a></code>
+  <li><details><summary><code><a href="./Gem/SilentUI.html">SilentUI</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Gem/SilentUI/NullIO.html">NullIO</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./Gem/Source.html">Source</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Gem/Source/Git.html">Git</a></code>
+  <li><code><a href="./Gem/Source/Installed.html">Installed</a></code>
+  <li><code><a href="./Gem/Source/Local.html">Local</a></code>
+  <li><code><a href="./Gem/Source/Lock.html">Lock</a></code>
+  <li><code><a href="./Gem/Source/SpecificFile.html">SpecificFile</a></code>
+  <li><code><a href="./Gem/Source/Vendor.html">Vendor</a></code>
+  </ul></details>
+  <li><code><a href="./Gem/SourceFetchProblem.html">SourceFetchProblem</a></code>
+  <li><code><a href="./Gem/SourceList.html">SourceList</a></code>
+  <li><code><a href="./Gem/SpecFetcher.html">SpecFetcher</a></code>
+  <li><code><a href="./Gem/SpecificGemNotFoundException.html">SpecificGemNotFoundException</a></code>
+  <li><code><a href="./Gem/Specification.html">Specification</a></code>
+  <li><code><a href="./Gem/SpecificationPolicy.html">SpecificationPolicy</a></code>
+  <li><details><summary><code><a href="./Gem/StreamUI.html">StreamUI</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Gem/StreamUI/SilentDownloadReporter.html">SilentDownloadReporter</a></code>
+  <li><code><a href="./Gem/StreamUI/SilentProgressReporter.html">SilentProgressReporter</a></code>
+  <li><code><a href="./Gem/StreamUI/SimpleProgressReporter.html">SimpleProgressReporter</a></code>
+  <li><code><a href="./Gem/StreamUI/ThreadedDownloadReporter.html">ThreadedDownloadReporter</a></code>
+  <li><code><a href="./Gem/StreamUI/VerboseProgressReporter.html">VerboseProgressReporter</a></code>
+  </ul></details>
+  <li><code><a href="./Gem/StubSpecification.html">StubSpecification</a></code>
+  <li><code><a href="./Gem/SystemExitException.html">SystemExitException</a></code>
+  <li><code><a href="./Gem/Text.html">Text</a></code>
+  <li><code><a href="./Gem/UninstallError.html">UninstallError</a></code>
+  <li><code><a href="./Gem/Uninstaller.html">Uninstaller</a></code>
+  <li><code><a href="./Gem/UnknownCommandError.html">UnknownCommandError</a></code>
+  <li><code><a href="./Gem/UnknownCommandSpellChecker.html">UnknownCommandSpellChecker</a></code>
+  <li><code><a href="./Gem/UnsatisfiableDependencyError.html">UnsatisfiableDependencyError</a></code>
+  <li><code><a href="./Gem/UpdateSuggestion.html">UpdateSuggestion</a></code>
+  <li><code><a href="./Gem/Uri.html">Uri</a></code>
+  <li><code><a href="./Gem/UriFormatter.html">UriFormatter</a></code>
+  <li><code><a href="./Gem/UserInteraction.html">UserInteraction</a></code>
+  <li><code><a href="./Gem/Util.html">Util</a></code>
+  <li><code><a href="./Gem/Validator.html">Validator</a></code>
+  <li><code><a href="./Gem/VerificationError.html">VerificationError</a></code>
+  <li><code><a href="./Gem/Version.html">Version</a></code>
+  <li><code><a href="./Gem/VersionOption.html">VersionOption</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./GetoptLong.html">GetoptLong</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./GetoptLong/AmbiguousOption.html">AmbiguousOption</a></code>
+  <li><code><a href="./GetoptLong/Error.html">Error</a></code>
+  <li><code><a href="./GetoptLong/InvalidOption.html">InvalidOption</a></code>
+  <li><code><a href="./GetoptLong/MissingArgument.html">MissingArgument</a></code>
+  <li><code><a href="./GetoptLong/NeedlessArgument.html">NeedlessArgument</a></code>
+  </ul></details>
+  <li><code><a href="./Hash.html">Hash</a></code>
+  <li><details><summary><code><a href="./IO.html">IO</a></code></summary>
+  <ul class="link-list">
+  <li><details><summary><code><a href="./IO/Buffer.html">Buffer</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./IO/Buffer/AccessError.html">AccessError</a></code>
+  <li><code><a href="./IO/Buffer/AllocationError.html">AllocationError</a></code>
+  <li><code><a href="./IO/Buffer/InvalidatedError.html">InvalidatedError</a></code>
+  <li><code><a href="./IO/Buffer/LockedError.html">LockedError</a></code>
+  <li><code><a href="./IO/Buffer/MaskError.html">MaskError</a></code>
+  </ul></details>
+  <li><code><a href="./IO/EAGAINWaitReadable.html">EAGAINWaitReadable</a></code>
+  <li><code><a href="./IO/EAGAINWaitWritable.html">EAGAINWaitWritable</a></code>
+  <li><code><a href="./IO/EINPROGRESSWaitReadable.html">EINPROGRESSWaitReadable</a></code>
+  <li><code><a href="./IO/EINPROGRESSWaitWritable.html">EINPROGRESSWaitWritable</a></code>
+  <li><code><a href="./IO/EWOULDBLOCKWaitReadable.html">EWOULDBLOCKWaitReadable</a></code>
+  <li><code><a href="./IO/EWOULDBLOCKWaitWritable.html">EWOULDBLOCKWaitWritable</a></code>
+  <li><code><a href="./IO/TimeoutError.html">TimeoutError</a></code>
+  <li><code><a href="./IO/WaitReadable.html">WaitReadable</a></code>
+  <li><code><a href="./IO/WaitWritable.html">WaitWritable</a></code>
+  <li><code><a href="./IO/generic_readable.html">generic_readable</a></code>
+  <li><code><a href="./IO/generic_writable.html">generic_writable</a></code>
+  </ul></details>
+  <li><code><a href="./IOError.html">IOError</a></code>
+  <li><details><summary><code><a href="./IPAddr.html">IPAddr</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./IPAddr/AddressFamilyError.html">AddressFamilyError</a></code>
+  <li><code><a href="./IPAddr/Error.html">Error</a></code>
+  <li><code><a href="./IPAddr/InvalidAddressError.html">InvalidAddressError</a></code>
+  <li><code><a href="./IPAddr/InvalidPrefixError.html">InvalidPrefixError</a></code>
+  </ul></details>
+  <li><code><a href="./IPSocket.html">IPSocket</a></code>
+  <li><details><summary><code><a href="./IRB.html">IRB</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./IRB/Abort.html">Abort</a></code>
+  <li><code><a href="./IRB/Canvas.html">Canvas</a></code>
+  <li><details><summary><code><a href="./IRB/Color.html">Color</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./IRB/Color/SymbolState.html">SymbolState</a></code>
+  </ul></details>
+  <li><code><a href="./IRB/ColorPrinter.html">ColorPrinter</a></code>
+  <li><code><a href="./IRB/Context.html">Context</a></code>
+  <li><code><a href="./IRB/ContextExtender.html">ContextExtender</a></code>
+  <li><code><a href="./IRB/ExtendCommandBundle.html">ExtendCommandBundle</a></code>
+  <li><code><a href="./IRB/FileInputMethod.html">FileInputMethod</a></code>
+  <li><details><summary><code><a href="./IRB/Frame.html">Frame</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./IRB/Frame/FrameOverflow.html">FrameOverflow</a></code>
+  <li><code><a href="./IRB/Frame/FrameUnderflow.html">FrameUnderflow</a></code>
+  </ul></details>
+  <li><code><a href="./IRB/History.html">History</a></code>
+  <li><code><a href="./IRB/InputMethod.html">InputMethod</a></code>
+  <li><code><a href="./IRB/Inspector.html">Inspector</a></code>
+  <li><code><a href="./IRB/Irb.html">Irb</a></code>
+  <li><code><a href="./IRB/IrbLoader.html">IrbLoader</a></code>
+  <li><code><a href="./IRB/JobManager.html">JobManager</a></code>
+  <li><code><a href="./IRB/LoadAbort.html">LoadAbort</a></code>
+  <li><code><a href="./IRB/MagicFile.html">MagicFile</a></code>
+  <li><code><a href="./IRB/MethodExtender.html">MethodExtender</a></code>
+  <li><details><summary><code><a href="./IRB/Notifier.html">Notifier</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./IRB/Notifier/AbstractNotifier.html">AbstractNotifier</a></code>
+  <li><code><a href="./IRB/Notifier/CompositeNotifier.html">CompositeNotifier</a></code>
+  <li><code><a href="./IRB/Notifier/ErrUndefinedNotifier.html">ErrUndefinedNotifier</a></code>
+  <li><code><a href="./IRB/Notifier/ErrUnrecognizedLevel.html">ErrUnrecognizedLevel</a></code>
+  <li><code><a href="./IRB/Notifier/LeveledNotifier.html">LeveledNotifier</a></code>
+  <li><code><a href="./IRB/Notifier/NoMsgNotifier.html">NoMsgNotifier</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./IRB/OutputMethod.html">OutputMethod</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./IRB/OutputMethod/NotImplementedError.html">NotImplementedError</a></code>
+  </ul></details>
+  <li><code><a href="./IRB/ReadlineInputMethod.html">ReadlineInputMethod</a></code>
+  <li><code><a href="./IRB/ReidlineInputMethod.html">ReidlineInputMethod</a></code>
+  <li><code><a href="./IRB/RelineInputMethod.html">RelineInputMethod</a></code>
+  <li><code><a href="./IRB/RubyModel.html">RubyModel</a></code>
+  <li><code><a href="./IRB/StdioInputMethod.html">StdioInputMethod</a></code>
+  <li><code><a href="./IRB/StdioOutputMethod.html">StdioOutputMethod</a></code>
+  <li><code><a href="./IRB/Vec.html">Vec</a></code>
+  <li><code><a href="./IRB/WorkSpace.html">WorkSpace</a></code>
+  </ul></details>
+  <li><code><a href="./IndexError.html">IndexError</a></code>
+  <li><code><a href="./Integer.html">Integer</a></code>
+  <li><code><a href="./Interrupt.html">Interrupt</a></code>
+  <li><details><summary><code><a href="./JSON.html">JSON</a></code></summary>
+  <ul class="link-list">
+  <li><details><summary><code><a href="./JSON/Ext.html">Ext</a></code></summary>
+  <ul class="link-list">
+  <li><details><summary><code><a href="./JSON/Ext/Generator.html">Generator</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./JSON/Ext/Generator/State.html">State</a></code>
+  </ul></details>
+  <li><code><a href="./JSON/Ext/Parser.html">Parser</a></code>
+  </ul></details>
+  <li><code><a href="./JSON/GeneratorError.html">GeneratorError</a></code>
+  <li><code><a href="./JSON/GenericObject.html">GenericObject</a></code>
+  <li><code><a href="./JSON/JSONError.html">JSONError</a></code>
+  <li><code><a href="./JSON/MissingUnicodeSupport.html">MissingUnicodeSupport</a></code>
+  <li><code><a href="./JSON/NestingError.html">NestingError</a></code>
+  <li><code><a href="./JSON/ParserError.html">ParserError</a></code>
+  </ul></details>
+  <li><code><a href="./Jacobian.html">Jacobian</a></code>
+  <li><code><a href="./Kconv.html">Kconv</a></code>
+  <li><code><a href="./Kernel.html">Kernel</a></code>
+  <li><code><a href="./KeyError.html">KeyError</a></code>
+  <li><code><a href="./LUSolve.html">LUSolve</a></code>
+  <li><code><a href="./LoadError.html">LoadError</a></code>
+  <li><code><a href="./LocalJumpError.html">LocalJumpError</a></code>
+  <li><details><summary><code><a href="./Logger.html">Logger</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Logger/Formatter.html">Formatter</a></code>
+  <li><code><a href="./Logger/LogDevice.html">LogDevice</a></code>
+  <li><code><a href="./Logger/Period.html">Period</a></code>
+  <li><code><a href="./Logger/Severity.html">Severity</a></code>
+  </ul></details>
+  <li><code><a href="./MakeMakefile.html">MakeMakefile</a></code>
+  <li><code><a href="./Marshal.html">Marshal</a></code>
+  <li><code><a href="./MatchData.html">MatchData</a></code>
+  <li><details><summary><code><a href="./Math.html">Math</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Math/DomainError.html">DomainError</a></code>
+  </ul></details>
+  <li><code><a href="./Method.html">Method</a></code>
+  <li><code><a href="./Module.html">Module</a></code>
+  <li><code><a href="./Monitor.html">Monitor</a></code>
+  <li><details><summary><code><a href="./MonitorMixin.html">MonitorMixin</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./MonitorMixin/ConditionVariable.html">ConditionVariable</a></code>
+  </ul></details>
+  <li><code><a href="./Mutex_m.html">Mutex_m</a></code>
+  <li><code><a href="./NKF.html">NKF</a></code>
+  <li><code><a href="./NameError.html">NameError</a></code>
+  <li><details><summary><code><a href="./Net.html">Net</a></code></summary>
+  <ul class="link-list">
+  <li><details><summary><code><a href="./Net/HTTP.html">HTTP</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Net/HTTP/Copy.html">Copy</a></code>
+  <li><code><a href="./Net/HTTP/Delete.html">Delete</a></code>
+  <li><code><a href="./Net/HTTP/Get.html">Get</a></code>
+  <li><code><a href="./Net/HTTP/Head.html">Head</a></code>
+  <li><code><a href="./Net/HTTP/Lock.html">Lock</a></code>
+  <li><code><a href="./Net/HTTP/Mkcol.html">Mkcol</a></code>
+  <li><code><a href="./Net/HTTP/Move.html">Move</a></code>
+  <li><code><a href="./Net/HTTP/Options.html">Options</a></code>
+  <li><code><a href="./Net/HTTP/Patch.html">Patch</a></code>
+  <li><code><a href="./Net/HTTP/Post.html">Post</a></code>
+  <li><code><a href="./Net/HTTP/Propfind.html">Propfind</a></code>
+  <li><code><a href="./Net/HTTP/Proppatch.html">Proppatch</a></code>
+  <li><code><a href="./Net/HTTP/Put.html">Put</a></code>
+  <li><code><a href="./Net/HTTP/Trace.html">Trace</a></code>
+  <li><code><a href="./Net/HTTP/Unlock.html">Unlock</a></code>
+  </ul></details>
+  <li><code><a href="./Net/HTTPAccepted.html">HTTPAccepted</a></code>
+  <li><code><a href="./Net/HTTPAlreadyReported.html">HTTPAlreadyReported</a></code>
+  <li><code><a href="./Net/HTTPBadGateway.html">HTTPBadGateway</a></code>
+  <li><code><a href="./Net/HTTPBadRequest.html">HTTPBadRequest</a></code>
+  <li><code><a href="./Net/HTTPClientError.html">HTTPClientError</a></code>
+  <li><code><a href="./Net/HTTPClientException.html">HTTPClientException</a></code>
+  <li><code><a href="./Net/HTTPConflict.html">HTTPConflict</a></code>
+  <li><code><a href="./Net/HTTPContinue.html">HTTPContinue</a></code>
+  <li><code><a href="./Net/HTTPCreated.html">HTTPCreated</a></code>
+  <li><code><a href="./Net/HTTPEarlyHints.html">HTTPEarlyHints</a></code>
+  <li><code><a href="./Net/HTTPError.html">HTTPError</a></code>
+  <li><code><a href="./Net/HTTPExceptions.html">HTTPExceptions</a></code>
+  <li><code><a href="./Net/HTTPExpectationFailed.html">HTTPExpectationFailed</a></code>
+  <li><code><a href="./Net/HTTPFailedDependency.html">HTTPFailedDependency</a></code>
+  <li><code><a href="./Net/HTTPFatalError.html">HTTPFatalError</a></code>
+  <li><code><a href="./Net/HTTPForbidden.html">HTTPForbidden</a></code>
+  <li><code><a href="./Net/HTTPFound.html">HTTPFound</a></code>
+  <li><code><a href="./Net/HTTPGatewayTimeout.html">HTTPGatewayTimeOut</a></code>
+  <li><code><a href="./Net/HTTPGatewayTimeout.html">HTTPGatewayTimeout</a></code>
+  <li><code><a href="./Net/HTTPGenericRequest.html">HTTPGenericRequest</a></code>
+  <li><code><a href="./Net/HTTPGone.html">HTTPGone</a></code>
+  <li><code><a href="./Net/HTTPHeader.html">HTTPHeader</a></code>
+  <li><code><a href="./Net/HTTPIMUsed.html">HTTPIMUsed</a></code>
+  <li><code><a href="./Net/HTTPInformation.html">HTTPInformation</a></code>
+  <li><code><a href="./Net/HTTPInsufficientStorage.html">HTTPInsufficientStorage</a></code>
+  <li><code><a href="./Net/HTTPInternalServerError.html">HTTPInternalServerError</a></code>
+  <li><code><a href="./Net/HTTPLengthRequired.html">HTTPLengthRequired</a></code>
+  <li><code><a href="./Net/HTTPLocked.html">HTTPLocked</a></code>
+  <li><code><a href="./Net/HTTPLoopDetected.html">HTTPLoopDetected</a></code>
+  <li><code><a href="./Net/HTTPMethodNotAllowed.html">HTTPMethodNotAllowed</a></code>
+  <li><code><a href="./Net/HTTPMisdirectedRequest.html">HTTPMisdirectedRequest</a></code>
+  <li><code><a href="./Net/HTTPMovedPermanently.html">HTTPMovedPermanently</a></code>
+  <li><code><a href="./Net/HTTPFound.html">HTTPMovedTemporarily</a></code>
+  <li><code><a href="./Net/HTTPMultiStatus.html">HTTPMultiStatus</a></code>
+  <li><code><a href="./Net/HTTPMultipleChoices.html">HTTPMultipleChoice</a></code>
+  <li><code><a href="./Net/HTTPMultipleChoices.html">HTTPMultipleChoices</a></code>
+  <li><code><a href="./Net/HTTPNetworkAuthenticationRequired.html">HTTPNetworkAuthenticationRequired</a></code>
+  <li><code><a href="./Net/HTTPNoContent.html">HTTPNoContent</a></code>
+  <li><code><a href="./Net/HTTPNonAuthoritativeInformation.html">HTTPNonAuthoritativeInformation</a></code>
+  <li><code><a href="./Net/HTTPNotAcceptable.html">HTTPNotAcceptable</a></code>
+  <li><code><a href="./Net/HTTPNotExtended.html">HTTPNotExtended</a></code>
+  <li><code><a href="./Net/HTTPNotFound.html">HTTPNotFound</a></code>
+  <li><code><a href="./Net/HTTPNotImplemented.html">HTTPNotImplemented</a></code>
+  <li><code><a href="./Net/HTTPNotModified.html">HTTPNotModified</a></code>
+  <li><code><a href="./Net/HTTPOK.html">HTTPOK</a></code>
+  <li><code><a href="./Net/HTTPPartialContent.html">HTTPPartialContent</a></code>
+  <li><code><a href="./Net/HTTPPayloadTooLarge.html">HTTPPayloadTooLarge</a></code>
+  <li><code><a href="./Net/HTTPPaymentRequired.html">HTTPPaymentRequired</a></code>
+  <li><code><a href="./Net/HTTPPermanentRedirect.html">HTTPPermanentRedirect</a></code>
+  <li><code><a href="./Net/HTTPPreconditionFailed.html">HTTPPreconditionFailed</a></code>
+  <li><code><a href="./Net/HTTPPreconditionRequired.html">HTTPPreconditionRequired</a></code>
+  <li><code><a href="./Net/HTTPProcessing.html">HTTPProcessing</a></code>
+  <li><code><a href="./Net/HTTPProxyAuthenticationRequired.html">HTTPProxyAuthenticationRequired</a></code>
+  <li><code><a href="./Net/HTTPRangeNotSatisfiable.html">HTTPRangeNotSatisfiable</a></code>
+  <li><code><a href="./Net/HTTPRedirection.html">HTTPRedirection</a></code>
+  <li><code><a href="./Net/HTTPRequest.html">HTTPRequest</a></code>
+  <li><code><a href="./Net/HTTPPayloadTooLarge.html">HTTPRequestEntityTooLarge</a></code>
+  <li><code><a href="./Net/HTTPRequestHeaderFieldsTooLarge.html">HTTPRequestHeaderFieldsTooLarge</a></code>
+  <li><code><a href="./Net/HTTPRequestTimeout.html">HTTPRequestTimeOut</a></code>
+  <li><code><a href="./Net/HTTPRequestTimeout.html">HTTPRequestTimeout</a></code>
+  <li><code><a href="./Net/HTTPRequestURITooLong.html">HTTPRequestURITooLarge</a></code>
+  <li><code><a href="./Net/HTTPURITooLong.html">HTTPRequestURITooLong</a></code>
+  <li><code><a href="./Net/HTTPRangeNotSatisfiable.html">HTTPRequestedRangeNotSatisfiable</a></code>
+  <li><code><a href="./Net/HTTPResetContent.html">HTTPResetContent</a></code>
+  <li><code><a href="./Net/HTTPResponse.html">HTTPResponse</a></code>
+  <li><code><a href="./Net/HTTPRetriableError.html">HTTPRetriableError</a></code>
+  <li><code><a href="./Net/HTTPSeeOther.html">HTTPSeeOther</a></code>
+  <li><code><a href="./Net/HTTPServerError.html">HTTPServerError</a></code>
+  <li><code><a href="./Net/HTTPServiceUnavailable.html">HTTPServiceUnavailable</a></code>
+  <li><code><a href="./Net/HTTPSuccess.html">HTTPSuccess</a></code>
+  <li><code><a href="./Net/HTTPSwitchProtocol.html">HTTPSwitchProtocol</a></code>
+  <li><code><a href="./Net/HTTPTemporaryRedirect.html">HTTPTemporaryRedirect</a></code>
+  <li><code><a href="./Net/HTTPTooManyRequests.html">HTTPTooManyRequests</a></code>
+  <li><code><a href="./Net/HTTPURITooLong.html">HTTPURITooLong</a></code>
+  <li><code><a href="./Net/HTTPUnauthorized.html">HTTPUnauthorized</a></code>
+  <li><code><a href="./Net/HTTPUnavailableForLegalReasons.html">HTTPUnavailableForLegalReasons</a></code>
+  <li><code><a href="./Net/HTTPUnknownResponse.html">HTTPUnknownResponse</a></code>
+  <li><code><a href="./Net/HTTPUnprocessableEntity.html">HTTPUnprocessableEntity</a></code>
+  <li><code><a href="./Net/HTTPUnsupportedMediaType.html">HTTPUnsupportedMediaType</a></code>
+  <li><code><a href="./Net/HTTPUpgradeRequired.html">HTTPUpgradeRequired</a></code>
+  <li><code><a href="./Net/HTTPUseProxy.html">HTTPUseProxy</a></code>
+  <li><code><a href="./Net/HTTPVariantAlsoNegotiates.html">HTTPVariantAlsoNegotiates</a></code>
+  <li><code><a href="./Net/HTTPVersionNotSupported.html">HTTPVersionNotSupported</a></code>
+  <li><code><a href="./Net/OpenTimeout.html">OpenTimeout</a></code>
+  <li><code><a href="./Net/ProtoAuthError.html">ProtoAuthError</a></code>
+  <li><code><a href="./Net/ProtoCommandError.html">ProtoCommandError</a></code>
+  <li><code><a href="./Net/ProtoFatalError.html">ProtoFatalError</a></code>
+  <li><code><a href="./Net/ProtoRetriableError.html">ProtoRetriableError</a></code>
+  <li><code><a href="./Net/ProtoServerError.html">ProtoServerError</a></code>
+  <li><code><a href="./Net/ProtoSyntaxError.html">ProtoSyntaxError</a></code>
+  <li><code><a href="./Net/ProtoUnknownError.html">ProtoUnknownError</a></code>
+  <li><code><a href="./Net/ProtocRetryError.html">ProtocRetryError</a></code>
+  <li><code><a href="./Net/ProtocolError.html">ProtocolError</a></code>
+  <li><code><a href="./Net/ReadTimeout.html">ReadTimeout</a></code>
+  <li><code><a href="./Net/WriteAdapter.html">WriteAdapter</a></code>
+  <li><code><a href="./Net/WriteTimeout.html">WriteTimeout</a></code>
+  </ul></details>
+  <li><code><a href="./Newton.html">Newton</a></code>
+  <li><code><a href="./NilClass.html">NilClass</a></code>
+  <li><code><a href="./NoMatchingPatternError.html">NoMatchingPatternError</a></code>
+  <li><code><a href="./NoMatchingPatternKeyError.html">NoMatchingPatternKeyError</a></code>
+  <li><code><a href="./NoMemoryError.html">NoMemoryError</a></code>
+  <li><code><a href="./NoMethodError.html">NoMethodError</a></code>
+  <li><code><a href="./NotImplementedError.html">NotImplementedError</a></code>
+  <li><code><a href="./Numeric.html">Numeric</a></code>
+  <li><code><a href="./OLEProperty.html">OLEProperty</a></code>
+  <li><code><a href="./Object.html">Object</a></code>
+  <li><details><summary><code><a href="./ObjectSpace.html">ObjectSpace</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./ObjectSpace/InternalObjectWrapper.html">InternalObjectWrapper</a></code>
+  <li><code><a href="./ObjectSpace/WeakMap.html">WeakMap</a></code>
+  </ul></details>
+  <li><code><a href="./Observable.html">Observable</a></code>
+  <li><code><a href="./Open3.html">Open3</a></code>
+  <li><details><summary><code><a href="./OpenSSL.html">OpenSSL</a></code></summary>
+  <ul class="link-list">
+  <li><details><summary><code><a href="./OpenSSL/ASN1.html">ASN1</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./OpenSSL/ASN1/ASN1Data.html">ASN1Data</a></code>
+  <li><code><a href="./OpenSSL/ASN1/ASN1Error.html">ASN1Error</a></code>
+  <li><code><a href="./OpenSSL/ASN1/Constructive.html">Constructive</a></code>
+  <li><code><a href="./OpenSSL/ASN1/ObjectId.html">ObjectId</a></code>
+  <li><code><a href="./OpenSSL/ASN1/Primitive.html">Primitive</a></code>
+  </ul></details>
+  <li><code><a href="./OpenSSL/BN.html">BN</a></code>
+  <li><code><a href="./OpenSSL/BNError.html">BNError</a></code>
+  <li><details><summary><code><a href="./OpenSSL/Buffering.html">Buffering</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./OpenSSL/Buffering/Buffer.html">Buffer</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./OpenSSL/Cipher.html">Cipher</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./OpenSSL/Cipher/Cipher.html">Cipher</a></code>
+  <li><code><a href="./OpenSSL/Cipher/CipherError.html">CipherError</a></code>
+  </ul></details>
+  <li><code><a href="./OpenSSL/Config.html">Config</a></code>
+  <li><code><a href="./OpenSSL/ConfigError.html">ConfigError</a></code>
+  <li><details><summary><code><a href="./OpenSSL/Digest.html">Digest</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./OpenSSL/Digest/DigestError.html">DigestError</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./OpenSSL/Engine.html">Engine</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./OpenSSL/Engine/EngineError.html">EngineError</a></code>
+  </ul></details>
+  <li><code><a href="./OpenSSL/HMAC.html">HMAC</a></code>
+  <li><code><a href="./OpenSSL/HMACError.html">HMACError</a></code>
+  <li><details><summary><code><a href="./OpenSSL/KDF.html">KDF</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./OpenSSL/KDF/KDFError.html">KDFError</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./OpenSSL/Marshal.html">Marshal</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./OpenSSL/Marshal/ClassMethods.html">ClassMethods</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./OpenSSL/Netscape.html">Netscape</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./OpenSSL/Netscape/SPKI.html">SPKI</a></code>
+  <li><code><a href="./OpenSSL/Netscape/SPKIError.html">SPKIError</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./OpenSSL/OCSP.html">OCSP</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./OpenSSL/OCSP/BasicResponse.html">BasicResponse</a></code>
+  <li><code><a href="./OpenSSL/OCSP/CertificateId.html">CertificateId</a></code>
+  <li><code><a href="./OpenSSL/OCSP/OCSPError.html">OCSPError</a></code>
+  <li><code><a href="./OpenSSL/OCSP/Request.html">Request</a></code>
+  <li><code><a href="./OpenSSL/OCSP/Response.html">Response</a></code>
+  <li><code><a href="./OpenSSL/OCSP/SingleResponse.html">SingleResponse</a></code>
+  </ul></details>
+  <li><code><a href="./OpenSSL/OpenSSLError.html">OpenSSLError</a></code>
+  <li><details><summary><code><a href="./OpenSSL/PKCS12.html">PKCS12</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./OpenSSL/PKCS12/PKCS12Error.html">PKCS12Error</a></code>
+  </ul></details>
+  <li><code><a href="./OpenSSL/PKCS5.html">PKCS5</a></code>
+  <li><details><summary><code><a href="./OpenSSL/PKCS7.html">PKCS7</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./OpenSSL/PKCS7/PKCS7Error.html">PKCS7Error</a></code>
+  <li><code><a href="./OpenSSL/PKCS7/RecipientInfo.html">RecipientInfo</a></code>
+  <li><code><a href="./OpenSSL/PKCS7/SignerInfo.html">SignerInfo</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./OpenSSL/PKey.html">PKey</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./OpenSSL/PKey/DH.html">DH</a></code>
+  <li><code><a href="./OpenSSL/PKey/DHError.html">DHError</a></code>
+  <li><code><a href="./OpenSSL/PKey/DSA.html">DSA</a></code>
+  <li><code><a href="./OpenSSL/PKey/DSAError.html">DSAError</a></code>
+  <li><details><summary><code><a href="./OpenSSL/PKey/EC.html">EC</a></code></summary>
+  <ul class="link-list">
+  <li><details><summary><code><a href="./OpenSSL/PKey/EC/Group.html">Group</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./OpenSSL/PKey/EC/Group/Error.html">Error</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./OpenSSL/PKey/EC/Point.html">Point</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./OpenSSL/PKey/EC/Point/Error.html">Error</a></code>
+  </ul></details>
+  </ul></details>
+  <li><code><a href="./OpenSSL/PKey/ECError.html">ECError</a></code>
+  <li><code><a href="./OpenSSL/PKey/PKey.html">PKey</a></code>
+  <li><code><a href="./OpenSSL/PKey/PKeyError.html">PKeyError</a></code>
+  <li><code><a href="./OpenSSL/PKey/RSA.html">RSA</a></code>
+  <li><code><a href="./OpenSSL/PKey/RSAError.html">RSAError</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./OpenSSL/Random.html">Random</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./OpenSSL/Random/RandomError.html">RandomError</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./OpenSSL/SSL.html">SSL</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./OpenSSL/SSL/SSLContext.html">SSLContext</a></code>
+  <li><code><a href="./OpenSSL/SSL/SSLError.html">SSLError</a></code>
+  <li><code><a href="./OpenSSL/SSL/SSLErrorWaitReadable.html">SSLErrorWaitReadable</a></code>
+  <li><code><a href="./OpenSSL/SSL/SSLErrorWaitWritable.html">SSLErrorWaitWritable</a></code>
+  <li><code><a href="./OpenSSL/SSL/SSLServer.html">SSLServer</a></code>
+  <li><code><a href="./OpenSSL/SSL/SSLSocket.html">SSLSocket</a></code>
+  <li><details><summary><code><a href="./OpenSSL/SSL/Session.html">Session</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./OpenSSL/SSL/Session/SessionError.html">SessionError</a></code>
+  </ul></details>
+  <li><code><a href="./OpenSSL/SSL/SocketForwarder.html">SocketForwarder</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./OpenSSL/Timestamp.html">Timestamp</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./OpenSSL/Timestamp/Factory.html">Factory</a></code>
+  <li><code><a href="./OpenSSL/Timestamp/Request.html">Request</a></code>
+  <li><code><a href="./OpenSSL/Timestamp/Response.html">Response</a></code>
+  <li><code><a href="./OpenSSL/Timestamp/TimestampError.html">TimestampError</a></code>
+  <li><code><a href="./OpenSSL/Timestamp/TokenInfo.html">TokenInfo</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./OpenSSL/X509.html">X509</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./OpenSSL/X509/Attribute.html">Attribute</a></code>
+  <li><code><a href="./OpenSSL/X509/AttributeError.html">AttributeError</a></code>
+  <li><code><a href="./OpenSSL/X509/CRL.html">CRL</a></code>
+  <li><code><a href="./OpenSSL/X509/CRLError.html">CRLError</a></code>
+  <li><code><a href="./OpenSSL/X509/Certificate.html">Certificate</a></code>
+  <li><code><a href="./OpenSSL/X509/CertificateError.html">CertificateError</a></code>
+  <li><details><summary><code><a href="./OpenSSL/X509/Extension.html">Extension</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./OpenSSL/X509/Extension/AuthorityInfoAccess.html">AuthorityInfoAccess</a></code>
+  <li><code><a href="./OpenSSL/X509/Extension/AuthorityKeyIdentifier.html">AuthorityKeyIdentifier</a></code>
+  <li><code><a href="./OpenSSL/X509/Extension/CRLDistributionPoints.html">CRLDistributionPoints</a></code>
+  <li><code><a href="./OpenSSL/X509/Extension/Helpers.html">Helpers</a></code>
+  <li><code><a href="./OpenSSL/X509/Extension/SubjectKeyIdentifier.html">SubjectKeyIdentifier</a></code>
+  </ul></details>
+  <li><code><a href="./OpenSSL/X509/ExtensionError.html">ExtensionError</a></code>
+  <li><code><a href="./OpenSSL/X509/ExtensionFactory.html">ExtensionFactory</a></code>
+  <li><details><summary><code><a href="./OpenSSL/X509/Name.html">Name</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./OpenSSL/X509/Name/RFC2253DN.html">RFC2253DN</a></code>
+  </ul></details>
+  <li><code><a href="./OpenSSL/X509/NameError.html">NameError</a></code>
+  <li><code><a href="./OpenSSL/X509/Request.html">Request</a></code>
+  <li><code><a href="./OpenSSL/X509/RequestError.html">RequestError</a></code>
+  <li><code><a href="./OpenSSL/X509/Revoked.html">Revoked</a></code>
+  <li><code><a href="./OpenSSL/X509/RevokedError.html">RevokedError</a></code>
+  <li><code><a href="./OpenSSL/X509/Store.html">Store</a></code>
+  <li><code><a href="./OpenSSL/X509/StoreContext.html">StoreContext</a></code>
+  <li><code><a href="./OpenSSL/X509/StoreError.html">StoreError</a></code>
+  </ul></details>
+  </ul></details>
+  <li><code><a href="./OpenStruct.html">OpenStruct</a></code>
+  <li><details><summary><code><a href="./OpenURI.html">OpenURI</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./OpenURI/HTTPError.html">HTTPError</a></code>
+  <li><code><a href="./OpenURI/HTTPRedirect.html">HTTPRedirect</a></code>
+  <li><code><a href="./OpenURI/Meta.html">Meta</a></code>
+  <li><code><a href="./OpenURI/OpenRead.html">OpenRead</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./OptionParser.html">OptionParser</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./OptionParser/AC.html">AC</a></code>
+  <li><code><a href="./OptionParser/Acceptables.html">Acceptables</a></code>
+  <li><code><a href="./OptionParser/AmbiguousArgument.html">AmbiguousArgument</a></code>
+  <li><code><a href="./OptionParser/AmbiguousOption.html">AmbiguousOption</a></code>
+  <li><code><a href="./OptionParser/Arguable.html">Arguable</a></code>
+  <li><code><a href="./OptionParser/CompletingHash.html">CompletingHash</a></code>
+  <li><code><a href="./OptionParser/Completion.html">Completion</a></code>
+  <li><code><a href="./OptionParser/InvalidArgument.html">InvalidArgument</a></code>
+  <li><code><a href="./OptionParser/InvalidOption.html">InvalidOption</a></code>
+  <li><code><a href="./OptionParser/List.html">List</a></code>
+  <li><code><a href="./OptionParser/MissingArgument.html">MissingArgument</a></code>
+  <li><code><a href="./OptionParser/NeedlessArgument.html">NeedlessArgument</a></code>
+  <li><code><a href="./OptionParser/OptionMap.html">OptionMap</a></code>
+  <li><code><a href="./OptionParser/ParseError.html">ParseError</a></code>
+  <li><details><summary><code><a href="./OptionParser/Switch.html">Switch</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./OptionParser/Switch/NoArgument.html">NoArgument</a></code>
+  <li><code><a href="./OptionParser/Switch/OptionalArgument.html">OptionalArgument</a></code>
+  <li><code><a href="./OptionParser/Switch/PlacedArgument.html">PlacedArgument</a></code>
+  <li><code><a href="./OptionParser/Switch/RequiredArgument.html">RequiredArgument</a></code>
+  </ul></details>
+  </ul></details>
+  <li><details><summary><code><a href="./PP.html">PP</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./PP/PPMethods.html">PPMethods</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./PStore.html">PStore</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./PStore/Error.html">Error</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./PTY.html">PTY</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./PTY/ChildExited.html">ChildExited</a></code>
+  </ul></details>
+  <li><code><a href="./Pathname.html">Pathname</a></code>
+  <li><details><summary><code><a href="./PrettyPrint.html">PrettyPrint</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./PrettyPrint/SingleLine.html">SingleLine</a></code>
+  </ul></details>
+  <li><code><a href="./Proc.html">Proc</a></code>
+  <li><details><summary><code><a href="./Process.html">Process</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Process/GID.html">GID</a></code>
+  <li><code><a href="./Process/Status.html">Status</a></code>
+  <li><code><a href="./Process/Sys.html">Sys</a></code>
+  <li><code><a href="./Process/Tms.html">Tms</a></code>
+  <li><code><a href="./Process/UID.html">UID</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./Psych.html">Psych</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Psych/AliasesNotEnabled.html">AliasesNotEnabled</a></code>
+  <li><code><a href="./Psych/AnchorNotDefined.html">AnchorNotDefined</a></code>
+  <li><code><a href="./Psych/BadAlias.html">BadAlias</a></code>
+  <li><details><summary><code><a href="./Psych/ClassLoader.html">ClassLoader</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Psych/ClassLoader/Restricted.html">Restricted</a></code>
+  </ul></details>
+  <li><code><a href="./Psych/Coder.html">Coder</a></code>
+  <li><code><a href="./Psych/DisallowedClass.html">DisallowedClass</a></code>
+  <li><code><a href="./Psych/Emitter.html">Emitter</a></code>
+  <li><code><a href="./Psych/Exception.html">Exception</a></code>
+  <li><details><summary><code><a href="./Psych/Handler.html">Handler</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Psych/Handler/DumperOptions.html">DumperOptions</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./Psych/Handlers.html">Handlers</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Psych/Handlers/Recorder.html">Recorder</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./Psych/JSON.html">JSON</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Psych/JSON/Stream.html">Stream</a></code>
+  <li><code><a href="./Psych/JSON/TreeBuilder.html">TreeBuilder</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./Psych/Nodes.html">Nodes</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Psych/Nodes/Alias.html">Alias</a></code>
+  <li><code><a href="./Psych/Nodes/Document.html">Document</a></code>
+  <li><code><a href="./Psych/Nodes/Mapping.html">Mapping</a></code>
+  <li><code><a href="./Psych/Nodes/Node.html">Node</a></code>
+  <li><code><a href="./Psych/Nodes/Scalar.html">Scalar</a></code>
+  <li><code><a href="./Psych/Nodes/Sequence.html">Sequence</a></code>
+  <li><code><a href="./Psych/Nodes/Stream.html">Stream</a></code>
+  </ul></details>
+  <li><code><a href="./Psych/Omap.html">Omap</a></code>
+  <li><details><summary><code><a href="./Psych/Parser.html">Parser</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Psych/Parser/Mark.html">Mark</a></code>
+  </ul></details>
+  <li><code><a href="./Psych/ScalarScanner.html">ScalarScanner</a></code>
+  <li><code><a href="./Psych/Set.html">Set</a></code>
+  <li><code><a href="./Psych/Stream.html">Stream</a></code>
+  <li><details><summary><code><a href="./Psych/Streaming.html">Streaming</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Psych/Streaming/ClassMethods.html">ClassMethods</a></code>
+  </ul></details>
+  <li><code><a href="./Psych/SyntaxError.html">SyntaxError</a></code>
+  <li><code><a href="./Psych/TreeBuilder.html">TreeBuilder</a></code>
+  <li><details><summary><code><a href="./Psych/Visitors.html">Visitors</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Psych/Visitors/DepthFirst.html">DepthFirst</a></code>
+  <li><code><a href="./Psych/Visitors/Emitter.html">Emitter</a></code>
+  <li><code><a href="./Psych/Visitors/JSONTree.html">JSONTree</a></code>
+  <li><code><a href="./Psych/Visitors/NoAliasRuby.html">NoAliasRuby</a></code>
+  <li><code><a href="./Psych/Visitors/RestrictedYAMLTree.html">RestrictedYAMLTree</a></code>
+  <li><code><a href="./Psych/Visitors/ToRuby.html">ToRuby</a></code>
+  <li><code><a href="./Psych/Visitors/Visitor.html">Visitor</a></code>
+  <li><code><a href="./Psych/Visitors/YAMLTree.html">YAMLTree</a></code>
+  </ul></details>
+  </ul></details>
+  <li><details><summary><code><a href="./RDoc.html">RDoc</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./RDoc/Alias.html">Alias</a></code>
+  <li><code><a href="./RDoc/AnonClass.html">AnonClass</a></code>
+  <li><code><a href="./RDoc/AnyMethod.html">AnyMethod</a></code>
+  <li><code><a href="./RDoc/Attr.html">Attr</a></code>
+  <li><code><a href="./RDoc/ClassModule.html">ClassModule</a></code>
+  <li><code><a href="./RDoc/CodeObject.html">CodeObject</a></code>
+  <li><code><a href="./RDoc/Comment.html">Comment</a></code>
+  <li><code><a href="./RDoc/Constant.html">Constant</a></code>
+  <li><code><a href="./RDoc/Context.html">Context</a></code>
+  <li><code><a href="./RDoc/CrossReference.html">CrossReference</a></code>
+  <li><code><a href="./RDoc/ERBIO.html">ERBIO</a></code>
+  <li><code><a href="./RDoc/ERBPartial.html">ERBPartial</a></code>
+  <li><code><a href="./RDoc/Encoding.html">Encoding</a></code>
+  <li><code><a href="./RDoc/Error.html">Error</a></code>
+  <li><code><a href="./RDoc/Extend.html">Extend</a></code>
+  <li><code><a href="./RDoc/Generator.html">Generator</a></code>
+  <li><code><a href="./RDoc/GhostMethod.html">GhostMethod</a></code>
+  <li><code><a href="./RDoc/I18n.html">I18n</a></code>
+  <li><code><a href="./RDoc/Include.html">Include</a></code>
+  <li><code><a href="./RDoc/Markdown.html">Markdown</a></code>
+  <li><code><a href="./RDoc/Markup.html">Markup</a></code>
+  <li><details><summary><code><a href="./RDoc/MarkupReference.html">MarkupReference</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./RDoc/MarkupReference/DummyClass.html">DummyClass</a></code>
+  <li><code><a href="./RDoc/MarkupReference/DummyModule.html">DummyModule</a></code>
+  </ul></details>
+  <li><code><a href="./RDoc/MetaMethod.html">MetaMethod</a></code>
+  <li><code><a href="./RDoc/MethodAttr.html">MethodAttr</a></code>
+  <li><code><a href="./RDoc/Mixin.html">Mixin</a></code>
+  <li><code><a href="./RDoc/NormalClass.html">NormalClass</a></code>
+  <li><code><a href="./RDoc/NormalModule.html">NormalModule</a></code>
+  <li><code><a href="./RDoc/Options.html">Options</a></code>
+  <li><details><summary><code><a href="./RDoc/Parser.html">Parser</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./RDoc/Parser/C.html">C</a></code>
+  <li><details><summary><code><a href="./RDoc/Parser/ChangeLog.html">ChangeLog</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./RDoc/Parser/ChangeLog/Git.html">Git</a></code>
+  </ul></details>
+  <li><code><a href="./RDoc/Parser/Markdown.html">Markdown</a></code>
+  <li><code><a href="./RDoc/Parser/RD.html">RD</a></code>
+  <li><details><summary><code><a href="./RDoc/Parser/RipperStateLex.html">RipperStateLex</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./RDoc/Parser/RipperStateLex/InnerStateLex.html">InnerStateLex</a></code>
+  </ul></details>
+  <li><code><a href="./RDoc/Parser/Ruby.html">Ruby</a></code>
+  <li><code><a href="./RDoc/Parser/RubyTools.html">RubyTools</a></code>
+  <li><code><a href="./RDoc/Parser/Simple.html">Simple</a></code>
+  <li><code><a href="./RDoc/Parser/Text.html">Text</a></code>
+  </ul></details>
+  <li><code><a href="./RDoc/RD.html">RD</a></code>
+  <li><code><a href="./RDoc/RDoc.html">RDoc</a></code>
+  <li><details><summary><code><a href="./RDoc/RI.html">RI</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./RDoc/RI/Error.html">Error</a></code>
+  </ul></details>
+  <li><code><a href="./RDoc/Require.html">Require</a></code>
+  <li><code><a href="./RDoc/RubygemsHook.html">RDoc</a></code>
+  <li><code><a href="./RDoc/Servlet.html">Servlet</a></code>
+  <li><code><a href="./RDoc/SingleClass.html">SingleClass</a></code>
+  <li><code><a href="./RDoc/Stats.html">Stats</a></code>
+  <li><details><summary><code><a href="./RDoc/Store.html">Store</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./RDoc/Store/Error.html">Error</a></code>
+  <li><code><a href="./RDoc/Store/MissingFileError.html">MissingFileError</a></code>
+  </ul></details>
+  <li><code><a href="./RDoc/Task.html">Task</a></code>
+  <li><code><a href="./RDoc/Text.html">Text</a></code>
+  <li><code><a href="./RDoc/TokenStream.html">TokenStream</a></code>
+  <li><code><a href="./RDoc/TomDoc.html">TomDoc</a></code>
+  <li><code><a href="./RDoc/TopLevel.html">TopLevel</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./RDoc.html">RDoc</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./RDoc/Alias.html">Alias</a></code>
+  <li><code><a href="./RDoc/AnonClass.html">AnonClass</a></code>
+  <li><code><a href="./RDoc/AnyMethod.html">AnyMethod</a></code>
+  <li><code><a href="./RDoc/Attr.html">Attr</a></code>
+  <li><code><a href="./RDoc/ClassModule.html">ClassModule</a></code>
+  <li><code><a href="./RDoc/CodeObject.html">CodeObject</a></code>
+  <li><code><a href="./RDoc/Comment.html">Comment</a></code>
+  <li><code><a href="./RDoc/Constant.html">Constant</a></code>
+  <li><code><a href="./RDoc/Context.html">Context</a></code>
+  <li><code><a href="./RDoc/CrossReference.html">CrossReference</a></code>
+  <li><code><a href="./RDoc/ERBIO.html">ERBIO</a></code>
+  <li><code><a href="./RDoc/ERBPartial.html">ERBPartial</a></code>
+  <li><code><a href="./RDoc/Encoding.html">Encoding</a></code>
+  <li><code><a href="./RDoc/Error.html">Error</a></code>
+  <li><code><a href="./RDoc/Extend.html">Extend</a></code>
+  <li><code><a href="./RDoc/Generator.html">Generator</a></code>
+  <li><code><a href="./RDoc/GhostMethod.html">GhostMethod</a></code>
+  <li><code><a href="./RDoc/I18n.html">I18n</a></code>
+  <li><code><a href="./RDoc/Include.html">Include</a></code>
+  <li><code><a href="./RDoc/Markdown.html">Markdown</a></code>
+  <li><code><a href="./RDoc/Markup.html">Markup</a></code>
+  <li><details><summary><code><a href="./RDoc/MarkupReference.html">MarkupReference</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./RDoc/MarkupReference/DummyClass.html">DummyClass</a></code>
+  <li><code><a href="./RDoc/MarkupReference/DummyModule.html">DummyModule</a></code>
+  </ul></details>
+  <li><code><a href="./RDoc/MetaMethod.html">MetaMethod</a></code>
+  <li><code><a href="./RDoc/MethodAttr.html">MethodAttr</a></code>
+  <li><code><a href="./RDoc/Mixin.html">Mixin</a></code>
+  <li><code><a href="./RDoc/NormalClass.html">NormalClass</a></code>
+  <li><code><a href="./RDoc/NormalModule.html">NormalModule</a></code>
+  <li><code><a href="./RDoc/Options.html">Options</a></code>
+  <li><details><summary><code><a href="./RDoc/Parser.html">Parser</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./RDoc/Parser/C.html">C</a></code>
+  <li><details><summary><code><a href="./RDoc/Parser/ChangeLog.html">ChangeLog</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./RDoc/Parser/ChangeLog/Git.html">Git</a></code>
+  </ul></details>
+  <li><code><a href="./RDoc/Parser/Markdown.html">Markdown</a></code>
+  <li><code><a href="./RDoc/Parser/RD.html">RD</a></code>
+  <li><details><summary><code><a href="./RDoc/Parser/RipperStateLex.html">RipperStateLex</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./RDoc/Parser/RipperStateLex/InnerStateLex.html">InnerStateLex</a></code>
+  </ul></details>
+  <li><code><a href="./RDoc/Parser/Ruby.html">Ruby</a></code>
+  <li><code><a href="./RDoc/Parser/RubyTools.html">RubyTools</a></code>
+  <li><code><a href="./RDoc/Parser/Simple.html">Simple</a></code>
+  <li><code><a href="./RDoc/Parser/Text.html">Text</a></code>
+  </ul></details>
+  <li><code><a href="./RDoc/RD.html">RD</a></code>
+  <li><code><a href="./RDoc/RDoc.html">RDoc</a></code>
+  <li><details><summary><code><a href="./RDoc/RI.html">RI</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./RDoc/RI/Error.html">Error</a></code>
+  </ul></details>
+  <li><code><a href="./RDoc/Require.html">Require</a></code>
+  <li><code><a href="./RDoc/RubygemsHook.html">RDoc</a></code>
+  <li><code><a href="./RDoc/Servlet.html">Servlet</a></code>
+  <li><code><a href="./RDoc/SingleClass.html">SingleClass</a></code>
+  <li><code><a href="./RDoc/Stats.html">Stats</a></code>
+  <li><details><summary><code><a href="./RDoc/Store.html">Store</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./RDoc/Store/Error.html">Error</a></code>
+  <li><code><a href="./RDoc/Store/MissingFileError.html">MissingFileError</a></code>
+  </ul></details>
+  <li><code><a href="./RDoc/Task.html">Task</a></code>
+  <li><code><a href="./RDoc/Text.html">Text</a></code>
+  <li><code><a href="./RDoc/TokenStream.html">TokenStream</a></code>
+  <li><code><a href="./RDoc/TomDoc.html">TomDoc</a></code>
+  <li><code><a href="./RDoc/TopLevel.html">TopLevel</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./Racc.html">Racc</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Racc/Accept.html">Accept</a></code>
+  <li><code><a href="./Racc/ActionTable.html">ActionTable</a></code>
+  <li><code><a href="./Racc/CompileError.html">CompileError</a></code>
+  <li><code><a href="./Racc/CparseParams.html">CparseParams</a></code>
+  <li><code><a href="./Racc/DebugFlags.html">DebugFlags</a></code>
+  <li><code><a href="./Racc/Error.html">Error</a></code>
+  <li><code><a href="./Racc/Goto.html">Goto</a></code>
+  <li><details><summary><code><a href="./Racc/Grammar.html">Grammar</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Racc/Grammar/DefinitionEnv.html">DefinitionEnv</a></code>
+  <li><code><a href="./Racc/Grammar/PrecedenceDefinitionEnv.html">PrecedenceDefinitionEnv</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./Racc/GrammarFileParser.html">GrammarFileParser</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Racc/GrammarFileParser/Result.html">Result</a></code>
+  </ul></details>
+  <li><code><a href="./Racc/GrammarFileScanner.html">GrammarFileScanner</a></code>
+  <li><code><a href="./Racc/ISet.html">ISet</a></code>
+  <li><code><a href="./Racc/Item.html">Item</a></code>
+  <li><code><a href="./Racc/LocationPointer.html">LocationPointer</a></code>
+  <li><code><a href="./Racc/LogFileGenerator.html">LogFileGenerator</a></code>
+  <li><code><a href="./Racc/OrMark.html">OrMark</a></code>
+  <li><code><a href="./Racc/ParseError.html">ParseError</a></code>
+  <li><code><a href="./Racc/Parser.html">Parser</a></code>
+  <li><code><a href="./Racc/ParserClassGenerator.html">ParserClassGenerator</a></code>
+  <li><details><summary><code><a href="./Racc/ParserFileGenerator.html">ParserFileGenerator</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Racc/ParserFileGenerator/Params.html">Params</a></code>
+  </ul></details>
+  <li><code><a href="./Racc/Prec.html">Prec</a></code>
+  <li><code><a href="./Racc/RRconflict.html">RRconflict</a></code>
+  <li><code><a href="./Racc/Reduce.html">Reduce</a></code>
+  <li><code><a href="./Racc/Rule.html">Rule</a></code>
+  <li><code><a href="./Racc/SRconflict.html">SRconflict</a></code>
+  <li><code><a href="./Racc/Shift.html">Shift</a></code>
+  <li><code><a href="./Racc/SourceText.html">SourceText</a></code>
+  <li><code><a href="./Racc/State.html">State</a></code>
+  <li><code><a href="./Racc/StateTransitionTable.html">StateTransitionTable</a></code>
+  <li><code><a href="./Racc/StateTransitionTableGenerator.html">StateTransitionTableGenerator</a></code>
+  <li><code><a href="./Racc/States.html">States</a></code>
+  <li><code><a href="./Racc/Sym.html">Sym</a></code>
+  <li><code><a href="./Racc/SymbolTable.html">SymbolTable</a></code>
+  <li><code><a href="./Racc/UserAction.html">UserAction</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./Ractor.html">Ractor</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Ractor/ClosedError.html">ClosedError</a></code>
+  <li><code><a href="./Ractor/Error.html">Error</a></code>
+  <li><code><a href="./Ractor/IsolationError.html">IsolationError</a></code>
+  <li><code><a href="./Ractor/MovedError.html">MovedError</a></code>
+  <li><code><a href="./Ractor/MovedObject.html">MovedObject</a></code>
+  <li><code><a href="./Ractor/RemoteError.html">RemoteError</a></code>
+  <li><code><a href="./Ractor/UnsafeError.html">UnsafeError</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./Random.html">Random</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Random/Formatter.html">Formatter</a></code>
+  </ul></details>
+  <li><code><a href="./Range.html">Range</a></code>
+  <li><code><a href="./RangeError.html">RangeError</a></code>
+  <li><code><a href="./Rational.html">Rational</a></code>
+  <li><code><a href="./Readline.html">Readline</a></code>
+  <li><code><a href="./Refinement.html">Refinement</a></code>
+  <li><details><summary><code><a href="./Regexp.html">Regexp</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Regexp/TimeoutError.html">TimeoutError</a></code>
+  </ul></details>
+  <li><code><a href="./RegexpError.html">RegexpError</a></code>
+  <li><details><summary><code><a href="./Reline.html">Reline</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Reline/ANSI.html">ANSI</a></code>
+  <li><details><summary><code><a href="./Reline/Config.html">Config</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Reline/Config/InvalidInputrc.html">InvalidInputrc</a></code>
+  </ul></details>
+  <li><code><a href="./Reline/ConfigEncodingConversionError.html">ConfigEncodingConversionError</a></code>
+  <li><code><a href="./Reline/Core.html">Core</a></code>
+  <li><code><a href="./Reline/GeneralIO.html">GeneralIO</a></code>
+  <li><code><a href="./Reline/History.html">History</a></code>
+  <li><details><summary><code><a href="./Reline/KeyActor.html">KeyActor</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Reline/KeyActor/Base.html">Base</a></code>
+  <li><code><a href="./Reline/KeyActor/Emacs.html">Emacs</a></code>
+  <li><code><a href="./Reline/KeyActor/ViCommand.html">ViCommand</a></code>
+  <li><code><a href="./Reline/KeyActor/ViInsert.html">ViInsert</a></code>
+  </ul></details>
+  <li><code><a href="./Reline/KeyStroke.html">KeyStroke</a></code>
+  <li><details><summary><code><a href="./Reline/KillRing.html">KillRing</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Reline/KillRing/RingBuffer.html">RingBuffer</a></code>
+  <li><code><a href="./Reline/KillRing/State.html">State</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./Reline/LineEditor.html">LineEditor</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Reline/LineEditor/CompletionState.html">CompletionState</a></code>
+  <li><code><a href="./Reline/LineEditor/Dialog.html">Dialog</a></code>
+  <li><code><a href="./Reline/LineEditor/DialogProcScope.html">DialogProcScope</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./Reline/Terminfo.html">Terminfo</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Reline/Terminfo/StringWithTiparm.html">StringWithTiparm</a></code>
+  <li><code><a href="./Reline/Terminfo/TerminfoError.html">TerminfoError</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./Reline/Unicode.html">Unicode</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Reline/Unicode/EastAsianWidth.html">EastAsianWidth</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./Reline/Windows.html">Windows</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Reline/Windows/KeyEventRecord.html">KeyEventRecord</a></code>
+  <li><code><a href="./Reline/Windows/Win32API.html">Win32API</a></code>
+  </ul></details>
+  </ul></details>
+  <li><details><summary><code><a href="./Resolv.html">Resolv</a></code></summary>
+  <ul class="link-list">
+  <li><details><summary><code><a href="./Resolv/DNS.html">DNS</a></code></summary>
+  <ul class="link-list">
+  <li><details><summary><code><a href="./Resolv/DNS/Config.html">Config</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Resolv/DNS/Config/NXDomain.html">NXDomain</a></code>
+  <li><code><a href="./Resolv/DNS/Config/OtherResolvError.html">OtherResolvError</a></code>
+  </ul></details>
+  <li><code><a href="./Resolv/DNS/DecodeError.html">DecodeError</a></code>
+  <li><code><a href="./Resolv/DNS/EncodeError.html">EncodeError</a></code>
+  <li><code><a href="./Resolv/DNS/Name.html">Name</a></code>
+  <li><code><a href="./Resolv/DNS/Query.html">Query</a></code>
+  <li><details><summary><code><a href="./Resolv/DNS/Requester.html">Requester</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Resolv/DNS/Requester/RequestError.html">RequestError</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./Resolv/DNS/Resource.html">Resource</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Resolv/DNS/Resource/ANY.html">ANY</a></code>
+  <li><code><a href="./Resolv/DNS/Resource/CNAME.html">CNAME</a></code>
+  <li><code><a href="./Resolv/DNS/Resource/DomainName.html">DomainName</a></code>
+  <li><code><a href="./Resolv/DNS/Resource/Generic.html">Generic</a></code>
+  <li><code><a href="./Resolv/DNS/Resource/HINFO.html">HINFO</a></code>
+  <li><details><summary><code><a href="./Resolv/DNS/Resource/IN.html">IN</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Resolv/DNS/Resource/IN/A.html">A</a></code>
+  <li><code><a href="./Resolv/DNS/Resource/IN/AAAA.html">AAAA</a></code>
+  <li><code><a href="./Resolv/DNS/Resource/IN/SRV.html">SRV</a></code>
+  <li><code><a href="./Resolv/DNS/Resource/IN/WKS.html">WKS</a></code>
+  </ul></details>
+  <li><code><a href="./Resolv/DNS/Resource/LOC.html">LOC</a></code>
+  <li><code><a href="./Resolv/DNS/Resource/MINFO.html">MINFO</a></code>
+  <li><code><a href="./Resolv/DNS/Resource/MX.html">MX</a></code>
+  <li><code><a href="./Resolv/DNS/Resource/NS.html">NS</a></code>
+  <li><code><a href="./Resolv/DNS/Resource/PTR.html">PTR</a></code>
+  <li><code><a href="./Resolv/DNS/Resource/SOA.html">SOA</a></code>
+  <li><code><a href="./Resolv/DNS/Resource/TXT.html">TXT</a></code>
+  </ul></details>
+  </ul></details>
+  <li><code><a href="./Resolv/Hosts.html">Hosts</a></code>
+  <li><code><a href="./Resolv/IPv4.html">IPv4</a></code>
+  <li><code><a href="./Resolv/IPv6.html">IPv6</a></code>
+  <li><details><summary><code><a href="./Resolv/LOC.html">LOC</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Resolv/LOC/Alt.html">Alt</a></code>
+  <li><code><a href="./Resolv/LOC/Coord.html">Coord</a></code>
+  <li><code><a href="./Resolv/LOC/Size.html">Size</a></code>
+  </ul></details>
+  <li><code><a href="./Resolv/MDNS.html">MDNS</a></code>
+  <li><code><a href="./Resolv/ResolvError.html">ResolvError</a></code>
+  <li><code><a href="./Resolv/ResolvTimeout.html">ResolvTimeout</a></code>
+  <li><code><a href="./Resolv/SZ.html">SZ</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./Resolv.html">Resolv</a></code></summary>
+  <ul class="link-list">
+  <li><details><summary><code><a href="./Resolv/DNS.html">DNS</a></code></summary>
+  <ul class="link-list">
+  <li><details><summary><code><a href="./Resolv/DNS/Config.html">Config</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Resolv/DNS/Config/NXDomain.html">NXDomain</a></code>
+  <li><code><a href="./Resolv/DNS/Config/OtherResolvError.html">OtherResolvError</a></code>
+  </ul></details>
+  <li><code><a href="./Resolv/DNS/DecodeError.html">DecodeError</a></code>
+  <li><code><a href="./Resolv/DNS/EncodeError.html">EncodeError</a></code>
+  <li><code><a href="./Resolv/DNS/Name.html">Name</a></code>
+  <li><code><a href="./Resolv/DNS/Query.html">Query</a></code>
+  <li><details><summary><code><a href="./Resolv/DNS/Requester.html">Requester</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Resolv/DNS/Requester/RequestError.html">RequestError</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./Resolv/DNS/Resource.html">Resource</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Resolv/DNS/Resource/ANY.html">ANY</a></code>
+  <li><code><a href="./Resolv/DNS/Resource/CNAME.html">CNAME</a></code>
+  <li><code><a href="./Resolv/DNS/Resource/DomainName.html">DomainName</a></code>
+  <li><code><a href="./Resolv/DNS/Resource/Generic.html">Generic</a></code>
+  <li><code><a href="./Resolv/DNS/Resource/HINFO.html">HINFO</a></code>
+  <li><details><summary><code><a href="./Resolv/DNS/Resource/IN.html">IN</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Resolv/DNS/Resource/IN/A.html">A</a></code>
+  <li><code><a href="./Resolv/DNS/Resource/IN/AAAA.html">AAAA</a></code>
+  <li><code><a href="./Resolv/DNS/Resource/IN/SRV.html">SRV</a></code>
+  <li><code><a href="./Resolv/DNS/Resource/IN/WKS.html">WKS</a></code>
+  </ul></details>
+  <li><code><a href="./Resolv/DNS/Resource/LOC.html">LOC</a></code>
+  <li><code><a href="./Resolv/DNS/Resource/MINFO.html">MINFO</a></code>
+  <li><code><a href="./Resolv/DNS/Resource/MX.html">MX</a></code>
+  <li><code><a href="./Resolv/DNS/Resource/NS.html">NS</a></code>
+  <li><code><a href="./Resolv/DNS/Resource/PTR.html">PTR</a></code>
+  <li><code><a href="./Resolv/DNS/Resource/SOA.html">SOA</a></code>
+  <li><code><a href="./Resolv/DNS/Resource/TXT.html">TXT</a></code>
+  </ul></details>
+  </ul></details>
+  <li><code><a href="./Resolv/Hosts.html">Hosts</a></code>
+  <li><code><a href="./Resolv/IPv4.html">IPv4</a></code>
+  <li><code><a href="./Resolv/IPv6.html">IPv6</a></code>
+  <li><details><summary><code><a href="./Resolv/LOC.html">LOC</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Resolv/LOC/Alt.html">Alt</a></code>
+  <li><code><a href="./Resolv/LOC/Coord.html">Coord</a></code>
+  <li><code><a href="./Resolv/LOC/Size.html">Size</a></code>
+  </ul></details>
+  <li><code><a href="./Resolv/MDNS.html">MDNS</a></code>
+  <li><code><a href="./Resolv/ResolvError.html">ResolvError</a></code>
+  <li><code><a href="./Resolv/ResolvTimeout.html">ResolvTimeout</a></code>
+  <li><code><a href="./Resolv/SZ.html">SZ</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./Rinda.html">Rinda</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Rinda/DRbObjectTemplate.html">DRbObjectTemplate</a></code>
+  <li><code><a href="./Rinda/InvalidHashTupleKey.html">InvalidHashTupleKey</a></code>
+  <li><code><a href="./Rinda/NotifyTemplateEntry.html">NotifyTemplateEntry</a></code>
+  <li><code><a href="./Rinda/RequestCanceledError.html">RequestCanceledError</a></code>
+  <li><code><a href="./Rinda/RequestExpiredError.html">RequestExpiredError</a></code>
+  <li><code><a href="./Rinda/RindaError.html">RindaError</a></code>
+  <li><code><a href="./Rinda/RingFinger.html">RingFinger</a></code>
+  <li><code><a href="./Rinda/RingProvider.html">RingProvider</a></code>
+  <li><code><a href="./Rinda/RingServer.html">RingServer</a></code>
+  <li><code><a href="./Rinda/SimpleRenewer.html">SimpleRenewer</a></code>
+  <li><code><a href="./Rinda/Template.html">Template</a></code>
+  <li><code><a href="./Rinda/TemplateEntry.html">TemplateEntry</a></code>
+  <li><code><a href="./Rinda/Tuple.html">Tuple</a></code>
+  <li><details><summary><code><a href="./Rinda/TupleBag.html">TupleBag</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Rinda/TupleBag/TupleBin.html">TupleBin</a></code>
+  </ul></details>
+  <li><code><a href="./Rinda/TupleEntry.html">TupleEntry</a></code>
+  <li><code><a href="./Rinda/TupleSpace.html">TupleSpace</a></code>
+  <li><code><a href="./Rinda/TupleSpaceProxy.html">TupleSpaceProxy</a></code>
+  <li><code><a href="./Rinda/WaitTemplateEntry.html">WaitTemplateEntry</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./Ripper.html">Ripper</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Ripper/Filter.html">Filter</a></code>
+  <li><details><summary><code><a href="./Ripper/Lexer.html">Lexer</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Ripper/Lexer/Elem.html">Elem</a></code>
+  <li><code><a href="./Ripper/Lexer/State.html">State</a></code>
+  </ul></details>
+  </ul></details>
+  <li><details><summary><code><a href="./RubyVM.html">RubyVM</a></code></summary>
+  <ul class="link-list">
+  <li><details><summary><code><a href="./RubyVM/AbstractSyntaxTree.html">AbstractSyntaxTree</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./RubyVM/AbstractSyntaxTree/Node.html">Node</a></code>
+  </ul></details>
+  <li><code><a href="./RubyVM/InstructionSequence.html">InstructionSequence</a></code>
+  <li><code><a href="./RubyVM/MJIT.html">MJIT</a></code>
+  <li><code><a href="./RubyVM/Shape.html">Shape</a></code>
+  <li><code><a href="./RubyVM/YJIT.html">YJIT</a></code>
+  </ul></details>
+  <li><code><a href="./RuntimeError.html">RuntimeError</a></code>
+  <li><code><a href="./SOCKSSocket.html">SOCKSSocket</a></code>
+  <li><code><a href="./ScriptError.html">ScriptError</a></code>
+  <li><code><a href="./SecureRandom.html">SecureRandom</a></code>
+  <li><code><a href="./SecurityError.html">SecurityError</a></code>
+  <li><code><a href="./Set.html">Set</a></code>
+  <li><code><a href="./Shellwords.html">Shellwords</a></code>
+  <li><code><a href="./Signal.html">Signal</a></code>
+  <li><code><a href="./SignalException.html">SignalException</a></code>
+  <li><code><a href="./SimpleDelegator.html">SimpleDelegator</a></code>
+  <li><code><a href="./SingleForwardable.html">SingleForwardable</a></code>
+  <li><code><a href="./Singleton.html">Singleton</a></code>
+  <li><details><summary><code><a href="./Socket.html">Socket</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Socket/AncillaryData.html">AncillaryData</a></code>
+  <li><code><a href="./Socket/Constants.html">Constants</a></code>
+  <li><code><a href="./Socket/Ifaddr.html">Ifaddr</a></code>
+  <li><code><a href="./Socket/Option.html">Option</a></code>
+  <li><code><a href="./Socket/UDPSource.html">UDPSource</a></code>
+  </ul></details>
+  <li><code><a href="./SocketError.html">SocketError</a></code>
+  <li><code><a href="./StandardError.html">StandardError</a></code>
+  <li><code><a href="./StopIteration.html">StopIteration</a></code>
+  <li><code><a href="./String.html">String</a></code>
+  <li><code><a href="./StringIO.html">StringIO</a></code>
+  <li><details><summary><code><a href="./StringScanner.html">StringScanner</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./StringScanner/Error.html">Error</a></code>
+  </ul></details>
+  <li><code><a href="./Struct.html">Struct</a></code>
+  <li><code><a href="./Symbol.html">Symbol</a></code>
+  <li><code><a href="./SyntaxError.html">SyntaxError</a></code>
+  <li><details><summary><code><a href="./SyntaxSuggest.html">SyntaxSuggest</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./SyntaxSuggest/AroundBlockScan.html">AroundBlockScan</a></code>
+  <li><code><a href="./SyntaxSuggest/BlockExpand.html">BlockExpand</a></code>
+  <li><code><a href="./SyntaxSuggest/CaptureCodeContext.html">CaptureCodeContext</a></code>
+  <li><code><a href="./SyntaxSuggest/CleanDocument.html">CleanDocument</a></code>
+  <li><code><a href="./SyntaxSuggest/Cli.html">Cli</a></code>
+  <li><code><a href="./SyntaxSuggest/CodeBlock.html">CodeBlock</a></code>
+  <li><code><a href="./SyntaxSuggest/CodeFrontier.html">CodeFrontier</a></code>
+  <li><code><a href="./SyntaxSuggest/CodeLine.html">CodeLine</a></code>
+  <li><code><a href="./SyntaxSuggest/CodeSearch.html">CodeSearch</a></code>
+  <li><code><a href="./SyntaxSuggest/DisplayCodeWithLineNumbers.html">DisplayCodeWithLineNumbers</a></code>
+  <li><code><a href="./SyntaxSuggest/DisplayInvalidBlocks.html">DisplayInvalidBlocks</a></code>
+  <li><code><a href="./SyntaxSuggest/Error.html">Error</a></code>
+  <li><code><a href="./SyntaxSuggest/ExplainSyntax.html">ExplainSyntax</a></code>
+  <li><code><a href="./SyntaxSuggest/LeftRightLexCount.html">LeftRightLexCount</a></code>
+  <li><code><a href="./SyntaxSuggest/LexAll.html">LexAll</a></code>
+  <li><code><a href="./SyntaxSuggest/LexValue.html">LexValue</a></code>
+  <li><code><a href="./SyntaxSuggest/MiniStringIO.html">MiniStringIO</a></code>
+  <li><code><a href="./SyntaxSuggest/ParseBlocksFromIndentLine.html">ParseBlocksFromIndentLine</a></code>
+  <li><code><a href="./SyntaxSuggest/PathnameFromMessage.html">PathnameFromMessage</a></code>
+  <li><code><a href="./SyntaxSuggest/PriorityEngulfQueue.html">PriorityEngulfQueue</a></code>
+  <li><code><a href="./SyntaxSuggest/PriorityQueue.html">PriorityQueue</a></code>
+  <li><code><a href="./SyntaxSuggest/RipperErrors.html">RipperErrors</a></code>
+  <li><code><a href="./SyntaxSuggest/UnvisitedLines.html">UnvisitedLines</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./Syslog.html">Syslog</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Syslog/Constants.html">Constants</a></code>
+  <li><code><a href="./Syslog/Facility.html">Facility</a></code>
+  <li><code><a href="./Syslog/Level.html">Level</a></code>
+  <li><details><summary><code><a href="./Syslog/Logger.html">Logger</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Syslog/Logger/Formatter.html">Formatter</a></code>
+  </ul></details>
+  <li><code><a href="./Syslog/Macros.html">Macros</a></code>
+  <li><code><a href="./Syslog/Option.html">Option</a></code>
+  </ul></details>
+  <li><code><a href="./SystemCallError.html">SystemCallError</a></code>
+  <li><code><a href="./SystemExit.html">SystemExit</a></code>
+  <li><code><a href="./SystemStackError.html">SystemStackError</a></code>
+  <li><code><a href="./TCPServer.html">TCPServer</a></code>
+  <li><code><a href="./TCPSocket.html">TCPSocket</a></code>
+  <li><details><summary><code><a href="./TSort.html">TSort</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./TSort/Cyclic.html">Cyclic</a></code>
+  </ul></details>
+  <li><code><a href="./Tempfile.html">Tempfile</a></code>
+  <li><details><summary><code><a href="./Thread.html">Thread</a></code></summary>
+  <ul class="link-list">
+  <li><details><summary><code><a href="./Thread/Backtrace.html">Backtrace</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Thread/Backtrace/Location.html">Location</a></code>
+  </ul></details>
+  <li><code><a href="./Thread/ConditionVariable.html">ConditionVariable</a></code>
+  <li><code><a href="./Thread/Mutex.html">Mutex</a></code>
+  <li><code><a href="./Thread/Queue.html">Queue</a></code>
+  <li><code><a href="./Thread/SizedQueue.html">SizedQueue</a></code>
+  </ul></details>
+  <li><code><a href="./ThreadError.html">ThreadError</a></code>
+  <li><code><a href="./ThreadGroup.html">ThreadGroup</a></code>
+  <li><code><a href="./Time.html">Time</a></code>
+  <li><details><summary><code><a href="./Timeout.html">Timeout</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Timeout/Error.html">Error</a></code>
+  </ul></details>
+  <li><code><a href="./TracePoint.html">TracePoint</a></code>
+  <li><code><a href="./TrueClass.html">TrueClass</a></code>
+  <li><code><a href="./TypeError.html">TypeError</a></code>
+  <li><code><a href="./UDPSocket.html">UDPSocket</a></code>
+  <li><code><a href="./UNIXServer.html">UNIXServer</a></code>
+  <li><code><a href="./UNIXSocket.html">UNIXSocket</a></code>
+  <li><details><summary><code><a href="./URI.html">URI</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./URI/BadURIError.html">BadURIError</a></code>
+  <li><code><a href="./URI/Error.html">Error</a></code>
+  <li><code><a href="./URI/FTP.html">FTP</a></code>
+  <li><code><a href="./URI/File.html">File</a></code>
+  <li><code><a href="./URI/Generic.html">Generic</a></code>
+  <li><code><a href="./URI/HTTP.html">HTTP</a></code>
+  <li><code><a href="./URI/HTTPS.html">HTTPS</a></code>
+  <li><code><a href="./URI/InvalidComponentError.html">InvalidComponentError</a></code>
+  <li><code><a href="./URI/InvalidURIError.html">InvalidURIError</a></code>
+  <li><code><a href="./URI/LDAP.html">LDAP</a></code>
+  <li><code><a href="./URI/LDAPS.html">LDAPS</a></code>
+  <li><code><a href="./URI/MailTo.html">MailTo</a></code>
+  <li><code><a href="./URI/RFC2396_Parser.html">Parser</a></code>
+  <li><code><a href="./URI/RFC2396_REGEXP.html">REGEXP</a></code>
+  <li><code><a href="./URI/RFC2396_Parser.html">RFC2396_Parser</a></code>
+  <li><details><summary><code><a href="./URI/RFC2396_REGEXP.html">RFC2396_REGEXP</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./URI/RFC2396_REGEXP/PATTERN.html">PATTERN</a></code>
+  </ul></details>
+  <li><code><a href="./URI/Schemes.html">Schemes</a></code>
+  <li><code><a href="./URI/WS.html">WS</a></code>
+  <li><code><a href="./URI/WSS.html">WSS</a></code>
+  </ul></details>
+  <li><code><a href="./UnboundMethod.html">UnboundMethod</a></code>
+  <li><code><a href="./UncaughtThrowError.html">UncaughtThrowError</a></code>
+  <li><details><summary><code><a href="./WIN32OLE.html">WIN32OLE</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./WIN32OLE/Event.html">Event</a></code>
+  <li><code><a href="./WIN32OLE/Method.html">Method</a></code>
+  <li><code><a href="./WIN32OLE/Param.html">Param</a></code>
+  <li><code><a href="./WIN32OLE/Record.html">Record</a></code>
+  <li><code><a href="./WIN32OLE/Type.html">Type</a></code>
+  <li><code><a href="./WIN32OLE/Typelib.html">Typelib</a></code>
+  <li><code><a href="./WIN32OLE/VARIANT.html">VARIANT</a></code>
+  <li><code><a href="./WIN32OLE/Variable.html">Variable</a></code>
+  <li><code><a href="./WIN32OLE/Variant.html">Variant</a></code>
+  </ul></details>
+  <li><code><a href="./WIN32OLEQueryInterfaceError.html">WIN32OLEQueryInterfaceError</a></code>
+  <li><code><a href="./WIN32OLERuntimeError.html">WIN32OLERuntimeError</a></code>
+  <li><code><a href="./Warning.html">Warning</a></code>
+  <li><details><summary><code><a href="./WeakRef.html">WeakRef</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./WeakRef/RefError.html">RefError</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./Win32.html">Win32</a></code></summary>
+  <ul class="link-list">
+  <li><details><summary><code><a href="./Win32/Registry.html">Registry</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Win32/Registry/API.html">API</a></code>
+  <li><code><a href="./Win32/Registry/Constants.html">Constants</a></code>
+  <li><details><summary><code><a href="./Win32/Registry/Error.html">Error</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Win32/Registry/Error/Kernel32.html">Kernel32</a></code>
+  </ul></details>
+  <li><code><a href="./Win32/Registry/PredefinedKey.html">PredefinedKey</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./Win32/SSPI.html">SSPI</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Win32/SSPI/API.html">API</a></code>
+  <li><code><a href="./Win32/SSPI/Identity.html">Identity</a></code>
+  <li><code><a href="./Win32/SSPI/NegotiateAuth.html">NegotiateAuth</a></code>
+  <li><code><a href="./Win32/SSPI/SSPIResult.html">SSPIResult</a></code>
+  <li><code><a href="./Win32/SSPI/SecurityBuffer.html">SecurityBuffer</a></code>
+  <li><code><a href="./Win32/SSPI/SecurityHandle.html">SecurityHandle</a></code>
+  <li><code><a href="./Win32/SSPI/TimeStamp.html">TimeStamp</a></code>
+  </ul></details>
+  </ul></details>
+  <li><details><summary><code><a href="./XMP.html">XMP</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./XMP/StringInputMethod.html">StringInputMethod</a></code>
+  </ul></details>
+  <li><details><summary><code><a href="./YAML.html">YAML</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./YAML/DBM.html">DBM</a></code>
+  <li><code><a href="./YAML/Store.html">Store</a></code>
+  </ul></details>
+  <li><code><a href="./ZeroDivisionError.html">ZeroDivisionError</a></code>
+  <li><details><summary><code><a href="./Zlib.html">Zlib</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Zlib/BufError.html">BufError</a></code>
+  <li><code><a href="./Zlib/DataError.html">DataError</a></code>
+  <li><code><a href="./Zlib/Deflate.html">Deflate</a></code>
+  <li><code><a href="./Zlib/Error.html">Error</a></code>
+  <li><details><summary><code><a href="./Zlib/GzipFile.html">GzipFile</a></code></summary>
+  <ul class="link-list">
+  <li><code><a href="./Zlib/GzipFile/CRCError.html">CRCError</a></code>
+  <li><code><a href="./Zlib/GzipFile/Error.html">Error</a></code>
+  <li><code><a href="./Zlib/GzipFile/LengthError.html">LengthError</a></code>
+  <li><code><a href="./Zlib/GzipFile/NoFooter.html">NoFooter</a></code>
+  </ul></details>
+  <li><code><a href="./Zlib/GzipReader.html">GzipReader</a></code>
+  <li><code><a href="./Zlib/GzipWriter.html">GzipWriter</a></code>
+  <li><code><a href="./Zlib/InProgressError.html">InProgressError</a></code>
+  <li><code><a href="./Zlib/Inflate.html">Inflate</a></code>
+  <li><code><a href="./Zlib/MemError.html">MemError</a></code>
+  <li><code><a href="./Zlib/NeedDict.html">NeedDict</a></code>
+  <li><code><a href="./Zlib/StreamEnd.html">StreamEnd</a></code>
+  <li><code><a href="./Zlib/StreamError.html">StreamError</a></code>
+  <li><code><a href="./Zlib/VersionError.html">VersionError</a></code>
+  <li><code><a href="./Zlib/ZStream.html">ZStream</a></code>
+  </ul></details>
+  <li><code><a href="./fatal.html">fatal</a></code>
+</div>
+
+  </div>
+</nav>
+
+<main role="main">
+
+
+<p><a href="https://github.com/ruby/ruby/actions?query=workflow%3A&quot;MinGW&quot;"><img src="https://github.com/ruby/ruby/workflows/MinGW/badge.svg"></a> <a href="https://github.com/ruby/ruby/actions?query=workflow%3A&quot;MJIT&quot;"><img src="https://github.com/ruby/ruby/workflows/MJIT/badge.svg"></a> <a href="https://github.com/ruby/ruby/actions?query=workflow%3A&quot;Ubuntu&quot;"><img src="https://github.com/ruby/ruby/workflows/Ubuntu/badge.svg"></a> <a href="https://github.com/ruby/ruby/actions?query=workflow%3A&quot;Windows&quot;"><img src="https://github.com/ruby/ruby/workflows/Windows/badge.svg"></a> <a href="https://ci.appveyor.com/project/ruby/ruby/branch/master"><img src="https://ci.appveyor.com/api/projects/status/0sy8rrxut4o0k960/branch/master?svg=true"></a> <a href="https://app.travis-ci.com/ruby/ruby"><img src="https://app.travis-ci.com/ruby/ruby.svg?branch=master"></a> <a href="https://cirrus-ci.com/github/ruby/ruby/master"><img src="https://api.cirrus-ci.com/github/ruby/ruby.svg"></a></p>
+
+<h1 id="label-What+is+Ruby-3F">What is Ruby?<span><a href="#label-What+is+Ruby-3F">&para;</a> <a href="#top">&uarr;</a></span></h1>
+
+<p>Ruby is an interpreted object-oriented programming language often used for web development. It also offers many scripting features to process plain text and serialized files, or manage system tasks. It is simple, straightforward, and extensible.</p>
+
+<h2 id="label-Features+of+Ruby">Features of Ruby<span><a href="#label-Features+of+Ruby">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Simple Syntax</p>
+</li><li>
+<p><strong>Normal</strong> Object-oriented Features (e.g. class, method calls)</p>
+</li><li>
+<p><strong>Advanced</strong> Object-oriented Features (e.g. mix-in, singleton-method)</p>
+</li><li>
+<p>Operator Overloading</p>
+</li><li>
+<p><a href="Exception.html"><code>Exception</code></a> Handling</p>
+</li><li>
+<p>Iterators and Closures</p>
+</li><li>
+<p>Garbage Collection</p>
+</li><li>
+<p>Dynamic Loading of <a href="Object.html"><code>Object</code></a> Files (on some architectures)</p>
+</li><li>
+<p>Highly Portable (works on many Unix-like/POSIX compatible platforms as  well as Windows, macOS, etc.) cf.  <a href="https://github.com/ruby/ruby/blob/master/doc/maintainers.rdoc#label-Platform+Maintainers">github.com/ruby/ruby/blob/master/doc/maintainers.rdoc#label-Platform+Maintainers</a></p>
+</li></ul>
+
+<h2 id="label-How+to+get+Ruby+with+Git">How to get Ruby with Git<span><a href="#label-How+to+get+Ruby+with+Git">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>For a complete list of ways to install Ruby, including using third-party tools like rvm, see:</p>
+
+<p><a href="https://www.ruby-lang.org/en/downloads">www.ruby-lang.org/en/downloads</a>/</p>
+
+<p>The mirror of the Ruby source tree can be checked out with the following command:</p>
+
+<pre>$ git clone https://github.com/ruby/ruby.git</pre>
+
+<p>There are some other branches under development. Try the following command to see the list of branches:</p>
+
+<pre>$ git ls-remote https://github.com/ruby/ruby.git</pre>
+
+<p>You may also want to use <a href="https://git.ruby-lang.org/ruby.git">git.ruby-lang.org/ruby.git</a> (actual master of Ruby source) if you are a committer.</p>
+
+<h2 id="label-How+to+build">How to build<span><a href="#label-How+to+build">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>see <a href="doc/contributing/building_ruby_md.html">Building Ruby</a></p>
+
+<h2 id="label-Ruby+home+page">Ruby home page<span><a href="#label-Ruby+home+page">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p><a href="https://www.ruby-lang.org">www.ruby-lang.org</a>/</p>
+
+<h2 id="label-Documentation">Documentation<span><a href="#label-Documentation">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p><a href="https://docs.ruby-lang.org/en/master/index.html">English</a></p>
+</li><li>
+<p><a href="https://docs.ruby-lang.org/ja/master/index.html">Japanese</a></p>
+</li></ul>
+
+<h2 id="label-Mailing+list">Mailing list<span><a href="#label-Mailing+list">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>There is a mailing list to discuss Ruby. To subscribe to this list, please send the following phrase:</p>
+
+<pre class="ruby"><span class="ruby-identifier">subscribe</span>
+</pre>
+
+<p>in the mail body (not subject) to the address <a href="mailto:ruby-talk-request@ruby-lang.org?subject=Join%20Ruby%20Mailing%20List&amp;body=subscribe">ruby-talk-request@ruby-lang.org</a>.</p>
+
+<h2 id="label-Copying">Copying<span><a href="#label-Copying">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>See the file <a href="COPYING.html">COPYING</a>.</p>
+
+<h2 id="label-Feedback">Feedback<span><a href="#label-Feedback">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>Questions about the Ruby language can be asked on the <a href="https://www.ruby-lang.org/en/community/mailing-lists">Ruby-Talk</a> mailing list or on websites like <a href="https://stackoverflow.com">stackoverflow.com</a>.</p>
+
+<p>Bugs should be reported at <a href="https://bugs.ruby-lang.org">bugs.ruby-lang.org</a>. Read <a href="https://docs.ruby-lang.org/en/master/contributing/reporting_issues_md.html">“Reporting Issues”</a> for more information.</p>
+
+<h2 id="label-Contributing">Contributing<span><a href="#label-Contributing">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>See <a href="https://docs.ruby-lang.org/en/master/contributing_md.html">“Contributing to Ruby”</a>, which includes setup and build instructions.</p>
+
+<h2 id="label-The+Author">The Author<span><a href="#label-The+Author">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>Ruby was originally designed and developed by Yukihiro Matsumoto (Matz) in 1995.</p>
+
+<p><a href="mailto:matz@ruby-lang.org">matz@ruby-lang.org</a></p>
+
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.5.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

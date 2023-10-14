@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>timezones - Documentation for Ruby 3.2</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+  var index_rel_prefix = "./";
+</script>
+
+<script src="./js/navigation.js" defer></script>
+<script src="./js/search.js" defer></script>
+<script src="./js/search_index.js" defer></script>
+<script src="./js/searcher.js" defer></script>
+<script src="./js/darkfish.js" defer></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+<div class="nav-section">
+  <h3>Table of Contents</h3>
+
+
+
+  <ul class="link-list" role="directory">
+              <li>
+            <details open>
+              <summary>      <a href="#label-Timezones">Timezones</a>
+</summary>
+              <ul class="link-list" role="directory">
+                          <li>
+            <details open>
+              <summary>      <a href="#label-Timezone+Specifiers">Timezone Specifiers</a>
+</summary>
+              <ul class="link-list" role="directory">
+                          <li>      <a href="#label-Hours-2FMinutes+Offsets">Hours/Minutes Offsets</a>
+          <li>      <a href="#label-Single-Letter+Offsets">Single-Letter Offsets</a>
+          <li>      <a href="#label-Integer+Offsets">Integer Offsets</a>
+          <li>      <a href="#label-Timezone+Objects">Timezone Objects</a>
+
+              </ul>
+            </details>
+          </li>
+
+              </ul>
+            </details>
+          </li>
+
+  </ul>
+</div>
+
+
+  <div id="project-metadata">
+    
+<div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+    <li><a href="./COPYING.html">COPYING</a>
+    <li><a href="./COPYING_ja.html">COPYING.ja</a>
+    <li><a href="./LEGAL.html">LEGAL</a>
+    <li><details><summary><a href="./NEWS_md.html">NEWS</a></summary>
+    <ul class="link-list">
+      <li><a href="./NEWS/NEWS-1_8_7.html">NEWS-1.8.7</a>
+      <li><a href="./NEWS/NEWS-1_9_1.html">NEWS-1.9.1</a>
+      <li><a href="./NEWS/NEWS-1_9_2.html">NEWS-1.9.2</a>
+      <li><a href="./NEWS/NEWS-1_9_3.html">NEWS-1.9.3</a>
+      <li><a href="./NEWS/NEWS-2_0_0.html">NEWS-2.0.0</a>
+      <li><a href="./NEWS/NEWS-2_1_0.html">NEWS-2.1.0</a>
+      <li><a href="./NEWS/NEWS-2_2_0.html">NEWS-2.2.0</a>
+      <li><a href="./NEWS/NEWS-2_3_0.html">NEWS-2.3.0</a>
+      <li><a href="./NEWS/NEWS-2_4_0.html">NEWS-2.4.0</a>
+      <li><a href="./NEWS/NEWS-2_5_0.html">NEWS-2.5.0</a>
+      <li><a href="./NEWS/NEWS-2_6_0.html">NEWS-2.6.0</a>
+      <li><a href="./NEWS/NEWS-2_7_0.html">NEWS-2.7.0</a>
+      <li><a href="./NEWS/NEWS-3_0_0_md.html">NEWS-3.0.0</a>
+      <li><a href="./NEWS/NEWS-3_1_0_md.html">NEWS-3.1.0</a>
+    </ul></details>
+    <li><a href="./README_ja_md.html">README.ja</a>
+    <li><a href="./README_md.html">README</a>
+    <li><a href="./bsearch_rdoc.html">bsearch</a>
+    <li><a href="./bug_triaging_rdoc.html">bug_triaging</a>
+    <li><a href="./case_mapping_rdoc.html">case_mapping</a>
+    <li><a href="./character_selectors_rdoc.html">character_selectors</a>
+    <li><a href="./command_injection_rdoc.html">command_injection</a>
+    <li><details><summary><a href="./contributing_md.html">contributing</a></summary>
+    <ul class="link-list">
+      <li><a href="./contributing/building_ruby_md.html">building_ruby</a>
+      <li><a href="./contributing/documentation_guide_md.html">documentation_guide</a>
+      <li><a href="./contributing/making_changes_to_ruby_md.html">making_changes_to_ruby</a>
+      <li><a href="./contributing/making_changes_to_stdlibs_md.html">making_changes_to_stdlibs</a>
+      <li><a href="./contributing/reporting_issues_md.html">reporting_issues</a>
+      <li><a href="./contributing/testing_ruby_md.html">testing_ruby</a>
+    </ul></details>
+    <li><a href="./dig_methods_rdoc.html">dig_methods</a>
+    <li><a href="./dtrace_probes_rdoc.html">dtrace_probes</a>
+    <li><a href="./encodings_rdoc.html">encodings</a>
+    <li><a href="./extension_ja_rdoc.html">extension.ja</a>
+    <li><a href="./extension_rdoc.html">extension</a>
+    <li><a href="./fiber_md.html">fiber</a>
+    <li><a href="./format_specifications_rdoc.html">format_specifications</a>
+    <li><a href="./globals_rdoc.html">globals</a>
+    <li><a href="./implicit_conversion_rdoc.html">implicit_conversion</a>
+    <li><a href="./keywords_rdoc.html">keywords</a>
+    <li><a href="./maintainers_rdoc.html">maintainers</a>
+    <li><a href="./marshal_rdoc.html">marshal</a>
+    <li><a href="./memory_view_md.html">memory_view</a>
+    <li><details><summary>optparse</summary>
+    <ul class="link-list">
+      <li><a href="./optparse/argument_converters_rdoc.html">argument_converters</a>
+      <li><a href="./optparse/creates_option_rdoc.html">creates_option</a>
+      <li><a href="./optparse/option_params_rdoc.html">option_params</a>
+      <li><a href="./optparse/tutorial_rdoc.html">tutorial</a>
+    </ul></details>
+    <li><a href="./packed_data_rdoc.html">packed_data</a>
+    <li><a href="./ractor_md.html">ractor</a>
+    <li><a href="./regexp_rdoc.html">regexp</a>
+    <li><a href="./security_rdoc.html">security</a>
+    <li><a href="./signals_rdoc.html">signals</a>
+    <li><a href="./standard_library_rdoc.html">standard_library</a>
+    <li><a href="./strftime_formatting_rdoc.html">strftime_formatting</a>
+    <li><details><summary><a href="./syntax_rdoc.html">syntax</a></summary>
+    <ul class="link-list">
+      <li><a href="./syntax/assignment_rdoc.html">assignment</a>
+      <li><a href="./syntax/calling_methods_rdoc.html">calling_methods</a>
+      <li><a href="./syntax/comments_rdoc.html">comments</a>
+      <li><a href="./syntax/control_expressions_rdoc.html">control_expressions</a>
+      <li><a href="./syntax/exceptions_rdoc.html">exceptions</a>
+      <li><a href="./syntax/literals_rdoc.html">literals</a>
+      <li><a href="./syntax/methods_rdoc.html">methods</a>
+      <li><a href="./syntax/miscellaneous_rdoc.html">miscellaneous</a>
+      <li><a href="./syntax/modules_and_classes_rdoc.html">modules_and_classes</a>
+      <li><a href="./syntax/pattern_matching_rdoc.html">pattern_matching</a>
+      <li><a href="./syntax/precedence_rdoc.html">precedence</a>
+      <li><a href="./syntax/refinements_rdoc.html">refinements</a>
+    </ul></details>
+    <li><a href="./timezones_rdoc.html">timezones</a>
+    <li><a href="./win32/README_win32.html">README.win32</a>
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page timezones.rdoc">
+
+<h2 id="label-Timezones">Timezones<span><a href="#label-Timezones">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<h3 id="label-Timezone+Specifiers">Timezone Specifiers<span><a href="#label-Timezone+Specifiers">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Certain Time methods accept arguments that specify timezones:</p>
+<ul><li>
+<p><a href="Time.html#method-c-at"><code>Time.at</code></a>: keyword argument <code>in:</code>.</p>
+</li><li>
+<p><a href="Time.html#method-c-new"><code>Time.new</code></a>: positional argument <code>zone</code> or keyword argument <code>in:</code>.</p>
+</li><li>
+<p><a href="Time.html#method-c-now"><code>Time.now</code></a>: keyword argument <code>in:</code>.</p>
+</li><li>
+<p><a href="Time.html#method-i-getlocal"><code>Time#getlocal</code></a>: positional argument <code>zone</code>.</p>
+</li><li>
+<p><a href="Time.html#method-i-localtime"><code>Time#localtime</code></a>: positional argument <code>zone</code>.</p>
+</li></ul>
+
+<p>The value given with any of these must be one of the following (each detailed below):</p>
+<ul><li>
+<p><a href="timezones_rdoc.html#label-Hours-2FMinutes+Offsets">Hours/minutes offset</a>.</p>
+</li><li>
+<p><a href="timezones_rdoc.html#label-Single-Letter+Offsets">Single-letter offset</a>.</p>
+</li><li>
+<p><a href="timezones_rdoc.html#label-Integer+Offsets">Integer offset</a>.</p>
+</li><li>
+<p><a href="timezones_rdoc.html#label-Timezone+Objects">Timezone object</a>.</p>
+</li></ul>
+
+<h4 id="label-Hours-2FMinutes+Offsets">Hours/Minutes Offsets<span><a href="#label-Hours-2FMinutes+Offsets">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<p>The zone value may be a string offset from UTC in the form <code>&#39;+HH:MM&#39;</code> or <code>&#39;-HH:MM&#39;</code>, where:</p>
+<ul><li>
+<p><code>HH</code> is the 2-digit hour in the range <code>0..23</code>.</p>
+</li><li>
+<p><code>MM</code> is the 2-digit minute in the range <code>0..59</code>.</p>
+</li></ul>
+
+<p>Examples:</p>
+
+<pre class="ruby"><span class="ruby-identifier">t</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">utc</span>(<span class="ruby-value">2000</span>, <span class="ruby-value">1</span>, <span class="ruby-value">1</span>, <span class="ruby-value">20</span>, <span class="ruby-value">15</span>, <span class="ruby-value">1</span>) <span class="ruby-comment"># =&gt; 2000-01-01 20:15:01 UTC</span>
+<span class="ruby-constant">Time</span>.<span class="ruby-identifier">at</span>(<span class="ruby-identifier">t</span>, <span class="ruby-value">in:</span> <span class="ruby-string">&#39;-23:59&#39;</span>)            <span class="ruby-comment"># =&gt; 1999-12-31 20:16:01 -2359</span>
+<span class="ruby-constant">Time</span>.<span class="ruby-identifier">at</span>(<span class="ruby-identifier">t</span>, <span class="ruby-value">in:</span> <span class="ruby-string">&#39;+23:59&#39;</span>)            <span class="ruby-comment"># =&gt; 2000-01-02 20:14:01 +2359</span>
+</pre>
+
+<h4 id="label-Single-Letter+Offsets">Single-Letter Offsets<span><a href="#label-Single-Letter+Offsets">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<p>The zone value may be a  letter in the range <code>&#39;A&#39;..&#39;I&#39;</code> or <code>&#39;K&#39;..&#39;Z&#39;</code>; see <a href="https://en.wikipedia.org/wiki/List_of_military_time_zones">List of military time zones</a>:</p>
+
+<pre class="ruby"><span class="ruby-identifier">t</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">utc</span>(<span class="ruby-value">2000</span>, <span class="ruby-value">1</span>, <span class="ruby-value">1</span>, <span class="ruby-value">20</span>, <span class="ruby-value">15</span>, <span class="ruby-value">1</span>) <span class="ruby-comment"># =&gt; 2000-01-01 20:15:01 UTC</span>
+<span class="ruby-constant">Time</span>.<span class="ruby-identifier">at</span>(<span class="ruby-identifier">t</span>, <span class="ruby-value">in:</span> <span class="ruby-string">&#39;A&#39;</span>)                 <span class="ruby-comment"># =&gt; 2000-01-01 21:15:01 +0100</span>
+<span class="ruby-constant">Time</span>.<span class="ruby-identifier">at</span>(<span class="ruby-identifier">t</span>, <span class="ruby-value">in:</span> <span class="ruby-string">&#39;I&#39;</span>)                 <span class="ruby-comment"># =&gt; 2000-01-02 05:15:01 +0900</span>
+<span class="ruby-constant">Time</span>.<span class="ruby-identifier">at</span>(<span class="ruby-identifier">t</span>, <span class="ruby-value">in:</span> <span class="ruby-string">&#39;K&#39;</span>)                 <span class="ruby-comment"># =&gt; 2000-01-02 06:15:01 +1000</span>
+<span class="ruby-constant">Time</span>.<span class="ruby-identifier">at</span>(<span class="ruby-identifier">t</span>, <span class="ruby-value">in:</span> <span class="ruby-string">&#39;Y&#39;</span>)                 <span class="ruby-comment"># =&gt; 2000-01-01 08:15:01 -1200</span>
+<span class="ruby-constant">Time</span>.<span class="ruby-identifier">at</span>(<span class="ruby-identifier">t</span>, <span class="ruby-value">in:</span> <span class="ruby-string">&#39;Z&#39;</span>)                 <span class="ruby-comment"># =&gt; 2000-01-01 20:15:01 UTC</span>
+</pre>
+
+<h4 id="label-Integer+Offsets">Integer Offsets<span><a href="#label-Integer+Offsets">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<p>The zone value may be an integer number of seconds in the range <code>-86399..86399</code>:</p>
+
+<pre class="ruby"><span class="ruby-identifier">t</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">utc</span>(<span class="ruby-value">2000</span>, <span class="ruby-value">1</span>, <span class="ruby-value">1</span>, <span class="ruby-value">20</span>, <span class="ruby-value">15</span>, <span class="ruby-value">1</span>) <span class="ruby-comment"># =&gt; 2000-01-01 20:15:01 UTC</span>
+<span class="ruby-constant">Time</span>.<span class="ruby-identifier">at</span>(<span class="ruby-identifier">t</span>, <span class="ruby-value">in:</span> <span class="ruby-value">-86399</span>)              <span class="ruby-comment"># =&gt; 1999-12-31 20:15:02 -235959</span>
+<span class="ruby-constant">Time</span>.<span class="ruby-identifier">at</span>(<span class="ruby-identifier">t</span>, <span class="ruby-value">in:</span> <span class="ruby-value">86399</span>)               <span class="ruby-comment"># =&gt; 2000-01-02 20:15:00 +235959</span>
+</pre>
+
+<h4 id="label-Timezone+Objects">Timezone Objects<span><a href="#label-Timezone+Objects">&para;</a> <a href="#top">&uarr;</a></span></h4>
+
+<p>In most cases, the zone value may be an object responding to certain timezone methods.</p>
+
+<p>Exceptions (timezone object not allowed):</p>
+<ul><li>
+<p><a href="Time.html#method-c-new"><code>Time.new</code></a> with positional argument <code>zone</code>.</p>
+</li><li>
+<p><a href="Time.html#method-c-now"><code>Time.now</code></a> with keyword argument <code>in:</code>.</p>
+</li></ul>
+
+<p>The timezone methods are:</p>
+<ul><li>
+<p><code>local_to_utc</code>:</p>
+<ul><li>
+<p>Called when <a href="Time.html#method-c-new"><code>Time.new</code></a> is invoked with <code>tz</code> as the value of positional argument <code>zone</code> or keyword argument <code>in:</code>.</p>
+</li><li>
+<p>Argument: a <code>Time::tm</code> object.</p>
+</li><li>
+<p>Returns: a Time-like object in the UTC timezone.</p>
+</li></ul>
+</li><li>
+<p><code>utc_to_local</code>:</p>
+<ul><li>
+<p>Called when <a href="Time.html#method-c-at"><code>Time.at</code></a> or <a href="Time.html#method-c-now"><code>Time.now</code></a> is invoked with <code>tz</code> as the value for keyword argument <code>in:</code>, and when <a href="Time.html#method-i-getlocal"><code>Time#getlocal</code></a> or <a href="Time.html#method-i-localtime"><code>Time#localtime</code></a> is called with <code>tz</code> as the value for positional argument <code>zone</code>.</p>
+</li><li>
+<p>Argument: a <code>Time::tm</code> object.</p>
+</li><li>
+<p>Returns: a Time-like object in the local timezone.</p>
+</li></ul>
+</li></ul>
+
+<p>A custom timezone class may have these instance methods, which will be called if defined:</p>
+<ul><li>
+<p><code>abbr</code>:</p>
+<ul><li>
+<p>Called when <a href="Time.html#method-i-strftime"><code>Time#strftime</code></a> is invoked with a format involving <code>%Z</code>.</p>
+</li><li>
+<p>Argument: a <code>Time::tm</code> object.</p>
+</li><li>
+<p>Returns: a string abbreviation for the timezone name.</p>
+</li></ul>
+</li><li>
+<p><code>dst?</code>:</p>
+<ul><li>
+<p>Called when <a href="Time.html#method-c-at"><code>Time.at</code></a> or <a href="Time.html#method-c-now"><code>Time.now</code></a> is invoked with <code>tz</code> as the value for keyword argument <code>in:</code>, and when <a href="Time.html#method-i-getlocal"><code>Time#getlocal</code></a> or <a href="Time.html#method-i-localtime"><code>Time#localtime</code></a> is called with <code>tz</code> as the value for positional argument <code>zone</code>.</p>
+</li><li>
+<p>Argument: a <code>Time::tm</code> object.</p>
+</li><li>
+<p>Returns: whether the time is daylight saving time.</p>
+</li></ul>
+</li><li>
+<p><code>name</code>:</p>
+<ul><li>
+<p>Called when &lt;tt&gt;Marshal.dump(t) is invoked</p>
+</li><li>
+<p>Argument: none.</p>
+</li><li>
+<p>Returns: the string name of the timezone.</p>
+</li></ul>
+</li></ul>
+
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.5.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

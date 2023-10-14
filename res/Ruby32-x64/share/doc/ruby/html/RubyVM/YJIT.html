@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>module RubyVM::YJIT - Documentation for Ruby 3.2</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+  var index_rel_prefix = "../";
+</script>
+
+<script src="../js/navigation.js" defer></script>
+<script src="../js/search.js" defer></script>
+<script src="../js/search_index.js" defer></script>
+<script src="../js/searcher.js" defer></script>
+<script src="../js/darkfish.js" defer></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link href="../css/rdoc.css" rel="stylesheet">
+
+
+<body id="top" role="document" class="module">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    
+    
+    
+    
+<!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    <li ><a href="#method-c-code_gc">::code_gc</a>
+    <li ><a href="#method-c-disasm">::disasm</a>
+    <li ><a href="#method-c-dump_exit_locations">::dump_exit_locations</a>
+    <li ><a href="#method-c-enabled-3F">::enabled?</a>
+    <li ><a href="#method-c-exit_locations">::exit_locations</a>
+    <li ><a href="#method-c-insns_compiled">::insns_compiled</a>
+    <li ><a href="#method-c-reset_stats-21">::reset_stats!</a>
+    <li ><a href="#method-c-runtime_stats">::runtime_stats</a>
+    <li ><a href="#method-c-stats_enabled-3F">::stats_enabled?</a>
+    <li ><a href="#method-c-trace_exit_locations_enabled-3F">::trace_exit_locations_enabled?</a>
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="module-RubyVM::YJIT">
+  <h1 id="module-RubyVM::YJIT" class="module">
+    module RubyVM::YJIT
+  </h1>
+
+  <section class="description">
+    
+<p>This module allows for introspection of <a href="YJIT.html"><code>YJIT</code></a>, CRuby’s in-process just-in-time compiler. This module exists only to help develop <a href="YJIT.html"><code>YJIT</code></a>, as such, everything in the module is highly implementation specific and comes with no API stability guarantee whatsoever.</p>
+
+<p>This module may not exist if <a href="YJIT.html"><code>YJIT</code></a> does not support the particular platform for which CRuby is built. There is also no API stability guarantee as to in what situations this module is defined.</p>
+
+  </section>
+
+  <section id="5Buntitled-5D" class="documentation-section">
+
+
+
+
+
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+      <div id="method-c-code_gc" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">code_gc</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          <p>Free and recompile all existing JIT code</p>
+
+          <div class="method-source-code" id="code_gc-source">
+            <pre><span class="ruby-comment"># File yjit.rb, line 209</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">code_gc</span>
+  <span class="ruby-constant">Primitive</span>.<span class="ruby-identifier">rb_yjit_code_gc</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-disasm" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">disasm</span><span
+              class="method-args">(iseq)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          <p>Produce disassembly for an iseq</p>
+
+          <div class="method-source-code" id="disasm-source">
+            <pre><span class="ruby-comment"># File yjit.rb, line 183</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">disasm</span>(<span class="ruby-identifier">iseq</span>)
+  <span class="ruby-comment"># If a method or proc is passed in, get its iseq</span>
+  <span class="ruby-identifier">iseq</span> = <span class="ruby-constant">RubyVM</span><span class="ruby-operator">::</span><span class="ruby-constant">InstructionSequence</span>.<span class="ruby-identifier">of</span>(<span class="ruby-identifier">iseq</span>)
+
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">enabled?</span>
+    <span class="ruby-comment"># Produce the disassembly string</span>
+    <span class="ruby-comment"># Include the YARV iseq disasm in the string for additional context</span>
+    <span class="ruby-identifier">iseq</span>.<span class="ruby-identifier">disasm</span> <span class="ruby-operator">+</span> <span class="ruby-string">&quot;\n&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-constant">Primitive</span>.<span class="ruby-identifier">rb_yjit_disasm_iseq</span>(<span class="ruby-identifier">iseq</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">iseq</span>.<span class="ruby-identifier">disasm</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-dump_exit_locations" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">dump_exit_locations</span><span
+              class="method-args">(filename)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          <p><a href="../Marshal.html"><code>Marshal</code></a> dumps exit locations to the given filename.</p>
+
+<p>Usage:</p>
+
+<p>If ‘–yjit-exit-locations` is passed, a file named “yjit_exit_locations.dump” will automatically be generated.</p>
+
+<p>If you want to collect traces manually, call ‘dump_exit_locations` directly.</p>
+
+<p>Note that calling this in a script will generate stats after the dump is created, so the stats data may include exits from the dump itself.</p>
+
+<p>In a script call:</p>
+
+<pre class="ruby"><span class="ruby-identifier">at_exit</span> <span class="ruby-keyword">do</span>
+  <span class="ruby-constant">RubyVM</span><span class="ruby-operator">::</span><span class="ruby-constant">YJIT</span>.<span class="ruby-identifier">dump_exit_locations</span>(<span class="ruby-string">&quot;my_file.dump&quot;</span>)
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p>Then run the file with the following options:</p>
+
+<pre>ruby --yjit --yjit-trace-exits test.rb</pre>
+
+<p>Once the code is done running, use Stackprof to read the dump file. See Stackprof documentation for options.</p>
+
+          <div class="method-source-code" id="dump_exit_locations-source">
+            <pre><span class="ruby-comment"># File yjit.rb, line 138</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">dump_exit_locations</span>(<span class="ruby-identifier">filename</span>)
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">trace_exit_locations_enabled?</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;--yjit-trace-exits must be enabled to use dump_exit_locations.&quot;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-constant">File</span>.<span class="ruby-identifier">binwrite</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-constant">Marshal</span>.<span class="ruby-identifier">dump</span>(<span class="ruby-constant">RubyVM</span><span class="ruby-operator">::</span><span class="ruby-constant">YJIT</span>.<span class="ruby-identifier">exit_locations</span>))
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-enabled-3F" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">enabled?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          <p>Check if <a href="YJIT.html"><code>YJIT</code></a> is enabled</p>
+
+          <div class="method-source-code" id="enabled-3F-source">
+            <pre><span class="ruby-comment"># File yjit.rb, line 13</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">enabled?</span>
+  <span class="ruby-constant">Primitive</span>.<span class="ruby-identifier">cexpr!</span> <span class="ruby-string">&#39;RBOOL(rb_yjit_enabled_p())&#39;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-exit_locations" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">exit_locations</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          <p>If –yjit-trace-exits is enabled parse the hashes from Primitive.rb_yjit_get_exit_locations into a format readable by Stackprof. This will allow us to find the exact location of a side exit in <a href="YJIT.html"><code>YJIT</code></a> based on the instruction that is exiting.</p>
+
+          <div class="method-source-code" id="exit_locations-source">
+            <pre><span class="ruby-comment"># File yjit.rb, line 36</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">exit_locations</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">trace_exit_locations_enabled?</span>
+
+  <span class="ruby-identifier">results</span> = <span class="ruby-constant">Primitive</span>.<span class="ruby-identifier">rb_yjit_get_exit_locations</span>
+  <span class="ruby-identifier">raw_samples</span> = <span class="ruby-identifier">results</span>[<span class="ruby-value">:raw</span>].<span class="ruby-identifier">dup</span>
+  <span class="ruby-identifier">line_samples</span> = <span class="ruby-identifier">results</span>[<span class="ruby-value">:lines</span>].<span class="ruby-identifier">dup</span>
+  <span class="ruby-identifier">frames</span> = <span class="ruby-identifier">results</span>[<span class="ruby-value">:frames</span>].<span class="ruby-identifier">dup</span>
+  <span class="ruby-identifier">samples_count</span> = <span class="ruby-value">0</span>
+
+  <span class="ruby-comment"># Loop through the instructions and set the frame hash with the data.</span>
+  <span class="ruby-comment"># We use nonexistent.def for the file name, otherwise insns.def will be displayed</span>
+  <span class="ruby-comment"># and that information isn&#39;t useful in this context.</span>
+  <span class="ruby-constant">RubyVM</span><span class="ruby-operator">::</span><span class="ruby-constant">INSTRUCTION_NAMES</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span>, <span class="ruby-identifier">frame_id</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">frame_hash</span> = { <span class="ruby-value">samples:</span> <span class="ruby-value">0</span>, <span class="ruby-value">total_samples:</span> <span class="ruby-value">0</span>, <span class="ruby-value">edges:</span> {}, <span class="ruby-value">name:</span> <span class="ruby-identifier">name</span>, <span class="ruby-value">file:</span> <span class="ruby-string">&quot;nonexistent.def&quot;</span>, <span class="ruby-value">line:</span> <span class="ruby-keyword">nil</span>, <span class="ruby-value">lines:</span> {} }
+    <span class="ruby-identifier">results</span>[<span class="ruby-value">:frames</span>][<span class="ruby-identifier">frame_id</span>] = <span class="ruby-identifier">frame_hash</span>
+    <span class="ruby-identifier">frames</span>[<span class="ruby-identifier">frame_id</span>] = <span class="ruby-identifier">frame_hash</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Loop through the raw_samples and build the hashes for StackProf.</span>
+  <span class="ruby-comment"># The loop is based off an example in the StackProf documentation and therefore</span>
+  <span class="ruby-comment"># this functionality can only work with that library.</span>
+  <span class="ruby-comment">#</span>
+  <span class="ruby-comment"># Raw Samples:</span>
+  <span class="ruby-comment"># [ length, frame1, frame2, frameN, ..., instruction, count</span>
+  <span class="ruby-comment">#</span>
+  <span class="ruby-comment"># Line Samples</span>
+  <span class="ruby-comment"># [ length, line_1, line_2, line_n, ..., dummy value, count</span>
+  <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+  <span class="ruby-keyword">while</span> <span class="ruby-identifier">i</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">raw_samples</span>.<span class="ruby-identifier">length</span>
+    <span class="ruby-identifier">stack_length</span> = <span class="ruby-identifier">raw_samples</span>[<span class="ruby-identifier">i</span>] <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span> <span class="ruby-comment"># consume the stack length</span>
+
+    <span class="ruby-identifier">prev_frame_id</span> = <span class="ruby-keyword">nil</span>
+    <span class="ruby-identifier">stack_length</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">idx</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">idx</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">i</span>
+      <span class="ruby-identifier">frame_id</span> = <span class="ruby-identifier">raw_samples</span>[<span class="ruby-identifier">idx</span>]
+
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">prev_frame_id</span>
+        <span class="ruby-identifier">prev_frame</span> = <span class="ruby-identifier">frames</span>[<span class="ruby-identifier">prev_frame_id</span>]
+        <span class="ruby-identifier">prev_frame</span>[<span class="ruby-value">:edges</span>][<span class="ruby-identifier">frame_id</span>] <span class="ruby-operator">||=</span> <span class="ruby-value">0</span>
+        <span class="ruby-identifier">prev_frame</span>[<span class="ruby-value">:edges</span>][<span class="ruby-identifier">frame_id</span>] <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-identifier">frame_info</span> = <span class="ruby-identifier">frames</span>[<span class="ruby-identifier">frame_id</span>]
+      <span class="ruby-identifier">frame_info</span>[<span class="ruby-value">:total_samples</span>] <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+
+      <span class="ruby-identifier">frame_info</span>[<span class="ruby-value">:lines</span>][<span class="ruby-identifier">line_samples</span>[<span class="ruby-identifier">idx</span>]] <span class="ruby-operator">||=</span> [<span class="ruby-value">0</span>, <span class="ruby-value">0</span>]
+      <span class="ruby-identifier">frame_info</span>[<span class="ruby-value">:lines</span>][<span class="ruby-identifier">line_samples</span>[<span class="ruby-identifier">idx</span>]][<span class="ruby-value">0</span>] <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+
+      <span class="ruby-identifier">prev_frame_id</span> = <span class="ruby-identifier">frame_id</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">stack_length</span> <span class="ruby-comment"># consume the stack</span>
+
+    <span class="ruby-identifier">top_frame_id</span> = <span class="ruby-identifier">prev_frame_id</span>
+    <span class="ruby-identifier">top_frame_line</span> = <span class="ruby-value">1</span>
+
+    <span class="ruby-identifier">sample_count</span> = <span class="ruby-identifier">raw_samples</span>[<span class="ruby-identifier">i</span>]
+
+    <span class="ruby-identifier">frames</span>[<span class="ruby-identifier">top_frame_id</span>][<span class="ruby-value">:samples</span>] <span class="ruby-operator">+=</span> <span class="ruby-identifier">sample_count</span>
+    <span class="ruby-identifier">frames</span>[<span class="ruby-identifier">top_frame_id</span>][<span class="ruby-value">:lines</span>] <span class="ruby-operator">||=</span> {}
+    <span class="ruby-identifier">frames</span>[<span class="ruby-identifier">top_frame_id</span>][<span class="ruby-value">:lines</span>][<span class="ruby-identifier">top_frame_line</span>] <span class="ruby-operator">||=</span> [<span class="ruby-value">0</span>, <span class="ruby-value">0</span>]
+    <span class="ruby-identifier">frames</span>[<span class="ruby-identifier">top_frame_id</span>][<span class="ruby-value">:lines</span>][<span class="ruby-identifier">top_frame_line</span>][<span class="ruby-value">1</span>] <span class="ruby-operator">+=</span> <span class="ruby-identifier">sample_count</span>
+
+    <span class="ruby-identifier">samples_count</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">sample_count</span>
+    <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">results</span>[<span class="ruby-value">:samples</span>] = <span class="ruby-identifier">samples_count</span>
+  <span class="ruby-comment"># Set missed_samples and gc_samples to 0 as their values</span>
+  <span class="ruby-comment"># don&#39;t matter to us in this context.</span>
+  <span class="ruby-identifier">results</span>[<span class="ruby-value">:missed_samples</span>] = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">results</span>[<span class="ruby-value">:gc_samples</span>] = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">results</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-insns_compiled" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">insns_compiled</span><span
+              class="method-args">(iseq)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          <p>Produce a list of instructions compiled by <a href="YJIT.html"><code>YJIT</code></a> for an iseq</p>
+
+          <div class="method-source-code" id="insns_compiled-source">
+            <pre><span class="ruby-comment"># File yjit.rb, line 197</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">insns_compiled</span>(<span class="ruby-identifier">iseq</span>)
+  <span class="ruby-comment"># If a method or proc is passed in, get its iseq</span>
+  <span class="ruby-identifier">iseq</span> = <span class="ruby-constant">RubyVM</span><span class="ruby-operator">::</span><span class="ruby-constant">InstructionSequence</span>.<span class="ruby-identifier">of</span>(<span class="ruby-identifier">iseq</span>)
+
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">enabled?</span>
+    <span class="ruby-constant">Primitive</span>.<span class="ruby-identifier">rb_yjit_insns_compiled</span>(<span class="ruby-identifier">iseq</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-constant">Qnil</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-reset_stats-21" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">reset_stats!</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          <p>Discard statistics collected for –yjit-stats.</p>
+
+          <div class="method-source-code" id="reset_stats-21-source">
+            <pre><span class="ruby-comment"># File yjit.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">reset_stats!</span>
+  <span class="ruby-constant">Primitive</span>.<span class="ruby-identifier">rb_yjit_reset_stats_bang</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-runtime_stats" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">runtime_stats</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          <p>Return a hash for statistics generated for the –yjit-stats command line option. Return nil when option is not passed or unavailable.</p>
+
+          <div class="method-source-code" id="runtime_stats-source">
+            <pre><span class="ruby-comment"># File yjit.rb, line 148</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">runtime_stats</span>
+  <span class="ruby-identifier">stats</span> = <span class="ruby-constant">Primitive</span>.<span class="ruby-identifier">rb_yjit_get_stats</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">stats</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">stats</span>.<span class="ruby-identifier">nil?</span>
+
+  <span class="ruby-identifier">stats</span>[<span class="ruby-value">:object_shape_count</span>] = <span class="ruby-constant">Primitive</span>.<span class="ruby-identifier">object_shape_count</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">stats</span> <span class="ruby-keyword">unless</span> <span class="ruby-constant">Primitive</span>.<span class="ruby-identifier">rb_yjit_stats_enabled_p</span>
+
+  <span class="ruby-identifier">side_exits</span> = <span class="ruby-identifier">total_exit_count</span>(<span class="ruby-identifier">stats</span>)
+  <span class="ruby-identifier">total_exits</span> = <span class="ruby-identifier">side_exits</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">stats</span>[<span class="ruby-value">:leave_interp_return</span>]
+
+  <span class="ruby-comment"># Number of instructions that finish executing in YJIT.</span>
+  <span class="ruby-comment"># See :count-placement: about the subtraction.</span>
+  <span class="ruby-identifier">retired_in_yjit</span> = <span class="ruby-identifier">stats</span>[<span class="ruby-value">:exec_instruction</span>] <span class="ruby-operator">-</span> <span class="ruby-identifier">side_exits</span>
+
+  <span class="ruby-comment"># Average length of instruction sequences executed by YJIT</span>
+  <span class="ruby-identifier">avg_len_in_yjit</span> = <span class="ruby-identifier">retired_in_yjit</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">total_exits</span>
+
+  <span class="ruby-comment"># This only available on yjit stats builds</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">stats</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-value">:vm_insns_count</span>)
+    <span class="ruby-comment"># Proportion of instructions that retire in YJIT</span>
+    <span class="ruby-identifier">total_insns_count</span> = <span class="ruby-identifier">retired_in_yjit</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">stats</span>[<span class="ruby-value">:vm_insns_count</span>]
+    <span class="ruby-identifier">yjit_ratio_pct</span> = <span class="ruby-value">100.0</span> <span class="ruby-operator">*</span> <span class="ruby-identifier">retired_in_yjit</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">total_insns_count</span>
+    <span class="ruby-identifier">stats</span>[<span class="ruby-value">:total_insns_count</span>] = <span class="ruby-identifier">total_insns_count</span>
+    <span class="ruby-identifier">stats</span>[<span class="ruby-value">:ratio_in_yjit</span>] = <span class="ruby-identifier">yjit_ratio_pct</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># Make those stats available in RubyVM::YJIT.runtime_stats as well</span>
+  <span class="ruby-identifier">stats</span>[<span class="ruby-value">:side_exit_count</span>]  = <span class="ruby-identifier">side_exits</span>
+  <span class="ruby-identifier">stats</span>[<span class="ruby-value">:total_exit_count</span>] = <span class="ruby-identifier">total_exits</span>
+  <span class="ruby-identifier">stats</span>[<span class="ruby-value">:avg_len_in_yjit</span>]  = <span class="ruby-identifier">avg_len_in_yjit</span>
+
+  <span class="ruby-identifier">stats</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-stats_enabled-3F" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">stats_enabled?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          <p>Check if –yjit-stats is used.</p>
+
+          <div class="method-source-code" id="stats_enabled-3F-source">
+            <pre><span class="ruby-comment"># File yjit.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">stats_enabled?</span>
+  <span class="ruby-constant">Primitive</span>.<span class="ruby-identifier">rb_yjit_stats_enabled_p</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-trace_exit_locations_enabled-3F" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">trace_exit_locations_enabled?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          <p>Check if rb_yjit_trace_exit_locations_enabled_p is enabled.</p>
+
+          <div class="method-source-code" id="trace_exit_locations_enabled-3F-source">
+            <pre><span class="ruby-comment"># File yjit.rb, line 23</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">trace_exit_locations_enabled?</span>
+  <span class="ruby-constant">Primitive</span>.<span class="ruby-identifier">rb_yjit_trace_exit_locations_enabled_p</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.5.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

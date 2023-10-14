@@ -1,0 +1,36 @@
+Это сертификат отзыва ключа OpenPGP:
+
+pub   rsa4096 2023-10-13 [S]
+      17F0995059F1ED07C455B534D7FB9A88F08B1C5D
+uid          Pacman Keyring Master Key <pacman@localhost>
+
+Сертификат отзыва - своего рода "уничтожитель", с его помощью можно
+публично объявить, что ключ больше не должен применяться. После публикации
+такой сертификат взять назад невозможно.
+
+Пользуйтесь им для отзыва этого ключа в случае раскрытия или потери
+секретного ключа. Однако если секретный ключ доступен, лучше создать
+новый сертификат с указанием причины отзыва. Подробности см. в описании
+команды gpg "--generate-revocation" в руководстве по GnuPG.
+
+Чтобы избежать случайного применения этого файла, перед 5 дефисами
+вставлено двоеточие. Удалите это двоеточие в текстовом редакторе
+перед импортированием и публикацией этого сертификата отзыва.
+
+:-----BEGIN PGP PUBLIC KEY BLOCK-----
+Comment: This is a revocation certificate
+
+iQI2BCABCAAgFiEEF/CZUFnx7QfEVbU01/uaiPCLHF0FAmUpp6MCHQAACgkQ1/ua
+iPCLHF35lA//TQAo5ofrsIaBzIK0Xp7Alt4r7Kny77Yv70JCuOff36qWc3fctTBW
+rEksSTEtwSQ1fiBhZNadv57As6dfnymTnAYlFxyLDLqAjR7AybwQeltw4sL29qjK
+FTItIR0Ia9P02tjMypBe6MxYWc6Iv9+s5VShnAT5fyx+b8HiUO7JAFrni0Z77ykh
+72m7AGzRaO9gj8/UhYEoS6B20IqGKUPMfiA7KEwXJTz4DYS/FtqemGadaCKHSg+i
+oBtSDY3miR0c0MjWzi+mpYetElcm1ewB3AaedkypKNcHIQ6tcz8rX9L/zxRa5Z7z
+NEbuG12RP2d1+/RiA8ZWGHWB7AXVaDvYMBP8+v+poSSpWZY0bbB20UuYj4OgwNnK
+Wcorzlpxf+2JD/bJqbxXvLkVHnmSV7vKSajqIgnIInhDJCDWt/kTcDfzthNXkCEG
+3od9hmCe4lqo6E9l9FANsvciOCcuMTwaz4zdqIZAe/f2o5jdnxGCP0QcnqW1kBbE
+1rRVaOwSy8UyaN5Bf9vda1d1/u9GKXOJoWn7k17czBkyg7xd+NfT3p1OMa3hOfgY
+G5mitl6vbzAVf0IDoBXu1dZt9mmaaQZP+ZfsjebEH17hL9E1nzPJhEaKXMpd5z4O
+ouAf9yNnRW1OqsA2nvX66MBcnp2DdTFAhSJgR9WWlY3tnsbXmlUH2qA=
+=9CRM
+-----END PGP PUBLIC KEY BLOCK-----

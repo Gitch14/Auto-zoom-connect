@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Reline::ANSI - Documentation for Ruby 3.2</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+  var index_rel_prefix = "../";
+</script>
+
+<script src="../js/navigation.js" defer></script>
+<script src="../js/search.js" defer></script>
+<script src="../js/search_index.js" defer></script>
+<script src="../js/searcher.js" defer></script>
+<script src="../js/darkfish.js" defer></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link href="../css/rdoc.css" rel="stylesheet">
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    
+<div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  <p class="link"><a href="../Object.html">Object</a>
+</div>
+
+    
+    
+    
+<!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    <li ><a href="#method-c-clear_screen">::clear_screen</a>
+    <li ><a href="#method-c-cursor_pos">::cursor_pos</a>
+    <li ><a href="#method-c-deprep">::deprep</a>
+    <li ><a href="#method-c-empty_buffer-3F">::empty_buffer?</a>
+    <li ><a href="#method-c-encoding">::encoding</a>
+    <li ><a href="#method-c-erase_after_cursor">::erase_after_cursor</a>
+    <li ><a href="#method-c-get_screen_size">::get_screen_size</a>
+    <li ><a href="#method-c-getc">::getc</a>
+    <li ><a href="#method-c-getc_with_bracketed_paste">::getc_with_bracketed_paste</a>
+    <li ><a href="#method-c-hide_cursor">::hide_cursor</a>
+    <li ><a href="#method-c-in_pasting-3F">::in_pasting?</a>
+    <li ><a href="#method-c-inner_getc">::inner_getc</a>
+    <li ><a href="#method-c-input-3D">::input=</a>
+    <li ><a href="#method-c-move_cursor_column">::move_cursor_column</a>
+    <li ><a href="#method-c-move_cursor_down">::move_cursor_down</a>
+    <li ><a href="#method-c-move_cursor_up">::move_cursor_up</a>
+    <li ><a href="#method-c-output-3D">::output=</a>
+    <li ><a href="#method-c-prep">::prep</a>
+    <li ><a href="#method-c-retrieve_keybuffer">::retrieve_keybuffer</a>
+    <li ><a href="#method-c-scroll_down">::scroll_down</a>
+    <li ><a href="#method-c-set_default_key_bindings">::set_default_key_bindings</a>
+    <li ><a href="#method-c-set_default_key_bindings_comprehensive_list">::set_default_key_bindings_comprehensive_list</a>
+    <li ><a href="#method-c-set_default_key_bindings_terminfo">::set_default_key_bindings_terminfo</a>
+    <li ><a href="#method-c-set_screen_size">::set_screen_size</a>
+    <li ><a href="#method-c-set_winch_handler">::set_winch_handler</a>
+    <li ><a href="#method-c-show_cursor">::show_cursor</a>
+    <li ><a href="#method-c-ungetc">::ungetc</a>
+    <li ><a href="#method-c-win-3F">::win?</a>
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Reline::ANSI">
+  <h1 id="class-Reline::ANSI" class="class">
+    class Reline::ANSI
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  <section id="5Buntitled-5D" class="documentation-section">
+
+
+    <section class="constants-list">
+      <header>
+        <h3>Constants</h3>
+      </header>
+      <dl>
+        <dt id="CAPNAME_KEY_BINDINGS">CAPNAME_KEY_BINDINGS
+        <dd>
+        <dt id="END_BRACKETED_PASTE">END_BRACKETED_PASTE
+        <dd>
+        <dt id="START_BRACKETED_PASTE">START_BRACKETED_PASTE
+        <dd>
+      </dl>
+    </section>
+
+
+
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+      <div id="method-c-clear_screen" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">clear_screen</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="clear_screen-source">
+            <pre><span class="ruby-comment"># File lib/reline/ansi.rb, line 332</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">clear_screen</span>
+  <span class="ruby-identifier">@@output</span>.<span class="ruby-identifier">write</span> <span class="ruby-string">&quot;\e[2J&quot;</span>
+  <span class="ruby-identifier">@@output</span>.<span class="ruby-identifier">write</span> <span class="ruby-string">&quot;\e[1;1H&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-cursor_pos" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">cursor_pos</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="cursor_pos-source">
+            <pre><span class="ruby-comment"># File lib/reline/ansi.rb, line 244</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">cursor_pos</span>
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">res</span> = <span class="ruby-string">+&#39;&#39;</span>
+    <span class="ruby-identifier">m</span> = <span class="ruby-keyword">nil</span>
+    <span class="ruby-identifier">@@input</span>.<span class="ruby-identifier">raw</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">stdin</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">@@output</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-string">&quot;\e[6n&quot;</span>
+      <span class="ruby-identifier">@@output</span>.<span class="ruby-identifier">flush</span>
+      <span class="ruby-identifier">loop</span> <span class="ruby-keyword">do</span>
+        <span class="ruby-identifier">c</span> = <span class="ruby-identifier">stdin</span>.<span class="ruby-identifier">getc</span>
+        <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">nil?</span>
+        <span class="ruby-identifier">res</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">c</span>
+        <span class="ruby-identifier">m</span> = <span class="ruby-identifier">res</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp">/\e\[(?&lt;row&gt;\d+);(?&lt;column&gt;\d+)R/</span>)
+        <span class="ruby-keyword">break</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">m</span>
+      <span class="ruby-keyword">end</span>
+      (<span class="ruby-identifier">m</span>.<span class="ruby-identifier">pre_match</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">m</span>.<span class="ruby-identifier">post_match</span>).<span class="ruby-identifier">chars</span>.<span class="ruby-identifier">reverse_each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ch</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">stdin</span>.<span class="ruby-identifier">ungetc</span> <span class="ruby-identifier">ch</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-identifier">column</span> = <span class="ruby-identifier">m</span>[<span class="ruby-value">:column</span>].<span class="ruby-identifier">to_i</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+    <span class="ruby-identifier">row</span> = <span class="ruby-identifier">m</span>[<span class="ruby-value">:row</span>].<span class="ruby-identifier">to_i</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ENOTTY</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">buf</span> = <span class="ruby-identifier">@@output</span>.<span class="ruby-identifier">pread</span>(<span class="ruby-identifier">@@output</span>.<span class="ruby-identifier">pos</span>, <span class="ruby-value">0</span>)
+      <span class="ruby-identifier">row</span> = <span class="ruby-identifier">buf</span>.<span class="ruby-identifier">count</span>(<span class="ruby-string">&quot;\n&quot;</span>)
+      <span class="ruby-identifier">column</span> = <span class="ruby-identifier">buf</span>.<span class="ruby-identifier">rindex</span>(<span class="ruby-string">&quot;\n&quot;</span>) <span class="ruby-operator">?</span> (<span class="ruby-identifier">buf</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">buf</span>.<span class="ruby-identifier">rindex</span>(<span class="ruby-string">&quot;\n&quot;</span>)) <span class="ruby-operator">-</span> <span class="ruby-value">1</span> <span class="ruby-operator">:</span> <span class="ruby-value">0</span>
+    <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ESPIPE</span>
+      <span class="ruby-comment"># Just returns column 1 for ambiguous width because this I/O is not</span>
+      <span class="ruby-comment"># tty and can&#39;t seek.</span>
+      <span class="ruby-identifier">row</span> = <span class="ruby-value">0</span>
+      <span class="ruby-identifier">column</span> = <span class="ruby-value">1</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-constant">Reline</span><span class="ruby-operator">::</span><span class="ruby-constant">CursorPos</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">column</span>, <span class="ruby-identifier">row</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-deprep" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">deprep</span><span
+              class="method-args">(otio)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="deprep-source">
+            <pre><span class="ruby-comment"># File lib/reline/ansi.rb, line 347</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">deprep</span>(<span class="ruby-identifier">otio</span>)
+  <span class="ruby-constant">Signal</span>.<span class="ruby-identifier">trap</span>(<span class="ruby-string">&#39;WINCH&#39;</span>, <span class="ruby-identifier">@@old_winch_handler</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">@@old_winch_handler</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-empty_buffer-3F" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">empty_buffer?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="empty_buffer-3F-source">
+            <pre><span class="ruby-comment"># File lib/reline/ansi.rb, line 205</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">empty_buffer?</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">@@buf</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-operator">!</span><span class="ruby-identifier">@@input</span>.<span class="ruby-identifier">wait_readable</span>(<span class="ruby-value">0</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-encoding" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">encoding</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="encoding-source">
+            <pre><span class="ruby-comment"># File lib/reline/ansi.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">encoding</span>
+  <span class="ruby-constant">Encoding</span>.<span class="ruby-identifier">default_external</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-erase_after_cursor" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">erase_after_cursor</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="erase_after_cursor-source">
+            <pre><span class="ruby-comment"># File lib/reline/ansi.rb, line 323</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">erase_after_cursor</span>
+  <span class="ruby-identifier">@@output</span>.<span class="ruby-identifier">write</span> <span class="ruby-string">&quot;\e[K&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-get_screen_size" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">get_screen_size</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="get_screen_size-source">
+            <pre><span class="ruby-comment"># File lib/reline/ansi.rb, line 227</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">get_screen_size</span>
+  <span class="ruby-identifier">s</span> = <span class="ruby-identifier">@@input</span>.<span class="ruby-identifier">winsize</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">s</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">s</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">s</span>[<span class="ruby-value">1</span>] <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+  <span class="ruby-identifier">s</span> = [<span class="ruby-constant">ENV</span>[<span class="ruby-string">&quot;LINES&quot;</span>].<span class="ruby-identifier">to_i</span>, <span class="ruby-constant">ENV</span>[<span class="ruby-string">&quot;COLUMNS&quot;</span>].<span class="ruby-identifier">to_i</span>]
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">s</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">s</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">s</span>[<span class="ruby-value">1</span>] <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+  [<span class="ruby-value">24</span>, <span class="ruby-value">80</span>]
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ENOTTY</span>
+  [<span class="ruby-value">24</span>, <span class="ruby-value">80</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-getc" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">getc</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="getc-source">
+            <pre><span class="ruby-comment"># File lib/reline/ansi.rb, line 193</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">getc</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Reline</span>.<span class="ruby-identifier">core</span>.<span class="ruby-identifier">config</span>.<span class="ruby-identifier">enable_bracketed_paste</span>
+    <span class="ruby-identifier">getc_with_bracketed_paste</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">inner_getc</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-getc_with_bracketed_paste" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">getc_with_bracketed_paste</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="getc_with_bracketed_paste-source">
+            <pre><span class="ruby-comment"># File lib/reline/ansi.rb, line 164</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">getc_with_bracketed_paste</span>
+  <span class="ruby-identifier">buffer</span> = <span class="ruby-constant">String</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">encoding:</span> <span class="ruby-constant">Encoding</span><span class="ruby-operator">::</span><span class="ruby-constant">ASCII_8BIT</span>)
+  <span class="ruby-identifier">buffer</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">inner_getc</span>
+  <span class="ruby-keyword">while</span> <span class="ruby-constant">START_BRACKETED_PASTE</span>.<span class="ruby-identifier">start_with?</span>(<span class="ruby-identifier">buffer</span>) <span class="ruby-keyword">or</span> <span class="ruby-constant">END_BRACKETED_PASTE</span>.<span class="ruby-identifier">start_with?</span>(<span class="ruby-identifier">buffer</span>) <span class="ruby-keyword">do</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-constant">START_BRACKETED_PASTE</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">buffer</span>
+      <span class="ruby-identifier">@@in_bracketed_paste_mode</span> = <span class="ruby-keyword">true</span>
+      <span class="ruby-keyword">return</span> <span class="ruby-identifier">inner_getc</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-constant">END_BRACKETED_PASTE</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">buffer</span>
+      <span class="ruby-identifier">@@in_bracketed_paste_mode</span> = <span class="ruby-keyword">false</span>
+      <span class="ruby-identifier">ungetc</span>(<span class="ruby-value">-1</span>)
+      <span class="ruby-keyword">return</span> <span class="ruby-identifier">inner_getc</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">succ_c</span> = <span class="ruby-keyword">nil</span>
+      <span class="ruby-constant">Timeout</span>.<span class="ruby-identifier">timeout</span>(<span class="ruby-constant">Reline</span>.<span class="ruby-identifier">core</span>.<span class="ruby-identifier">config</span>.<span class="ruby-identifier">keyseq_timeout</span> <span class="ruby-operator">*</span> <span class="ruby-value">100</span>) {
+        <span class="ruby-identifier">succ_c</span> = <span class="ruby-identifier">inner_getc</span>
+      }
+    <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Timeout</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span>
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">buffer</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">succ_c</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">buffer</span>.<span class="ruby-identifier">bytes</span>.<span class="ruby-identifier">reverse_each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">ch</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">ungetc</span> <span class="ruby-identifier">ch</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">inner_getc</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-hide_cursor" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">hide_cursor</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="hide_cursor-source">
+            <pre><span class="ruby-comment"># File lib/reline/ansi.rb, line 299</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">hide_cursor</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Reline</span><span class="ruby-operator">::</span><span class="ruby-constant">Terminfo</span>.<span class="ruby-identifier">enabled?</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">@@output</span>.<span class="ruby-identifier">write</span> <span class="ruby-constant">Reline</span><span class="ruby-operator">::</span><span class="ruby-constant">Terminfo</span>.<span class="ruby-identifier">tigetstr</span>(<span class="ruby-string">&#39;civis&#39;</span>)
+    <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Reline</span><span class="ruby-operator">::</span><span class="ruby-constant">Terminfo</span><span class="ruby-operator">::</span><span class="ruby-constant">TerminfoError</span>
+      <span class="ruby-comment"># civis is undefined</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-comment"># ignored</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-in_pasting-3F" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">in_pasting?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="in_pasting-3F-source">
+            <pre><span class="ruby-comment"># File lib/reline/ansi.rb, line 201</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">in_pasting?</span>
+  <span class="ruby-identifier">@@in_bracketed_paste_mode</span> <span class="ruby-keyword">or</span> (<span class="ruby-keyword">not</span> <span class="ruby-constant">Reline</span><span class="ruby-operator">::</span><span class="ruby-constant">IOGate</span>.<span class="ruby-identifier">empty_buffer?</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-inner_getc" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">inner_getc</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="inner_getc-source">
+            <pre><span class="ruby-comment"># File lib/reline/ansi.rb, line 146</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">inner_getc</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">@@buf</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">@@buf</span>.<span class="ruby-identifier">shift</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">until</span> <span class="ruby-identifier">c</span> = <span class="ruby-identifier">@@input</span>.<span class="ruby-identifier">raw</span>(<span class="ruby-value">intr:</span> <span class="ruby-keyword">true</span>) { <span class="ruby-identifier">@@input</span>.<span class="ruby-identifier">wait_readable</span>(<span class="ruby-value">0.1</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">@@input</span>.<span class="ruby-identifier">getbyte</span> }
+    <span class="ruby-constant">Reline</span>.<span class="ruby-identifier">core</span>.<span class="ruby-identifier">line_editor</span>.<span class="ruby-identifier">resize</span>
+  <span class="ruby-keyword">end</span>
+  (<span class="ruby-identifier">c</span> <span class="ruby-operator">==</span> <span class="ruby-value">0x16</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">@@input</span>.<span class="ruby-identifier">raw</span>(<span class="ruby-value">min:</span> <span class="ruby-value">0</span>, <span class="ruby-value">time:</span> <span class="ruby-value">0</span>, <span class="ruby-operator">&amp;</span><span class="ruby-value">:getbyte</span>)) <span class="ruby-operator">||</span> <span class="ruby-identifier">c</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">EIO</span>
+  <span class="ruby-comment"># Maybe the I/O has been closed.</span>
+  <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ENOTTY</span>
+  <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-input-3D" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">input=</span><span
+              class="method-args">(val)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="input-3D-source">
+            <pre><span class="ruby-comment"># File lib/reline/ansi.rb, line 136</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">input=</span>(<span class="ruby-identifier">val</span>)
+  <span class="ruby-identifier">@@input</span> = <span class="ruby-identifier">val</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-move_cursor_column" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">move_cursor_column</span><span
+              class="method-args">(x)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="move_cursor_column-source">
+            <pre><span class="ruby-comment"># File lib/reline/ansi.rb, line 279</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">move_cursor_column</span>(<span class="ruby-identifier">x</span>)
+  <span class="ruby-identifier">@@output</span>.<span class="ruby-identifier">write</span> <span class="ruby-node">&quot;\e[#{x + 1}G&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-move_cursor_down" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">move_cursor_down</span><span
+              class="method-args">(x)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="move_cursor_down-source">
+            <pre><span class="ruby-comment"># File lib/reline/ansi.rb, line 291</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">move_cursor_down</span>(<span class="ruby-identifier">x</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">@@output</span>.<span class="ruby-identifier">write</span> <span class="ruby-node">&quot;\e[#{x}B&quot;</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">move_cursor_up</span>(<span class="ruby-operator">-</span><span class="ruby-identifier">x</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-move_cursor_up" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">move_cursor_up</span><span
+              class="method-args">(x)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="move_cursor_up-source">
+            <pre><span class="ruby-comment"># File lib/reline/ansi.rb, line 283</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">move_cursor_up</span>(<span class="ruby-identifier">x</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">@@output</span>.<span class="ruby-identifier">write</span> <span class="ruby-node">&quot;\e[#{x}A&quot;</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
+    <span class="ruby-identifier">move_cursor_down</span>(<span class="ruby-operator">-</span><span class="ruby-identifier">x</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-output-3D" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">output=</span><span
+              class="method-args">(val)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="output-3D-source">
+            <pre><span class="ruby-comment"># File lib/reline/ansi.rb, line 141</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">output=</span>(<span class="ruby-identifier">val</span>)
+  <span class="ruby-identifier">@@output</span> = <span class="ruby-identifier">val</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-prep" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">prep</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="prep-source">
+            <pre><span class="ruby-comment"># File lib/reline/ansi.rb, line 342</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">prep</span>
+  <span class="ruby-identifier">retrieve_keybuffer</span>
+  <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-retrieve_keybuffer" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">retrieve_keybuffer</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="retrieve_keybuffer-source">
+            <pre><span class="ruby-comment"># File lib/reline/ansi.rb, line 216</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">retrieve_keybuffer</span>
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">@@input</span>.<span class="ruby-identifier">wait_readable</span>(<span class="ruby-value">0.001</span>)
+    <span class="ruby-identifier">str</span> = <span class="ruby-identifier">@@input</span>.<span class="ruby-identifier">read_nonblock</span>(<span class="ruby-value">1024</span>)
+    <span class="ruby-identifier">str</span>.<span class="ruby-identifier">bytes</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">@@buf</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">c</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">EOFError</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-scroll_down" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">scroll_down</span><span
+              class="method-args">(x)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="scroll_down-source">
+            <pre><span class="ruby-comment"># File lib/reline/ansi.rb, line 327</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">scroll_down</span>(<span class="ruby-identifier">x</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">zero?</span>
+  <span class="ruby-identifier">@@output</span>.<span class="ruby-identifier">write</span> <span class="ruby-node">&quot;\e[#{x}S&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-set_default_key_bindings" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">set_default_key_bindings</span><span
+              class="method-args">(config)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="set_default_key_bindings-source">
+            <pre><span class="ruby-comment"># File lib/reline/ansi.rb, line 32</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">set_default_key_bindings</span>(<span class="ruby-identifier">config</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Reline</span><span class="ruby-operator">::</span><span class="ruby-constant">Terminfo</span>.<span class="ruby-identifier">enabled?</span>
+    <span class="ruby-identifier">set_default_key_bindings_terminfo</span>(<span class="ruby-identifier">config</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">set_default_key_bindings_comprehensive_list</span>(<span class="ruby-identifier">config</span>)
+  <span class="ruby-keyword">end</span>
+  {
+    <span class="ruby-comment"># extended entries of terminfo</span>
+    [<span class="ruby-value">27</span>, <span class="ruby-value">91</span>, <span class="ruby-value">49</span>, <span class="ruby-value">59</span>, <span class="ruby-value">53</span>, <span class="ruby-value">67</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:em_next_word</span>, <span class="ruby-comment"># Ctrl+→, extended entry</span>
+    [<span class="ruby-value">27</span>, <span class="ruby-value">91</span>, <span class="ruby-value">49</span>, <span class="ruby-value">59</span>, <span class="ruby-value">53</span>, <span class="ruby-value">68</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:ed_prev_word</span>, <span class="ruby-comment"># Ctrl+←, extended entry</span>
+    [<span class="ruby-value">27</span>, <span class="ruby-value">91</span>, <span class="ruby-value">49</span>, <span class="ruby-value">59</span>, <span class="ruby-value">51</span>, <span class="ruby-value">67</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:em_next_word</span>, <span class="ruby-comment"># Meta+→, extended entry</span>
+    [<span class="ruby-value">27</span>, <span class="ruby-value">91</span>, <span class="ruby-value">49</span>, <span class="ruby-value">59</span>, <span class="ruby-value">51</span>, <span class="ruby-value">68</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:ed_prev_word</span>, <span class="ruby-comment"># Meta+←, extended entry</span>
+  }.<span class="ruby-identifier">each_pair</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">func</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">config</span>.<span class="ruby-identifier">add_default_key_binding_by_keymap</span>(<span class="ruby-value">:emacs</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">func</span>)
+    <span class="ruby-identifier">config</span>.<span class="ruby-identifier">add_default_key_binding_by_keymap</span>(<span class="ruby-value">:vi_insert</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">func</span>)
+    <span class="ruby-identifier">config</span>.<span class="ruby-identifier">add_default_key_binding_by_keymap</span>(<span class="ruby-value">:vi_command</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">func</span>)
+  <span class="ruby-keyword">end</span>
+  {
+    [<span class="ruby-value">27</span>, <span class="ruby-value">91</span>, <span class="ruby-value">90</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:completion_journey_up</span>, <span class="ruby-comment"># S-Tab</span>
+  }.<span class="ruby-identifier">each_pair</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">func</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">config</span>.<span class="ruby-identifier">add_default_key_binding_by_keymap</span>(<span class="ruby-value">:emacs</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">func</span>)
+    <span class="ruby-identifier">config</span>.<span class="ruby-identifier">add_default_key_binding_by_keymap</span>(<span class="ruby-value">:vi_insert</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">func</span>)
+  <span class="ruby-keyword">end</span>
+  {
+    <span class="ruby-comment"># default bindings</span>
+    [<span class="ruby-value">27</span>, <span class="ruby-value">32</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:em_set_mark</span>,             <span class="ruby-comment"># M-&lt;space&gt;</span>
+    [<span class="ruby-value">24</span>, <span class="ruby-value">24</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:em_exchange_mark</span>,        <span class="ruby-comment"># C-x C-x</span>
+  }.<span class="ruby-identifier">each_pair</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">func</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">config</span>.<span class="ruby-identifier">add_default_key_binding_by_keymap</span>(<span class="ruby-value">:emacs</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">func</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-set_default_key_bindings_comprehensive_list" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">set_default_key_bindings_comprehensive_list</span><span
+              class="method-args">(config)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="set_default_key_bindings_comprehensive_list-source">
+            <pre><span class="ruby-comment"># File lib/reline/ansi.rb, line 88</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">set_default_key_bindings_comprehensive_list</span>(<span class="ruby-identifier">config</span>)
+  {
+    <span class="ruby-comment"># Console (80x25)</span>
+    [<span class="ruby-value">27</span>, <span class="ruby-value">91</span>, <span class="ruby-value">49</span>, <span class="ruby-value">126</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:ed_move_to_beg</span>, <span class="ruby-comment"># Home</span>
+    [<span class="ruby-value">27</span>, <span class="ruby-value">91</span>, <span class="ruby-value">52</span>, <span class="ruby-value">126</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:ed_move_to_end</span>, <span class="ruby-comment"># End</span>
+    [<span class="ruby-value">27</span>, <span class="ruby-value">91</span>, <span class="ruby-value">51</span>, <span class="ruby-value">126</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:key_delete</span>,     <span class="ruby-comment"># Del</span>
+    [<span class="ruby-value">27</span>, <span class="ruby-value">91</span>, <span class="ruby-value">65</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:ed_prev_history</span>,     <span class="ruby-comment"># ↑</span>
+    [<span class="ruby-value">27</span>, <span class="ruby-value">91</span>, <span class="ruby-value">66</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:ed_next_history</span>,     <span class="ruby-comment"># ↓</span>
+    [<span class="ruby-value">27</span>, <span class="ruby-value">91</span>, <span class="ruby-value">67</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:ed_next_char</span>,        <span class="ruby-comment"># →</span>
+    [<span class="ruby-value">27</span>, <span class="ruby-value">91</span>, <span class="ruby-value">68</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:ed_prev_char</span>,        <span class="ruby-comment"># ←</span>
+
+    <span class="ruby-comment"># KDE</span>
+    [<span class="ruby-value">27</span>, <span class="ruby-value">91</span>, <span class="ruby-value">72</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:ed_move_to_beg</span>,      <span class="ruby-comment"># Home</span>
+    [<span class="ruby-value">27</span>, <span class="ruby-value">91</span>, <span class="ruby-value">70</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:ed_move_to_end</span>,      <span class="ruby-comment"># End</span>
+    <span class="ruby-comment"># Del is 0x08</span>
+    [<span class="ruby-value">27</span>, <span class="ruby-value">71</span>, <span class="ruby-value">65</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:ed_prev_history</span>,     <span class="ruby-comment"># ↑</span>
+    [<span class="ruby-value">27</span>, <span class="ruby-value">71</span>, <span class="ruby-value">66</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:ed_next_history</span>,     <span class="ruby-comment"># ↓</span>
+    [<span class="ruby-value">27</span>, <span class="ruby-value">71</span>, <span class="ruby-value">67</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:ed_next_char</span>,        <span class="ruby-comment"># →</span>
+    [<span class="ruby-value">27</span>, <span class="ruby-value">71</span>, <span class="ruby-value">68</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:ed_prev_char</span>,        <span class="ruby-comment"># ←</span>
+
+    <span class="ruby-comment"># urxvt / exoterm</span>
+    [<span class="ruby-value">27</span>, <span class="ruby-value">91</span>, <span class="ruby-value">55</span>, <span class="ruby-value">126</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:ed_move_to_beg</span>, <span class="ruby-comment"># Home</span>
+    [<span class="ruby-value">27</span>, <span class="ruby-value">91</span>, <span class="ruby-value">56</span>, <span class="ruby-value">126</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:ed_move_to_end</span>, <span class="ruby-comment"># End</span>
+
+    <span class="ruby-comment"># GNOME</span>
+    [<span class="ruby-value">27</span>, <span class="ruby-value">79</span>, <span class="ruby-value">72</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:ed_move_to_beg</span>,      <span class="ruby-comment"># Home</span>
+    [<span class="ruby-value">27</span>, <span class="ruby-value">79</span>, <span class="ruby-value">70</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:ed_move_to_end</span>,      <span class="ruby-comment"># End</span>
+    <span class="ruby-comment"># Del is 0x08</span>
+    <span class="ruby-comment"># Arrow keys are the same of KDE</span>
+
+    <span class="ruby-comment"># iTerm2</span>
+    [<span class="ruby-value">27</span>, <span class="ruby-value">27</span>, <span class="ruby-value">91</span>, <span class="ruby-value">67</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:em_next_word</span>,    <span class="ruby-comment"># Option+→, extended entry</span>
+    [<span class="ruby-value">27</span>, <span class="ruby-value">27</span>, <span class="ruby-value">91</span>, <span class="ruby-value">68</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:ed_prev_word</span>,    <span class="ruby-comment"># Option+←, extended entry</span>
+    [<span class="ruby-value">195</span>, <span class="ruby-value">166</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:em_next_word</span>,          <span class="ruby-comment"># Option+f</span>
+    [<span class="ruby-value">195</span>, <span class="ruby-value">162</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:ed_prev_word</span>,          <span class="ruby-comment"># Option+b</span>
+
+    [<span class="ruby-value">27</span>, <span class="ruby-value">79</span>, <span class="ruby-value">65</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:ed_prev_history</span>,     <span class="ruby-comment"># ↑</span>
+    [<span class="ruby-value">27</span>, <span class="ruby-value">79</span>, <span class="ruby-value">66</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:ed_next_history</span>,     <span class="ruby-comment"># ↓</span>
+    [<span class="ruby-value">27</span>, <span class="ruby-value">79</span>, <span class="ruby-value">67</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:ed_next_char</span>,        <span class="ruby-comment"># →</span>
+    [<span class="ruby-value">27</span>, <span class="ruby-value">79</span>, <span class="ruby-value">68</span>] <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:ed_prev_char</span>,        <span class="ruby-comment"># ←</span>
+  }.<span class="ruby-identifier">each_pair</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">func</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">config</span>.<span class="ruby-identifier">add_default_key_binding_by_keymap</span>(<span class="ruby-value">:emacs</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">func</span>)
+    <span class="ruby-identifier">config</span>.<span class="ruby-identifier">add_default_key_binding_by_keymap</span>(<span class="ruby-value">:vi_insert</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">func</span>)
+    <span class="ruby-identifier">config</span>.<span class="ruby-identifier">add_default_key_binding_by_keymap</span>(<span class="ruby-value">:vi_command</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">func</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-set_default_key_bindings_terminfo" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">set_default_key_bindings_terminfo</span><span
+              class="method-args">(config)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="set_default_key_bindings_terminfo-source">
+            <pre><span class="ruby-comment"># File lib/reline/ansi.rb, line 64</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">set_default_key_bindings_terminfo</span>(<span class="ruby-identifier">config</span>)
+  <span class="ruby-identifier">key_bindings</span> = <span class="ruby-constant">CAPNAME_KEY_BINDINGS</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">capname</span>, <span class="ruby-identifier">key_binding</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">key_code</span> = <span class="ruby-constant">Reline</span><span class="ruby-operator">::</span><span class="ruby-constant">Terminfo</span>.<span class="ruby-identifier">tigetstr</span>(<span class="ruby-identifier">capname</span>)
+      <span class="ruby-keyword">case</span> <span class="ruby-identifier">capname</span>
+      <span class="ruby-comment"># Escape sequences that omit the move distance and are set to defaults</span>
+      <span class="ruby-comment"># value 1 may be sometimes sent by pressing the arrow-key.</span>
+      <span class="ruby-keyword">when</span> <span class="ruby-string">&#39;cuu&#39;</span>, <span class="ruby-string">&#39;cud&#39;</span>, <span class="ruby-string">&#39;cuf&#39;</span>, <span class="ruby-string">&#39;cub&#39;</span>
+        [ <span class="ruby-identifier">key_code</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-regexp">/%p1%d/</span>, <span class="ruby-string">&#39;&#39;</span>).<span class="ruby-identifier">bytes</span>, <span class="ruby-identifier">key_binding</span> ]
+      <span class="ruby-keyword">else</span>
+        [ <span class="ruby-identifier">key_code</span>.<span class="ruby-identifier">bytes</span>, <span class="ruby-identifier">key_binding</span> ]
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Reline</span><span class="ruby-operator">::</span><span class="ruby-constant">Terminfo</span><span class="ruby-operator">::</span><span class="ruby-constant">TerminfoError</span>
+      <span class="ruby-comment"># capname is undefined</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">to_h</span>
+
+  <span class="ruby-identifier">key_bindings</span>.<span class="ruby-identifier">each_pair</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">func</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">config</span>.<span class="ruby-identifier">add_default_key_binding_by_keymap</span>(<span class="ruby-value">:emacs</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">func</span>)
+    <span class="ruby-identifier">config</span>.<span class="ruby-identifier">add_default_key_binding_by_keymap</span>(<span class="ruby-value">:vi_insert</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">func</span>)
+    <span class="ruby-identifier">config</span>.<span class="ruby-identifier">add_default_key_binding_by_keymap</span>(<span class="ruby-value">:vi_command</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">func</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-set_screen_size" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">set_screen_size</span><span
+              class="method-args">(rows, columns)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="set_screen_size-source">
+            <pre><span class="ruby-comment"># File lib/reline/ansi.rb, line 237</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">set_screen_size</span>(<span class="ruby-identifier">rows</span>, <span class="ruby-identifier">columns</span>)
+  <span class="ruby-identifier">@@input</span>.<span class="ruby-identifier">winsize</span> = [<span class="ruby-identifier">rows</span>, <span class="ruby-identifier">columns</span>]
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ENOTTY</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-set_winch_handler" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">set_winch_handler</span><span
+              class="method-args">(&amp;handler)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="set_winch_handler-source">
+            <pre><span class="ruby-comment"># File lib/reline/ansi.rb, line 338</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">set_winch_handler</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">handler</span>)
+  <span class="ruby-identifier">@@old_winch_handler</span> = <span class="ruby-constant">Signal</span>.<span class="ruby-identifier">trap</span>(<span class="ruby-string">&#39;WINCH&#39;</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">handler</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-show_cursor" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">show_cursor</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="show_cursor-source">
+            <pre><span class="ruby-comment"># File lib/reline/ansi.rb, line 311</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">show_cursor</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-constant">Reline</span><span class="ruby-operator">::</span><span class="ruby-constant">Terminfo</span>.<span class="ruby-identifier">enabled?</span>
+    <span class="ruby-keyword">begin</span>
+      <span class="ruby-identifier">@@output</span>.<span class="ruby-identifier">write</span> <span class="ruby-constant">Reline</span><span class="ruby-operator">::</span><span class="ruby-constant">Terminfo</span>.<span class="ruby-identifier">tigetstr</span>(<span class="ruby-string">&#39;cnorm&#39;</span>)
+    <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Reline</span><span class="ruby-operator">::</span><span class="ruby-constant">Terminfo</span><span class="ruby-operator">::</span><span class="ruby-constant">TerminfoError</span>
+      <span class="ruby-comment"># cnorm is undefined</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-comment"># ignored</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-ungetc" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">ungetc</span><span
+              class="method-args">(c)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="ungetc-source">
+            <pre><span class="ruby-comment"># File lib/reline/ansi.rb, line 212</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">ungetc</span>(<span class="ruby-identifier">c</span>)
+  <span class="ruby-identifier">@@buf</span>.<span class="ruby-identifier">unshift</span>(<span class="ruby-identifier">c</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-win-3F" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">win?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="win-3F-source">
+            <pre><span class="ruby-comment"># File lib/reline/ansi.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">win?</span>
+  <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.5.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

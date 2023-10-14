@@ -1,0 +1,32 @@
+{
+  "schedule": {
+    "monday": {
+      "8:00": "https://us04web.zoom.us/j/76123911535?pwd=9Bmw8d134REczZy0KD4bieGhZ1P0sh.1",
+      "9:35": "https://us04web.zoom.us/j/7340805536?pwd=enN6enp6VEw0cUJqM1RNSmtta3grQT09"
+    },
+    "tuesday": {
+      "8:00": "https://us04web.zoom.us/j/76123911535?pwd=9Bmw8d134REczZy0KD4bieGhZ1P0sh.1",
+      "9:35": "https://us04web.zoom.us/j/7340805536?pwd=enN6enp6VEw0cUJqM1RNSmtta3grQT09"
+    },
+    "wednesday": {
+      "8:00": "https://us04web.zoom.us/j/76123911535?pwd=9Bmw8d134REczZy0KD4bieGhZ1P0sh.1",
+      "9:35": "https://us04web.zoom.us/j/7340805536?pwd=enN6enp6VEw0cUJqM1RNSmtta3grQT09"
+    },
+    "thursday": {
+      "8:00": "https://us04web.zoom.us/j/76123911535?pwd=9Bmw8d134REczZy0KD4bieGhZ1P0sh.1",
+      "9:35": "https://us04web.zoom.us/j/7340805536?pwd=enN6enp6VEw0cUJqM1RNSmtta3grQT09"
+    },
+    "friday": {
+      "8:00": "https://us04web.zoom.us/j/3867814548?pwd=YU1hV25IYWo2K284bDRIK2pwd0xpUT09",
+      "23:57": "https://us04web.zoom.us/j/3867814548?pwd=YU1hV25IYWo2K284bDRIK2pwd0xpUT09"
+    },
+    "saturday": {
+      "1:00": "https://us04web.zoom.us/j/3867814548?pwd=YU1hV25IYWo2K284bDRIK2pwd0xpUT09",
+      "14:02": "https://us05web.zoom.us/j/3700637600?pwd=emJoRzZGYXBvaVFWZkpIaGF0cVpsdz09"
+    },
+    "sunday": {
+      "8:00": "https://us04web.zoom.us/j/76123911535?pwd=9Bmw8d134REczZy0KD4bieGhZ1P0sh.1",
+      "9:35": "https://us04web.zoom.us/j/7340805536?pwd=enN6enp6VEw0cUJqM1RNSmtta3grQT09"
+    }
+  }
+}

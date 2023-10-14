@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Reline::GeneralIO - Documentation for Ruby 3.2</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+  var index_rel_prefix = "../";
+</script>
+
+<script src="../js/navigation.js" defer></script>
+<script src="../js/search.js" defer></script>
+<script src="../js/search_index.js" defer></script>
+<script src="../js/searcher.js" defer></script>
+<script src="../js/darkfish.js" defer></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link href="../css/rdoc.css" rel="stylesheet">
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    
+<div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  <p class="link"><a href="../Object.html">Object</a>
+</div>
+
+    
+    
+    
+<!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    <li ><a href="#method-c-clear_screen">::clear_screen</a>
+    <li ><a href="#method-c-cursor_pos">::cursor_pos</a>
+    <li ><a href="#method-c-deprep">::deprep</a>
+    <li ><a href="#method-c-encoding">::encoding</a>
+    <li ><a href="#method-c-erase_after_cursor">::erase_after_cursor</a>
+    <li ><a href="#method-c-finish_pasting">::finish_pasting</a>
+    <li ><a href="#method-c-get_screen_size">::get_screen_size</a>
+    <li ><a href="#method-c-getc">::getc</a>
+    <li ><a href="#method-c-hide_cursor">::hide_cursor</a>
+    <li ><a href="#method-c-in_pasting-3F">::in_pasting?</a>
+    <li ><a href="#method-c-input-3D">::input=</a>
+    <li ><a href="#method-c-move_cursor_column">::move_cursor_column</a>
+    <li ><a href="#method-c-move_cursor_down">::move_cursor_down</a>
+    <li ><a href="#method-c-move_cursor_up">::move_cursor_up</a>
+    <li ><a href="#method-c-prep">::prep</a>
+    <li ><a href="#method-c-reset">::reset</a>
+    <li ><a href="#method-c-scroll_down">::scroll_down</a>
+    <li ><a href="#method-c-set_default_key_bindings">::set_default_key_bindings</a>
+    <li ><a href="#method-c-set_screen_size">::set_screen_size</a>
+    <li ><a href="#method-c-set_winch_handler">::set_winch_handler</a>
+    <li ><a href="#method-c-show_cursor">::show_cursor</a>
+    <li ><a href="#method-c-start_pasting">::start_pasting</a>
+    <li ><a href="#method-c-ungetc">::ungetc</a>
+    <li ><a href="#method-c-win-3F">::win?</a>
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Reline::GeneralIO">
+  <h1 id="class-Reline::GeneralIO" class="class">
+    class Reline::GeneralIO
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  <section id="5Buntitled-5D" class="documentation-section">
+
+
+
+
+
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+      <div id="method-c-clear_screen" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">clear_screen</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="clear_screen-source">
+            <pre><span class="ruby-comment"># File lib/reline/general_io.rb, line 81</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">clear_screen</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-cursor_pos" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">cursor_pos</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="cursor_pos-source">
+            <pre><span class="ruby-comment"># File lib/reline/general_io.rb, line 56</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">cursor_pos</span>
+  <span class="ruby-constant">Reline</span><span class="ruby-operator">::</span><span class="ruby-constant">CursorPos</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">1</span>, <span class="ruby-value">1</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-deprep" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">deprep</span><span
+              class="method-args">(otio)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="deprep-source">
+            <pre><span class="ruby-comment"># File lib/reline/general_io.rb, line 107</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">deprep</span>(<span class="ruby-identifier">otio</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-encoding" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">encoding</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="encoding-source">
+            <pre><span class="ruby-comment"># File lib/reline/general_io.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">encoding</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">defined?</span>(<span class="ruby-identifier">@@encoding</span>)
+    <span class="ruby-identifier">@@encoding</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-constant">RUBY_PLATFORM</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">/mswin|mingw/</span>
+    <span class="ruby-constant">Encoding</span><span class="ruby-operator">::</span><span class="ruby-constant">UTF_8</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-constant">Encoding</span><span class="ruby-operator">::</span><span class="ruby-identifier">default_external</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-erase_after_cursor" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">erase_after_cursor</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="erase_after_cursor-source">
+            <pre><span class="ruby-comment"># File lib/reline/general_io.rb, line 75</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">erase_after_cursor</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-finish_pasting" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">finish_pasting</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="finish_pasting-source">
+            <pre><span class="ruby-comment"># File lib/reline/general_io.rb, line 100</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">finish_pasting</span>
+  <span class="ruby-identifier">@@pasting</span> = <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-get_screen_size" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">get_screen_size</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="get_screen_size-source">
+            <pre><span class="ruby-comment"># File lib/reline/general_io.rb, line 52</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">get_screen_size</span>
+  [<span class="ruby-value">1</span>, <span class="ruby-value">1</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-getc" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">getc</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="getc-source">
+            <pre><span class="ruby-comment"># File lib/reline/general_io.rb, line 34</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">getc</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">@@buf</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">@@buf</span>.<span class="ruby-identifier">shift</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">c</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">loop</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-identifier">result</span> = <span class="ruby-identifier">@@input</span>.<span class="ruby-identifier">wait_readable</span>(<span class="ruby-value">0.1</span>)
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-identifier">c</span> = <span class="ruby-identifier">@@input</span>.<span class="ruby-identifier">read</span>(<span class="ruby-value">1</span>)
+    <span class="ruby-keyword">break</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">c</span>&amp;.<span class="ruby-identifier">ord</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-hide_cursor" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">hide_cursor</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="hide_cursor-source">
+            <pre><span class="ruby-comment"># File lib/reline/general_io.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">hide_cursor</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-in_pasting-3F" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">in_pasting?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="in_pasting-3F-source">
+            <pre><span class="ruby-comment"># File lib/reline/general_io.rb, line 92</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">in_pasting?</span>
+  <span class="ruby-identifier">@@pasting</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-input-3D" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">input=</span><span
+              class="method-args">(val)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="input-3D-source">
+            <pre><span class="ruby-comment"># File lib/reline/general_io.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">input=</span>(<span class="ruby-identifier">val</span>)
+  <span class="ruby-identifier">@@input</span> = <span class="ruby-identifier">val</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-move_cursor_column" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">move_cursor_column</span><span
+              class="method-args">(val)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="move_cursor_column-source">
+            <pre><span class="ruby-comment"># File lib/reline/general_io.rb, line 66</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">move_cursor_column</span>(<span class="ruby-identifier">val</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-move_cursor_down" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">move_cursor_down</span><span
+              class="method-args">(val)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="move_cursor_down-source">
+            <pre><span class="ruby-comment"># File lib/reline/general_io.rb, line 72</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">move_cursor_down</span>(<span class="ruby-identifier">val</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-move_cursor_up" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">move_cursor_up</span><span
+              class="method-args">(val)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="move_cursor_up-source">
+            <pre><span class="ruby-comment"># File lib/reline/general_io.rb, line 69</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">move_cursor_up</span>(<span class="ruby-identifier">val</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-prep" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">prep</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="prep-source">
+            <pre><span class="ruby-comment"># File lib/reline/general_io.rb, line 104</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">prep</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-reset" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">reset</span><span
+              class="method-args">(encoding: nil)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="reset-source">
+            <pre><span class="ruby-comment"># File lib/reline/general_io.rb, line 5</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">reset</span>(<span class="ruby-value">encoding:</span> <span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">@@pasting</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-identifier">@@encoding</span> = <span class="ruby-identifier">encoding</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-scroll_down" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">scroll_down</span><span
+              class="method-args">(val)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="scroll_down-source">
+            <pre><span class="ruby-comment"># File lib/reline/general_io.rb, line 78</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">scroll_down</span>(<span class="ruby-identifier">val</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-set_default_key_bindings" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">set_default_key_bindings</span><span
+              class="method-args">(_)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="set_default_key_bindings-source">
+            <pre><span class="ruby-comment"># File lib/reline/general_io.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">set_default_key_bindings</span>(<span class="ruby-identifier">_</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-set_screen_size" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">set_screen_size</span><span
+              class="method-args">(rows, columns)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="set_screen_size-source">
+            <pre><span class="ruby-comment"># File lib/reline/general_io.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">set_screen_size</span>(<span class="ruby-identifier">rows</span>, <span class="ruby-identifier">columns</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-set_winch_handler" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">set_winch_handler</span><span
+              class="method-args">(&amp;handler)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="set_winch_handler-source">
+            <pre><span class="ruby-comment"># File lib/reline/general_io.rb, line 87</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">set_winch_handler</span>(<span class="ruby-operator">&amp;</span><span class="ruby-identifier">handler</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-show_cursor" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">show_cursor</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="show_cursor-source">
+            <pre><span class="ruby-comment"># File lib/reline/general_io.rb, line 63</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">show_cursor</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-start_pasting" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">start_pasting</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="start_pasting-source">
+            <pre><span class="ruby-comment"># File lib/reline/general_io.rb, line 96</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">start_pasting</span>
+  <span class="ruby-identifier">@@pasting</span> = <span class="ruby-keyword">true</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-ungetc" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">ungetc</span><span
+              class="method-args">(c)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="ungetc-source">
+            <pre><span class="ruby-comment"># File lib/reline/general_io.rb, line 48</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">ungetc</span>(<span class="ruby-identifier">c</span>)
+  <span class="ruby-identifier">@@buf</span>.<span class="ruby-identifier">unshift</span>(<span class="ruby-identifier">c</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-win-3F" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">win?</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="win-3F-source">
+            <pre><span class="ruby-comment"># File lib/reline/general_io.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">win?</span>
+  <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.5.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

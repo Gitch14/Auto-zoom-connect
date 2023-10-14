@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class SyntaxSuggest::AroundBlockScan - Documentation for Ruby 3.2</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+  var index_rel_prefix = "../";
+</script>
+
+<script src="../js/navigation.js" defer></script>
+<script src="../js/search.js" defer></script>
+<script src="../js/search_index.js" defer></script>
+<script src="../js/searcher.js" defer></script>
+<script src="../js/darkfish.js" defer></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link href="../css/rdoc.css" rel="stylesheet">
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    
+<div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  <p class="link"><a href="../Object.html">Object</a>
+</div>
+
+    
+    
+    
+<!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    <li ><a href="#method-c-new">::new</a>
+    <li ><a href="#method-i-after_index">#after_index</a>
+    <li ><a href="#method-i-after_lines">#after_lines</a>
+    <li ><a href="#method-i-before_index">#before_index</a>
+    <li ><a href="#method-i-before_lines">#before_lines</a>
+    <li ><a href="#method-i-capture_neighbor_context">#capture_neighbor_context</a>
+    <li ><a href="#method-i-code_block">#code_block</a>
+    <li ><a href="#method-i-lines">#lines</a>
+    <li ><a href="#method-i-next_down">#next_down</a>
+    <li ><a href="#method-i-next_up">#next_up</a>
+    <li ><a href="#method-i-on_falling_indent">#on_falling_indent</a>
+    <li ><a href="#method-i-scan_adjacent_indent">#scan_adjacent_indent</a>
+    <li ><a href="#method-i-scan_neighbors">#scan_neighbors</a>
+    <li ><a href="#method-i-scan_while">#scan_while</a>
+    <li ><a href="#method-i-skip">#skip</a>
+    <li ><a href="#method-i-start_at_next_line">#start_at_next_line</a>
+    <li ><a href="#method-i-stop_after_kw">#stop_after_kw</a>
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-SyntaxSuggest::AroundBlockScan">
+  <h1 id="class-SyntaxSuggest::AroundBlockScan" class="class">
+    class SyntaxSuggest::AroundBlockScan
+  </h1>
+
+  <section class="description">
+    
+<p>This class is useful for exploring contents before and after a block</p>
+
+<p>It searches above and below the passed in block to match for whatever criteria you give it:</p>
+
+<p>Example:</p>
+
+<pre>def dog         # 1
+  puts &quot;bark&quot;   # 2
+  puts &quot;bark&quot;   # 3
+end             # 4
+
+scan = AroundBlockScan.new(
+  code_lines: code_lines
+  block: CodeBlock.new(lines: code_lines[1])
+)
+
+scan.scan_while { true }
+
+puts scan.before_index # =&gt; 0
+puts scan.after_index  # =&gt; 3</pre>
+
+<p>Contents can also be filtered using <a href="AroundBlockScan.html#method-i-skip"><code>AroundBlockScan#skip</code></a></p>
+
+<p>To grab the next surrounding indentation use <a href="AroundBlockScan.html#method-i-scan_adjacent_indent"><code>AroundBlockScan#scan_adjacent_indent</code></a></p>
+
+  </section>
+
+  <section id="5Buntitled-5D" class="documentation-section">
+
+
+
+
+
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+      <div id="method-c-new" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(code_lines:, block:)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/syntax_suggest/around_block_scan.rb, line 31</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-value">code_lines:</span>, <span class="ruby-value">block:</span>)
+  <span class="ruby-ivar">@code_lines</span> = <span class="ruby-identifier">code_lines</span>
+  <span class="ruby-ivar">@orig_before_index</span> = <span class="ruby-identifier">block</span>.<span class="ruby-identifier">lines</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">index</span>
+  <span class="ruby-ivar">@orig_after_index</span> = <span class="ruby-identifier">block</span>.<span class="ruby-identifier">lines</span>.<span class="ruby-identifier">last</span>.<span class="ruby-identifier">index</span>
+  <span class="ruby-ivar">@orig_indent</span> = <span class="ruby-identifier">block</span>.<span class="ruby-identifier">current_indent</span>
+  <span class="ruby-ivar">@skip_array</span> = []
+  <span class="ruby-ivar">@after_array</span> = []
+  <span class="ruby-ivar">@before_array</span> = []
+  <span class="ruby-ivar">@stop_after_kw</span> = <span class="ruby-keyword">false</span>
+
+  <span class="ruby-ivar">@skip_hidden</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-ivar">@skip_empty</span> = <span class="ruby-keyword">false</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+      <div id="method-i-after_index" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">after_index</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="after_index-source">
+            <pre><span class="ruby-comment"># File lib/syntax_suggest/around_block_scan.rb, line 212</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">after_index</span>
+  <span class="ruby-ivar">@after_index</span> <span class="ruby-operator">||=</span> <span class="ruby-ivar">@orig_after_index</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-before_index" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">before_index</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="before_index-source">
+            <pre><span class="ruby-comment"># File lib/syntax_suggest/around_block_scan.rb, line 208</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">before_index</span>
+  <span class="ruby-ivar">@before_index</span> <span class="ruby-operator">||=</span> <span class="ruby-ivar">@orig_before_index</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-capture_neighbor_context" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">capture_neighbor_context</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="capture_neighbor_context-source">
+            <pre><span class="ruby-comment"># File lib/syntax_suggest/around_block_scan.rb, line 108</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">capture_neighbor_context</span>
+  <span class="ruby-identifier">lines</span> = []
+  <span class="ruby-identifier">kw_count</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">end_count</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">before_lines</span>.<span class="ruby-identifier">reverse_each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-keyword">break</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">indent</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@orig_indent</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">indent</span> <span class="ruby-operator">!=</span> <span class="ruby-ivar">@orig_indent</span>
+
+    <span class="ruby-identifier">kw_count</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">is_kw?</span>
+    <span class="ruby-identifier">end_count</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">is_end?</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">kw_count</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">kw_count</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">end_count</span>
+      <span class="ruby-identifier">lines</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">line</span>
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">lines</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">line</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">lines</span>.<span class="ruby-identifier">reverse!</span>
+
+  <span class="ruby-identifier">kw_count</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">end_count</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">after_lines</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-keyword">break</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">indent</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@orig_indent</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">indent</span> <span class="ruby-operator">!=</span> <span class="ruby-ivar">@orig_indent</span>
+
+    <span class="ruby-identifier">kw_count</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">is_kw?</span>
+    <span class="ruby-identifier">end_count</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">is_end?</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">kw_count</span> <span class="ruby-operator">!=</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">kw_count</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">end_count</span>
+      <span class="ruby-identifier">lines</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">line</span>
+      <span class="ruby-keyword">break</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">lines</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">line</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">lines</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-code_block" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">code_block</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="code_block-source">
+            <pre><span class="ruby-comment"># File lib/syntax_suggest/around_block_scan.rb, line 200</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">code_block</span>
+  <span class="ruby-constant">CodeBlock</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">lines:</span> <span class="ruby-identifier">lines</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-lines" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">lines</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="lines-source">
+            <pre><span class="ruby-comment"># File lib/syntax_suggest/around_block_scan.rb, line 204</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">lines</span>
+  <span class="ruby-ivar">@code_lines</span>[<span class="ruby-identifier">before_index</span><span class="ruby-operator">..</span><span class="ruby-identifier">after_index</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-next_down" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">next_down</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="next_down-source">
+            <pre><span class="ruby-comment"># File lib/syntax_suggest/around_block_scan.rb, line 177</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">next_down</span>
+  <span class="ruby-ivar">@code_lines</span>[<span class="ruby-identifier">after_index</span>.<span class="ruby-identifier">next</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-next_up" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">next_up</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="next_up-source">
+            <pre><span class="ruby-comment"># File lib/syntax_suggest/around_block_scan.rb, line 173</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">next_up</span>
+  <span class="ruby-ivar">@code_lines</span>[<span class="ruby-identifier">before_index</span>.<span class="ruby-identifier">pred</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-on_falling_indent" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">on_falling_indent</span><span
+              class="method-args">() { |line| ... }</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="on_falling_indent-source">
+            <pre><span class="ruby-comment"># File lib/syntax_suggest/around_block_scan.rb, line 149</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">on_falling_indent</span>
+  <span class="ruby-identifier">last_indent</span> = <span class="ruby-ivar">@orig_indent</span>
+  <span class="ruby-identifier">before_lines</span>.<span class="ruby-identifier">reverse_each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">indent</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">last_indent</span>
+      <span class="ruby-keyword">yield</span> <span class="ruby-identifier">line</span>
+      <span class="ruby-identifier">last_indent</span> = <span class="ruby-identifier">line</span>.<span class="ruby-identifier">indent</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">last_indent</span> = <span class="ruby-ivar">@orig_indent</span>
+  <span class="ruby-identifier">after_lines</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">empty?</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">indent</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">last_indent</span>
+      <span class="ruby-keyword">yield</span> <span class="ruby-identifier">line</span>
+      <span class="ruby-identifier">last_indent</span> = <span class="ruby-identifier">line</span>.<span class="ruby-identifier">indent</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-scan_adjacent_indent" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">scan_adjacent_indent</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="scan_adjacent_indent-source">
+            <pre><span class="ruby-comment"># File lib/syntax_suggest/around_block_scan.rb, line 181</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">scan_adjacent_indent</span>
+  <span class="ruby-identifier">before_after_indent</span> = []
+  <span class="ruby-identifier">before_after_indent</span> <span class="ruby-operator">&lt;&lt;</span> (<span class="ruby-identifier">next_up</span>&amp;.<span class="ruby-identifier">indent</span> <span class="ruby-operator">||</span> <span class="ruby-value">0</span>)
+  <span class="ruby-identifier">before_after_indent</span> <span class="ruby-operator">&lt;&lt;</span> (<span class="ruby-identifier">next_down</span>&amp;.<span class="ruby-identifier">indent</span> <span class="ruby-operator">||</span> <span class="ruby-value">0</span>)
+
+  <span class="ruby-identifier">indent</span> = <span class="ruby-identifier">before_after_indent</span>.<span class="ruby-identifier">min</span>
+  <span class="ruby-identifier">scan_while</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">not_empty?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">indent</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-identifier">indent</span> }
+
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-scan_neighbors" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">scan_neighbors</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="scan_neighbors-source">
+            <pre><span class="ruby-comment"># File lib/syntax_suggest/around_block_scan.rb, line 169</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">scan_neighbors</span>
+  <span class="ruby-identifier">scan_while</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">not_empty?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">indent</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-ivar">@orig_indent</span> }
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-scan_while" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">scan_while</span><span
+              class="method-args">() { |line| ... }</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="scan_while-source">
+            <pre><span class="ruby-comment"># File lib/syntax_suggest/around_block_scan.rb, line 62</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">scan_while</span>
+  <span class="ruby-identifier">stop_next</span> = <span class="ruby-keyword">false</span>
+
+  <span class="ruby-identifier">kw_count</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">end_count</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">index</span> = <span class="ruby-identifier">before_lines</span>.<span class="ruby-identifier">reverse_each</span>.<span class="ruby-identifier">take_while</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">stop_next</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@skip_hidden</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">hidden?</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@skip_empty</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">empty?</span>
+
+    <span class="ruby-identifier">kw_count</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">is_kw?</span>
+    <span class="ruby-identifier">end_count</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">is_end?</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@stop_after_kw</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">kw_count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">end_count</span>
+      <span class="ruby-identifier">stop_next</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">yield</span> <span class="ruby-identifier">line</span>
+  <span class="ruby-keyword">end</span>.<span class="ruby-identifier">last</span>&amp;.<span class="ruby-identifier">index</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">index</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">index</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">before_index</span>
+    <span class="ruby-ivar">@before_index</span> = <span class="ruby-identifier">index</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">stop_next</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-identifier">kw_count</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">end_count</span> = <span class="ruby-value">0</span>
+  <span class="ruby-identifier">index</span> = <span class="ruby-identifier">after_lines</span>.<span class="ruby-identifier">take_while</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">false</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">stop_next</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@skip_hidden</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">hidden?</span>
+    <span class="ruby-keyword">next</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@skip_empty</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">empty?</span>
+
+    <span class="ruby-identifier">kw_count</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">is_kw?</span>
+    <span class="ruby-identifier">end_count</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">is_end?</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@stop_after_kw</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">end_count</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">kw_count</span>
+      <span class="ruby-identifier">stop_next</span> = <span class="ruby-keyword">true</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">yield</span> <span class="ruby-identifier">line</span>
+  <span class="ruby-keyword">end</span>.<span class="ruby-identifier">last</span>&amp;.<span class="ruby-identifier">index</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">index</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">index</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">after_index</span>
+    <span class="ruby-ivar">@after_index</span> = <span class="ruby-identifier">index</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-skip" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">skip</span><span
+              class="method-args">(name)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="skip-source">
+            <pre><span class="ruby-comment"># File lib/syntax_suggest/around_block_scan.rb, line 45</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">skip</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">name</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:hidden?</span>
+    <span class="ruby-ivar">@skip_hidden</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">when</span> <span class="ruby-value">:empty?</span>
+    <span class="ruby-ivar">@skip_empty</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Unsupported skip #{name}&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-start_at_next_line" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">start_at_next_line</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="start_at_next_line-source">
+            <pre><span class="ruby-comment"># File lib/syntax_suggest/around_block_scan.rb, line 192</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">start_at_next_line</span>
+  <span class="ruby-identifier">before_index</span>
+  <span class="ruby-identifier">after_index</span>
+  <span class="ruby-ivar">@before_index</span> <span class="ruby-operator">-=</span> <span class="ruby-value">1</span>
+  <span class="ruby-ivar">@after_index</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-stop_after_kw" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">stop_after_kw</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="stop_after_kw-source">
+            <pre><span class="ruby-comment"># File lib/syntax_suggest/around_block_scan.rb, line 57</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">stop_after_kw</span>
+  <span class="ruby-ivar">@stop_after_kw</span> = <span class="ruby-keyword">true</span>
+  <span class="ruby-keyword">self</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+     <section id="private-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Private Instance Methods</h3>
+       </header>
+
+      <div id="method-i-after_lines" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">after_lines</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="after_lines-source">
+            <pre><span class="ruby-comment"># File lib/syntax_suggest/around_block_scan.rb, line 220</span>
+        <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">after_lines</span>
+  <span class="ruby-ivar">@code_lines</span>[<span class="ruby-identifier">after_index</span>.<span class="ruby-identifier">next</span><span class="ruby-operator">..</span><span class="ruby-value">-1</span>] <span class="ruby-operator">||</span> []
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-before_lines" class="method-detail ">
+        <div class="method-header">
+          <div class="method-heading">
+            <span class="method-name">before_lines</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="before_lines-source">
+            <pre><span class="ruby-comment"># File lib/syntax_suggest/around_block_scan.rb, line 216</span>
+        <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">before_lines</span>
+  <span class="ruby-ivar">@code_lines</span>[<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">before_index</span>] <span class="ruby-operator">||</span> []
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.5.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
